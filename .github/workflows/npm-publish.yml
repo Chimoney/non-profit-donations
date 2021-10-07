@@ -1,5 +1,4 @@
-// .github/workflows.yml
-name: NPM publish CD workflow
+name: 'NPM publish CD workflow'
 
 on: push
 
