@@ -1,10 +1,15 @@
-// .github/workflows.yml
-name: NPM publish CD workflow
+name: 'NPM publish CD workflow'
 
-on: push
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [main]
 
 jobs:
   build:
+    name: Publish
     runs-on: ubuntu-latest
 
     steps:
