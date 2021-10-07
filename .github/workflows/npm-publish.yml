@@ -5,6 +5,7 @@ on: push
 
 jobs:
   build:
+    name: Publish
     runs-on: ubuntu-latest
 
     steps:
