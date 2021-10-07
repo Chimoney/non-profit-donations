@@ -71,7 +71,7 @@ export const random = (subList?: readonly NonProfit[]) => {
  */
 export const getCountryNonprofits = (country: string) => {
   return nonProfits.filter(
-    (n) => n.country?.toLocaleLowerCase() === country?.toLocaleLowerCase()
+    (org) => org.country?.toLocaleLowerCase() === country?.toLocaleLowerCase()
   );
 };
 
@@ -95,7 +95,7 @@ export const getCountryNonprofits = (country: string) => {
  * @returns A list of all verified non-profits.
  */
 export const getVerifiedNonprofits = () => {
-  return nonProfits.filter((n) => n.isVerified);
+  return nonProfits.filter((org) => org.isVerified);
 };
 
 /**
@@ -120,7 +120,7 @@ export const getVerifiedNonprofits = () => {
 export const randomWithMobileMoney = () => {
   const list = nonProfits.filter((n) =>
     n.paymentMethod.find(
-      (p) => p.type === 'mobile-money' && p.paymentID?.length > 0
+      (org) => org.type === 'mobile-money' && org.paymentID?.length > 0
     )
   );
   return random(list);
