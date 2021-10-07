@@ -12,12 +12,6 @@
   </p>
   <p>
 
-<!-- [![Build Status](https://travis-ci.com/uchibeke/non-profit-donations.svg?branch=master)](https://travis-ci.com/uchibeke/non-profit-donations) -->
-
-[![NPM version](https://img.shields.io/npm/v/non-profit-donations?style=flat-square)](https://img.shields.io/npm/v/non-profit-donations?style=flat-square)
-[![Package size](https://img.shields.io/bundlephobia/min/non-profit-donations)](https://img.shields.io/bundlephobia/min/non-profit-donations)
-[![Dependencies](https://img.shields.io/david/uchibeke/non-profit-donations.svg?style=popout-square)](https://david-dm.org/uchibeke/non-profit-donations)
-[![devDependencies Status](https://david-dm.org/uchibeke/non-profit-donations/dev-status.svg?style=flat-square)](https://david-dm.org/uchibeke/non-profit-donations?type=dev)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![Twitter](https://img.shields.io/twitter/follow/chimoney_io.svg?label=Follow&style=social)](https://twitter.com/chimoney_io)
 
