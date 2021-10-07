@@ -20,5 +20,5 @@ export type NonProfit = {
   readonly linkedin?: string;
   readonly isVerified: boolean;
   readonly verification?: Verification;
-  readonly paymentMethod: readonly PaymentMethod[];
+  readonly paymentMethods: readonly PaymentMethod[];
 };

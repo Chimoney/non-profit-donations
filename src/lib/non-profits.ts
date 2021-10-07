@@ -119,7 +119,7 @@ export const getVerifiedNonprofits = () => {
  */
 export const randomWithMobileMoney = () => {
   const list = nonProfits.filter((n) =>
-    n.paymentMethod.find(
+    n.paymentMethods.find(
       (org) => org.type === 'mobile-money' && org.paymentID?.length > 0
     )
   );
