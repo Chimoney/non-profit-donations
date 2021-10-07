@@ -9,6 +9,8 @@ test('list', async (t) => {
 });
 
 test('random', async (t) => {
-  const rrr = random();
-  t.like(rrr, nonProfits[0]);
+  const randomItem = random();
+  t.not(typeof randomItem?.name, 'undefined');
+  t.not(typeof randomItem?.email, 'undefined');
+  t.not(randomItem?.paymentMethods.length, 0);
 });

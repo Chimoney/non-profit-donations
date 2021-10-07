@@ -12,13 +12,14 @@
   </p>
   <p>
 
-[![Build Status](https://travis-ci.com/uchibeke/non-profit-donations.svg?branch=master)](https://travis-ci.com/uchibeke/non-profit-donations)
+<!-- [![Build Status](https://travis-ci.com/uchibeke/non-profit-donations.svg?branch=master)](https://travis-ci.com/uchibeke/non-profit-donations) -->
+
 [![NPM version](https://img.shields.io/npm/v/non-profit-donations?style=flat-square)](https://img.shields.io/npm/v/non-profit-donations?style=flat-square)
 [![Package size](https://img.shields.io/bundlephobia/min/non-profit-donations)](https://img.shields.io/bundlephobia/min/non-profit-donations)
 [![Dependencies](https://img.shields.io/david/uchibeke/non-profit-donations.svg?style=popout-square)](https://david-dm.org/uchibeke/non-profit-donations)
 [![devDependencies Status](https://david-dm.org/uchibeke/non-profit-donations/dev-status.svg?style=flat-square)](https://david-dm.org/uchibeke/non-profit-donations?type=dev)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Twitter](https://img.shields.io/twitter/follow/luctstt.svg?label=Follow&style=social)](https://twitter.com/chimoney_io)
+[![Twitter](https://img.shields.io/twitter/follow/chimoney_io.svg?label=Follow&style=social)](https://twitter.com/chimoney_io)
 
   </p>
 </div>
@@ -30,7 +31,6 @@
 - [Features](##features)
 - [Install](##install)
 - [Usage](##usage)
-- [Exemples](##exemples)
 - [Documentation](##documentation)
 - [API](##Api)
 - [Contributing](##contributing)
@@ -42,31 +42,65 @@
 - Filter by location, verification status, accepted donation method and many more
 - Get a random non-profit to make an instant donation
 
-## Install 🐙
+## Installation 🐙
 
-Explain to your users how they can install your product :)
+Yarn:
+
+```bash
+yarn add non-profit-donations
+```
+
+npm:
+
+```bash
+npm install --save non-profit-donations
+```
 
 ## Usage 💡
 
-In this section you can write some popular examples about how you can interact with the project. It's advisable to write some code here.
+### Example (es module)
 
-## Exemples 🖍
-
+```js
+import { getVerifiedNonprofits } from 'non-profit-donations';
+console.log(getVerifiedNonprofits());
 ```
-Show some code
+
+### Example (commonjs)
+
+```js
+var getVerifiedNonprofits =
+  require('non-profit-donations').getVerifiedNonprofits;
+console.log(getVerifiedNonprofits());
+```
+
+### Result
+
+```js
+{
+  name: 'SheCodeAfrica',
+  email: 'info@shecodeafrica.org',
+  country: 'Nigeria',
+  website: 'shecodeafrica.org',
+  logo: 'https://www.shecodeafrica.org/images/she-code-africa-logo.svg',
+  foundedYear: '2016',
+  description: 'A non-profit organisation focused on celebrating and empowering young girls and women in tech across Africa.',
+  isVerified: true,
+  verification: { date: 2021-10-04T04:00:00.000Z, verifier: 'Uchi Uchibeke' },
+  paymentMethods: [ [Object], [Object], [Object], [Object], [Object] ]
+}
 ```
 
 ## Documentation 📄
 
-If your project has some documentation you can link anything here.
+Coming soon
 
 ## API 👩‍💻
 
-You have a small project or you'll like to share the API of your project ? This is where it's happen.
+Coming soon
 
 ## Contributing 🍰
 
-Please make sure to read the [Contributing Guide]() before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/Chimoney/non-profit-donations/blob/main/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who already contributed to this project!
 

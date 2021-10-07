@@ -30,6 +30,7 @@
     "yarn.lock",
     "tsconfig.json",
     "node_modules/**",
-    "src"
+    "src",
+    "README.md"
   ]
 }

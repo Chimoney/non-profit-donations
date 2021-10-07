@@ -15,7 +15,7 @@ const nonProfits: readonly NonProfit[] = [
       date: new Date('Oct 4, 2021'),
       verifier: 'Uchi Uchibeke',
     },
-    paymentMethod: [
+    paymentMethods: [
       {
         type: 'mobile-money',
         paymentID: '',
@@ -52,7 +52,7 @@ const nonProfits: readonly NonProfit[] = [
       date: new Date('Oct 4, 2021'),
       verifier: 'Uchi Uchibeke',
     },
-    paymentMethod: [
+    paymentMethods: [
       {
         type: 'mobile-money',
         paymentID: '',
