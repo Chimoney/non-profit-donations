@@ -1,0 +1,107 @@
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>non-profit-donations</title><meta name="description" content="Documentation for non-profit-donations"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">non-profit-donations</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>non-profit-donations</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography"><div align="center">
+  <a href="#">
+      <img src="https://media.giphy.com/media/ONPuqEOr8BHr3AfHDE/giphy.gif" alt="Logo project" height="160" />
+  </a>
+  <br>
+  <br>
+  <p>
+    <b>non-profit-donations</b>
+  </p>
+  <p>
+     <i>Get and manage verified non-profits and send donations to them using their verified Interledger payment pointer, ENS name, Paystring, Mobile money number, Airtime phone number and other crypto or payment addresses.</i>
+  </p>
+  <p>
+
+<p><a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
+<a href="https://twitter.com/chimoney_io"><img src="https://img.shields.io/twitter/follow/chimoney_io.svg?label=Follow&style=social" alt="Twitter"></a></p>
+  </p>
+</div>
+
+<hr>
+<p><strong>Content</strong></p>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#api">API</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#maintainers">Maintainers</a></li>
+</ul>
+
+<a href="#features-✨" id="features-✨" style="color: inherit; text-decoration: none;">
+  <h2>Features ✨</h2>
+</a>
+<ul>
+<li>Get a list of verified Non-profits</li>
+<li>Filter by location, verification status, accepted donation method and many more</li>
+<li>Get a random non-profit to make an instant donation</li>
+<li>Get non-profits that accept your preferred donation medium</li>
+<li>And more. Please, contribute.</li>
+</ul>
+
+<a href="#installation-🐙" id="installation-🐙" style="color: inherit; text-decoration: none;">
+  <h2>Installation 🐙</h2>
+</a>
+<p>Yarn:</p>
+<pre><code class="language-bash"><span class="hl-1">yarn add non-profit-donations</span>
+</code></pre>
+<p>npm:</p>
+<pre><code class="language-bash"><span class="hl-1">npm install --save non-profit-donations</span>
+</code></pre>
+
+<a href="#usage-💡" id="usage-💡" style="color: inherit; text-decoration: none;">
+  <h2>Usage 💡</h2>
+</a>
+
+<a href="#example-es-module" id="example-es-module" style="color: inherit; text-decoration: none;">
+  <h3>Example (es module)</h3>
+</a>
+<pre><code class="language-js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">getVerifiedNonprofits</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;non-profit-donations&#39;</span><span class="hl-1">;</span><br/><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-4">log</span><span class="hl-1">(</span><span class="hl-4">getVerifiedNonprofits</span><span class="hl-1">());</span>
+</code></pre>
+
+<a href="#example-commonjs" id="example-commonjs" style="color: inherit; text-decoration: none;">
+  <h3>Example (commonjs)</h3>
+</a>
+<pre><code class="language-js"><span class="hl-6">var</span><span class="hl-1"> </span><span class="hl-2">getVerifiedNonprofits</span><span class="hl-1"> =</span><br/><span class="hl-1">  </span><span class="hl-4">require</span><span class="hl-1">(</span><span class="hl-3">&#39;non-profit-donations&#39;</span><span class="hl-1">).</span><span class="hl-2">getVerifiedNonprofits</span><span class="hl-1">;</span><br/><span class="hl-2">console</span><span class="hl-1">.</span><span class="hl-4">log</span><span class="hl-1">(</span><span class="hl-4">getVerifiedNonprofits</span><span class="hl-1">());</span>
+</code></pre>
+
+<a href="#result" id="result" style="color: inherit; text-decoration: none;">
+  <h3>Result</h3>
+</a>
+<pre><code class="language-js"><span class="hl-1">[</span><br/><span class="hl-1">  {</span><br/><span class="hl-1">    </span><span class="hl-2">name:</span><span class="hl-1"> </span><span class="hl-3">&#39;SheCodeAfrica&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">email:</span><span class="hl-1"> </span><span class="hl-3">&#39;info@shecodeafrica.org&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">country:</span><span class="hl-1"> </span><span class="hl-3">&#39;Nigeria&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">website:</span><span class="hl-1"> </span><span class="hl-3">&#39;shecodeafrica.org&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">logo:</span><span class="hl-1"> </span><span class="hl-3">&#39;https://www.shecodeafrica.org/images/she-code-africa-logo.svg&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">foundedYear:</span><span class="hl-1"> </span><span class="hl-3">&#39;2016&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">description:</span><br/><span class="hl-1">      </span><span class="hl-3">&#39;A non-profit organisation focused on celebrating and empowering young girls and women in tech across Africa.&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">isVerified:</span><span class="hl-1"> </span><span class="hl-6">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">verifications:</span><span class="hl-1"> [</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-2">date:</span><span class="hl-1"> </span><span class="hl-6">new</span><span class="hl-1"> </span><span class="hl-7">Date</span><span class="hl-1">(</span><span class="hl-3">&#39;Oct 4, 2021&#39;</span><span class="hl-1">),</span><br/><span class="hl-1">        </span><span class="hl-2">verifier:</span><span class="hl-1"> </span><span class="hl-3">&#39;@uchibeke&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">    ],</span><br/><span class="hl-1">    </span><span class="hl-2">paymentMethods:</span><span class="hl-1"> [</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-2">type:</span><span class="hl-1"> </span><span class="hl-3">&#39;interledger&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-2">paymentID:</span><span class="hl-1"> </span><span class="hl-3">&#39;$ilp.uphold.com/kkd4KdPQwqJM&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  {</span><br/><span class="hl-1">    </span><span class="hl-2">name:</span><span class="hl-1"> </span><span class="hl-3">&#39;Internet Archive&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">email:</span><span class="hl-1"> </span><span class="hl-3">&#39;info@archive.org&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">country:</span><span class="hl-1"> </span><span class="hl-3">&#39;United States&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">website:</span><span class="hl-1"> </span><span class="hl-3">&#39;https://archive.org/&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">logo:</span><span class="hl-1"> </span><span class="hl-3">&#39;https://anniversary.archive.org/wp-content/themes/anniversary/images/logo-white.svg&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">foundedYear:</span><span class="hl-1"> </span><span class="hl-3">&#39;1996&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">description:</span><br/><span class="hl-1">      </span><span class="hl-3">&#39;Internet Archive is a non-profit digital library offering millions of free books, movies, &amp; audio files, plus billions of saved web pages in the Wayback Machine&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">isVerified:</span><span class="hl-1"> </span><span class="hl-6">true</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">verifications:</span><span class="hl-1"> [</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-2">date:</span><span class="hl-1"> </span><span class="hl-6">new</span><span class="hl-1"> </span><span class="hl-7">Date</span><span class="hl-1">(</span><span class="hl-3">&#39;Oct 11, 2021&#39;</span><span class="hl-1">),</span><br/><span class="hl-1">        </span><span class="hl-2">verifier:</span><span class="hl-1"> </span><span class="hl-3">&#39;@uchibeke&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">    ],</span><br/><span class="hl-1">    </span><span class="hl-2">paymentMethods:</span><span class="hl-1"> [</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-2">type:</span><span class="hl-1"> </span><span class="hl-3">&#39;interledger&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-2">paymentID:</span><span class="hl-1"> </span><span class="hl-3">&#39;$ilp.uphold.com/D7BwPKMQzBiD&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">      {</span><br/><span class="hl-1">        </span><span class="hl-2">type:</span><span class="hl-1"> </span><span class="hl-3">&#39;xrp&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-2">paymentID:</span><span class="hl-1"> </span><span class="hl-3">&#39;rGeyCsqc6vKXuyTGF39WJxmTRemoV3c97h&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      },</span><br/><span class="hl-1">    ],</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  .</span><br/><span class="hl-1">  .</span><br/><span class="hl-1">  .</span><br/><span class="hl-1">]</span>
+</code></pre>
+
+<a href="#documentation-📄" id="documentation-📄" style="color: inherit; text-decoration: none;">
+  <h2>Documentation 📄</h2>
+</a>
+<p>Coming soon</p>
+
+<a href="#api-👩💻" id="api-👩💻" style="color: inherit; text-decoration: none;">
+  <h2>API 👩‍💻</h2>
+</a>
+<p>Coming soon</p>
+
+<a href="#contributing-🍰" id="contributing-🍰" style="color: inherit; text-decoration: none;">
+  <h2>Contributing 🍰</h2>
+</a>
+<p>Please make sure to read the <a href="https://github.com/Chimoney/non-profit-donations/blob/main/CONTRIBUTING.md">Contributing Guide</a> before making a pull request.</p>
+<p>Thank you to all the people who already contributed to this project!</p>
+
+<a href="#maintainers-👷" id="maintainers-👷" style="color: inherit; text-decoration: none;">
+  <h2>Maintainers 👷</h2>
+</a>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/uchibeke"><img src="https://avatars.githubusercontent.com/u/5677552?v=4" width="50px;" alt="Uchi Uchibeke"/><br /><sub><b>Uchi Uchibeke</b></sub></a><br /><a href="#" title="Code">💻</a></td>
+  </tr>
+</table>
+
+
+<a href="#license-⚖️" id="license-⚖️" style="color: inherit; text-decoration: none;">
+  <h2>License ⚖️</h2>
+</a>
+<p>MIT ©</p>
+<hr>
+<p><a href="https://chimoney.io"><img align="left" height="100" src="https://res.cloudinary.com/africahacks/image/upload/v1606074022/chimoney/Purple-100_z05fgn.jpg" /></a></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-function"><a href="modules.html#allWithPaymentType" class="tsd-kind-icon">all<wbr/>With<wbr/>Payment<wbr/>Type</a></li><li class="tsd-kind-function"><a href="modules.html#getCountryNonprofits" class="tsd-kind-icon">get<wbr/>Country<wbr/>Nonprofits</a></li><li class="tsd-kind-function"><a href="modules.html#getVerifiedNonprofits" class="tsd-kind-icon">get<wbr/>Verified<wbr/>Nonprofits</a></li><li class="tsd-kind-function"><a href="modules.html#list" class="tsd-kind-icon">list</a></li><li class="tsd-kind-function"><a href="modules.html#random" class="tsd-kind-icon">random</a></li><li class="tsd-kind-function"><a href="modules.html#randomWithInterledgerPaymentPointer" class="tsd-kind-icon">random<wbr/>With<wbr/>Interledger<wbr/>Payment<wbr/>Pointer</a></li><li class="tsd-kind-function"><a href="modules.html#randomWithMobileMoney" class="tsd-kind-icon">random<wbr/>With<wbr/>Mobile<wbr/>Money</a></li><li class="tsd-kind-function"><a href="modules.html#randomWithPaymentType" class="tsd-kind-icon">random<wbr/>With<wbr/>Payment<wbr/>Type</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
