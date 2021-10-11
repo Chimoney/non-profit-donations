@@ -55,14 +55,14 @@ export const random = (subList?: readonly NonProfit[]) => {
  * ### Example (es module)
  * ```js
  * import { getCountryNonprofits } from 'non-profit-donations'
- * console.log(getCountryNonprofits())
+ * console.log(getCountryNonprofits('Nigeria'))
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
  * var getCountryNonprofits = require('non-profit-donations').getCountryNonprofits;
- * console.log(getCountryNonprofits())
+ * console.log(getCountryNonprofits('Nigeria'))
  * // => [{}]
  * ```
  *
@@ -99,29 +99,98 @@ export const getVerifiedNonprofits = () => {
 };
 
 /**
+ * Gets a list of non-profit with specified payment type
+ *
+ * ### Example (es module)
+ * ```js
+ * import { allWithPaymentType } from 'non-profit-donations'
+ * console.log(allWithPaymentType('interledger'))
+ * // => {}
+ * ```
+ *
+ * ### Example (commonjs)
+ * ```js
+ * var allWithPaymentType = require('non-profit-donations').allWithPaymentType;
+ * console.log(allWithPaymentType('interledger'))
+ * // => {}
+ * ```
+ *
+ * @returns A list of non-profit with specified payment type.
+ */
+export const allWithPaymentType = (paymentType: string) => {
+  return nonProfits.filter((n) =>
+    n.paymentMethods.find(
+      (org) => org.type === paymentType && org.paymentID?.length > 0
+    )
+  );
+};
+
+/**
+ * Gets a random non-profit from the list of non-profits  with specified payment type
+ *
+ * ### Example (es module)
+ * ```js
+ * import { randomWithPaymentType } from 'non-profit-donations'
+ * console.log(randomWithPaymentType('interledger'))
+ * // => {}
+ * ```
+ *
+ * ### Example (commonjs)
+ * ```js
+ * var randomWithPaymentType = require('non-profit-donations').randomWithPaymentType;
+ * console.log(randomWithPaymentType('interledger'))
+ * // => {}
+ * ```
+ *
+ * @returns A random non-profit from a sub list with specified payment type.
+ */
+export const randomWithPaymentType = (paymentType: string) => {
+  const list = allWithPaymentType(paymentType);
+  return random(list);
+};
+
+/**
  * Gets a random non-profit from the list of non-profits with mobile money
  *
  * ### Example (es module)
  * ```js
  * import { randomWithMobileMoney } from 'non-profit-donations'
  * console.log(randomWithMobileMoney())
- * // => [{}]
+ * // => {}
  * ```
  *
  * ### Example (commonjs)
  * ```js
  * var randomWithMobileMoney = require('non-profit-donations').randomWithMobileMoney;
  * console.log(randomWithMobileMoney())
- * // => [{}]
+ * // => {}
  * ```
  *
  * @returns A random non-profit from a sub list with mobile money support.
  */
 export const randomWithMobileMoney = () => {
-  const list = nonProfits.filter((n) =>
-    n.paymentMethods.find(
-      (org) => org.type === 'mobile-money' && org.paymentID?.length > 0
-    )
-  );
-  return random(list);
+  return randomWithPaymentType('mobile-money');
+};
+
+/**
+ * Gets a random non-profit from the list of non-profits with interledger payment pointer
+ *
+ * ### Example (es module)
+ * ```js
+ * import { randomWithInterledgerPaymentPointer } from 'non-profit-donations'
+ * console.log(randomWithInterledgerPaymentPointer())
+ * // => {}
+ * ```
+ *
+ * ### Example (commonjs)
+ * ```js
+ * var randomWithInterledgerPaymentPointer = require('non-profit-donations').randomWithInterledgerPaymentPointer;
+ * console.log(randomWithInterledgerPaymentPointer())
+ * // => {}
+ * ```
+ *
+ * @returns A random non-profit from a sub list with ILP support.
+ */
+export const randomWithInterledgerPaymentPointer = () => {
+  return randomWithPaymentType('interledger');
 };
