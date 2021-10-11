@@ -55,14 +55,14 @@ export const random = (subList?: readonly NonProfit[]) => {
  * ### Example (es module)
  * ```js
  * import { getCountryNonprofits } from 'non-profit-donations'
- * console.log(getCountryNonprofits())
+ * console.log(getCountryNonprofits('Nigeria'))
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
  * var getCountryNonprofits = require('non-profit-donations').getCountryNonprofits;
- * console.log(getCountryNonprofits())
+ * console.log(getCountryNonprofits('Nigeria'))
  * // => [{}]
  * ```
  *
@@ -104,14 +104,14 @@ export const getVerifiedNonprofits = () => {
  * ### Example (es module)
  * ```js
  * import { allWithPaymentType } from 'non-profit-donations'
- * console.log(allWithPaymentType())
+ * console.log(allWithPaymentType('interledger'))
  * // => {}
  * ```
  *
  * ### Example (commonjs)
  * ```js
  * var allWithPaymentType = require('non-profit-donations').allWithPaymentType;
- * console.log(allWithPaymentType())
+ * console.log(allWithPaymentType('interledger'))
  * // => {}
  * ```
  *
@@ -131,14 +131,14 @@ export const allWithPaymentType = (paymentType: string) => {
  * ### Example (es module)
  * ```js
  * import { randomWithPaymentType } from 'non-profit-donations'
- * console.log(randomWithPaymentType())
+ * console.log(randomWithPaymentType('interledger'))
  * // => {}
  * ```
  *
  * ### Example (commonjs)
  * ```js
  * var randomWithPaymentType = require('non-profit-donations').randomWithPaymentType;
- * console.log(randomWithPaymentType())
+ * console.log(randomWithPaymentType('interledger'))
  * // => {}
  * ```
  *
