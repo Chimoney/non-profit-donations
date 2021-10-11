@@ -1,6 +1,6 @@
 {
   "name": "non-profit-donations",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Support non-profits globally. Get the details of verified non profits to support",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
@@ -46,7 +46,7 @@
     "commitizen": "^4.2.4"
   },
   "devDependencies": {
-    "@ava/typescript": "^1.1.1",
+    "@ava/typescript": "^2.0.0",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/node": "^16.10.3",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
