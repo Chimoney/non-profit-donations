@@ -6,6 +6,7 @@ type Verification = {
 type PaymentMethod = {
   readonly type: string;
   readonly paymentID?: string;
+  readonly country?: string;
 };
 
 export type NonProfit = {
@@ -19,6 +20,6 @@ export type NonProfit = {
   readonly twitter?: string;
   readonly linkedin?: string;
   readonly isVerified: boolean;
-  readonly verification?: Verification;
+  readonly verifications?: readonly Verification[];
   readonly paymentMethods: readonly PaymentMethod[];
 };
