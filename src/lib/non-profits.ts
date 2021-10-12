@@ -6,45 +6,45 @@ import { NonProfit } from '../types/non-profit';
  *
  * ### Example (es module)
  * ```js
- * import { list } from 'non-profit-donations'
- * console.log(list())
+ * import { nonProfitList } from 'non-profit-donations'
+ * console.log(nonProfitList())
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
- * var list = require('non-profit-donations').list;
- * console.log(list())
+ * var nonProfitList = require('non-profit-donations').nonProfitList;
+ * console.log(nonProfitList())
  * // => [{}]
  * ```
  *
  * @returns Returns all the non-profits.
  */
 
-export const list = () => {
+export const nonProfitList = () => {
   return nonProfits;
 };
 
 /**
- * Gets a random non-profit from the list of non-profits
+ * Gets a randomNonProfit non-profit from the list of non-profits
  *
  * ### Example (es module)
  * ```js
- * import { random } from 'non-profit-donations'
- * console.log(random())
+ * import { randomNonProfit } from 'non-profit-donations'
+ * console.log(randomNonProfit())
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
- * var random = require('non-profit-donations').random;
- * console.log(random())
+ * var randomNonProfit = require('non-profit-donations').randomNonProfit;
+ * console.log(randomNonProfit())
  * // => [{}]
  * ```
  *
  * @returns A random non-profit from the database or a sub list.
  */
-export const random = (subList?: readonly NonProfit[]) => {
+export const randomNonProfit = (subList?: readonly NonProfit[]) => {
   const list = subList || nonProfits;
   return list[Math.floor(Math.random() * list.length)];
 };
@@ -54,22 +54,22 @@ export const random = (subList?: readonly NonProfit[]) => {
  *
  * ### Example (es module)
  * ```js
- * import { getCountryNonprofits } from 'non-profit-donations'
- * console.log(getCountryNonprofits('Nigeria'))
+ * import { nonprofitsFromCountry } from 'non-profit-donations'
+ * console.log(nonprofitsFromCountry('Nigeria'))
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
- * var getCountryNonprofits = require('non-profit-donations').getCountryNonprofits;
- * console.log(getCountryNonprofits('Nigeria'))
+ * var nonprofitsFromCountry = require('non-profit-donations').nonprofitsFromCountry;
+ * console.log(nonprofitsFromCountry('Nigeria'))
  * // => [{}]
  * ```
  *
  * @param country - The name of the country to get non profits for.
  * @returns A list of non-profits for the given country.
  */
-export const getCountryNonprofits = (country: string) => {
+export const nonprofitsFromCountry = (country: string) => {
   return nonProfits.filter(
     (org) => org.country?.toLocaleLowerCase() === country?.toLocaleLowerCase()
   );
@@ -80,21 +80,21 @@ export const getCountryNonprofits = (country: string) => {
  *
  * ### Example (es module)
  * ```js
- * import { getVerifiedNonprofits } from 'non-profit-donations'
- * console.log(getVerifiedNonprofits())
+ * import { verifiedNonprofits } from 'non-profit-donations'
+ * console.log(verifiedNonprofits())
  * // => [{}]
  * ```
  *
  * ### Example (commonjs)
  * ```js
- * var getVerifiedNonprofits = require('non-profit-donations').getVerifiedNonprofits;
- * console.log(getVerifiedNonprofits())
+ * var verifiedNonprofits = require('non-profit-donations').verifiedNonprofits;
+ * console.log(verifiedNonprofits())
  * // => [{}]
  * ```
  *
  * @returns A list of all verified non-profits.
  */
-export const getVerifiedNonprofits = () => {
+export const verifiedNonprofits = () => {
   return nonProfits.filter((org) => org.isVerified);
 };
 
@@ -103,21 +103,21 @@ export const getVerifiedNonprofits = () => {
  *
  * ### Example (es module)
  * ```js
- * import { allWithPaymentType } from 'non-profit-donations'
- * console.log(allWithPaymentType('interledger'))
+ * import { nonProfitsAcceptingPaymentType } from 'non-profit-donations'
+ * console.log(nonProfitsAcceptingPaymentType('interledger'))
  * // => {}
  * ```
  *
  * ### Example (commonjs)
  * ```js
- * var allWithPaymentType = require('non-profit-donations').allWithPaymentType;
- * console.log(allWithPaymentType('interledger'))
+ * var nonProfitsAcceptingPaymentType = require('non-profit-donations').nonProfitsAcceptingPaymentType;
+ * console.log(nonProfitsAcceptingPaymentType('interledger'))
  * // => {}
  * ```
  *
  * @returns A list of non-profit with specified payment type.
  */
-export const allWithPaymentType = (paymentType: string) => {
+export const nonProfitsAcceptingPaymentType = (paymentType: string) => {
   return nonProfits.filter((n) =>
     n.paymentMethods.find(
       (org) => org.type === paymentType && org.paymentID?.length > 0
@@ -145,8 +145,8 @@ export const allWithPaymentType = (paymentType: string) => {
  * @returns A random non-profit from a sub list with specified payment type.
  */
 export const randomWithPaymentType = (paymentType: string) => {
-  const list = allWithPaymentType(paymentType);
-  return random(list);
+  const list = nonProfitsAcceptingPaymentType(paymentType);
+  return randomNonProfit(list);
 };
 
 /**
