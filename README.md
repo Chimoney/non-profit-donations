@@ -57,16 +57,15 @@ npm install --save non-profit-donations
 ### Example (es module)
 
 ```js
-import { getVerifiedNonprofits } from 'non-profit-donations';
-console.log(getVerifiedNonprofits());
+import { verifiedNonprofits } from 'non-profit-donations';
+console.log(verifiedNonprofits());
 ```
 
 ### Example (commonjs)
 
 ```js
-var getVerifiedNonprofits =
-  require('non-profit-donations').getVerifiedNonprofits;
-console.log(getVerifiedNonprofits());
+var verifiedNonprofits = require('non-profit-donations').verifiedNonprofits;
+console.log(verifiedNonprofits());
 ```
 
 ### Result
@@ -130,11 +129,11 @@ console.log(getVerifiedNonprofits());
 
 ## Documentation 📄
 
-Coming soon
+Documentation is at [chimoney.github.io/non-profit-donations](https://chimoney.github.io/non-profit-donations/index.html)
 
 ## API 👩‍💻
 
-Coming soon
+API is at [chimoney.github.io/non-profit-donations](https://chimoney.github.io/non-profit-donations/index.html)
 
 ## Contributing 🍰
 
