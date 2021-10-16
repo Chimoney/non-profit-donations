@@ -194,3 +194,48 @@ export const randomWithMobileMoney = () => {
 export const randomWithInterledgerPaymentPointer = () => {
   return randomWithPaymentType('interledger');
 };
+
+/**
+ * Gets non-profit using the npCode
+ *
+ * ### Example (es module)
+ * ```js
+ * import { getNonProfit } from 'non-profit-donations'
+ * console.log(getNonProfit("newstorycharity"))
+ * // => {}
+ * ```
+ *
+ * ### Example (commonjs)
+ * ```js
+ * var getNonProfit = require('non-profit-donations').getNonProfit;
+ * console.log(getNonProfit("newstorycharity"))
+ * // =>   {
+    npCode: 'newstorycharity',
+    name: 'New Story',
+    email: 'team@newstorycharity.org',
+    country: 'United States',
+    website: 'https://newstorycharity.org/',
+    logo: 'https://newstorycharity.org/wp-content/themes/newstory/src/img/mark.png',
+    foundedYear: '2013',
+    description: 'New Story pioneers solutions to end global homelessness.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 11, 2021'),
+        verifier: '@uchibeke',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'xrp',
+        paymentID: 'rUKvxJHsSbQXzvfQzwrmELdwnQ2kAsH7Ge',
+      },
+    ],
+  }
+ * ```
+ *
+ * @returns A non-profit.
+ */
+export const getNonProfit = (npCode) => {
+  return nonProfits.find((np) => np.npCode === npCode);
+};

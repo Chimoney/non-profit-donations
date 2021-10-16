@@ -10,6 +10,7 @@ type PaymentMethod = {
 };
 
 export type NonProfit = {
+  readonly npCode?: string;
   readonly name: string;
   readonly website: string;
   readonly logo: string;

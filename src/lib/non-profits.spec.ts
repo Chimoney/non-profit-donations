@@ -3,6 +3,7 @@ import test from 'ava';
 import nonProfits from '../non-profits-data';
 
 import {
+  getNonProfit,
   nonProfitList,
   nonProfitsAcceptingPaymentType,
   randomNonProfit,
@@ -40,4 +41,12 @@ test('randomWithPaymentType', async (t) => {
     nonProfit.paymentMethods.find((method) => method.type === paymentType).type,
     paymentType
   );
+});
+
+test('getNonProfit', async (t) => {
+  const npCode = 'newstorycharity';
+  const nonProfit = getNonProfit(npCode);
+  t.not(typeof nonProfit, 'undefined');
+  t.not(typeof nonProfit.name, 'undefined');
+  t.is(nonProfit.npCode, npCode);
 });
