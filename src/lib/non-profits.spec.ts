@@ -16,9 +16,9 @@ test('list', async (t) => {
 
 test('randomNonProfit', async (t) => {
   const randomItem = randomNonProfit();
-  t.not(typeof randomItem?.name, 'undefined');
-  t.not(typeof randomItem?.email, 'undefined');
-  t.not(randomItem?.paymentMethods.length, 0);
+  t.not(typeof randomItem.name, 'undefined');
+  t.not(typeof randomItem.email, 'undefined');
+  t.not(randomItem.paymentMethods.length, 0);
 });
 
 test('nonProfitsAcceptingPaymentType', async (t) => {

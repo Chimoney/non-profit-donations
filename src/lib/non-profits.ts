@@ -71,7 +71,7 @@ export const randomNonProfit = (subList?: readonly NonProfit[]) => {
  */
 export const nonprofitsFromCountry = (country: string) => {
   return nonProfits.filter(
-    (org) => org.country?.toLocaleLowerCase() === country?.toLocaleLowerCase()
+    (org) => org.country.toLocaleLowerCase() === country.toLocaleLowerCase()
   );
 };
 
@@ -120,7 +120,7 @@ export const verifiedNonprofits = () => {
 export const nonProfitsAcceptingPaymentType = (paymentType: string) => {
   return nonProfits.filter((n) =>
     n.paymentMethods.find(
-      (org) => org.type === paymentType && org.paymentID?.length > 0
+      (org) => org.type === paymentType && org.paymentID.length > 0
     )
   );
 };
