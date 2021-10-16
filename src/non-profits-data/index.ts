@@ -2,6 +2,7 @@ import { NonProfit } from '../types/non-profit';
 
 const nonProfits: readonly NonProfit[] = [
   {
+    npCode: 'SheCodeAfrica',
     name: 'SheCodeAfrica',
     email: 'info@shecodeafrica.org',
     country: 'Nigeria',
@@ -53,6 +54,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'techsoupafrica',
     name: 'techsoupafrica',
     email: 'tsafrica@techsoup.org',
     country: 'Africa',
@@ -84,6 +86,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'newstorycharity',
     name: 'New Story',
     email: 'team@newstorycharity.org',
     country: 'United States',
@@ -106,6 +109,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'InternetArchive',
     name: 'Internet Archive',
     email: 'info@archive.org',
     country: 'United States',
@@ -133,6 +137,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'ArtistRescueTrust',
     name: 'Artist Rescue Trust',
     email: 'info@artistrescue.org',
     country: 'United States',
@@ -156,6 +161,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'ContractForTheWeb',
     name: 'Contract for the Web',
     email: 'contract@webfoundation.org',
     country: 'Global',
@@ -179,6 +185,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'webfoundation',
     name: 'The World Wide Web Foundation',
     email: 'contract@webfoundation.org',
     country: 'Global',
@@ -202,6 +209,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'CreativeCommons',
     name: 'Creative Commons',
     email: '',
     country: '',
@@ -224,6 +232,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'CriticalRead',
     name: 'Critical Read',
     email: '',
     country: '',
@@ -246,6 +255,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'DefoldFoundation',
     name: 'Defold Foundation',
     email: '',
     country: '',
@@ -268,6 +278,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'DesignClub',
     name: 'Design Club',
     email: '',
     country: '',
@@ -290,6 +301,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'freeCodeCamp',
     name: 'freeCodeCamp',
     email: '',
     country: '',
@@ -312,6 +324,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'DevCareers',
     name: 'DevCareers',
     email: '',
     country: '',
@@ -334,6 +347,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'LibraryFutures',
     name: 'Library Futures',
     email: '',
     country: '',
@@ -356,6 +370,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'NewspeakHouse',
     name: 'Newspeak House',
     email: '',
     country: '',
@@ -378,6 +393,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'SurveillanceTechnologyOversightProject',
     name: 'S.T.O.P. (Surveillance Technology Oversight Project)',
     email: '',
     country: '',
@@ -400,6 +416,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'TheTeacherFund',
     name: 'The Teacher Fund',
     email: '',
     country: '',
@@ -444,6 +461,7 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'Ushahidi',
     name: 'Ushahidi',
     email: '',
     country: '',
