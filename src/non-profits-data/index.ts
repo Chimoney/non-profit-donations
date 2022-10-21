@@ -372,7 +372,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://creativecommons.org/',
     logo: 'https://creativecommons.org/wp-content/themes/cc/images/cc.logo.white.svg',
     foundedYear: '2002',
-    description: 'Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.',
+    description:
+      'Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.',
     isVerified: true,
     verifications: [
       {
@@ -423,7 +424,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://criticalread.org/',
     logo: 'https://criticalread.org/wp-content/uploads/2020/07/scale_275x0x0x0_criticalrea-1461429073-51.png',
     foundedYear: '2017',
-    description: 'Critical Read is a nonprofit, non-partisan publisher dedicated to making American art and art history more inclusive and discoverable.',
+    description:
+      'Critical Read is a nonprofit, non-partisan publisher dedicated to making American art and art history more inclusive and discoverable.',
     isVerified: true,
     verifications: [
       {
@@ -474,7 +476,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://defold.com/foundation/',
     logo: 'https://defold.com/images/logo/defold/logo/logo-ver-outline-white-64.png',
     foundedYear: '2014',
-    description: 'The Defold Foundation is the owner of the free to use, source available, game engine Defold. The foundation works together with industry partners to provide developer-friendly software and services to game developers across the globe. The foundation was created in May 2020 and is registered in Stockholm, Sweden.',
+    description:
+      'The Defold Foundation is the owner of the free to use, source available, game engine Defold. The foundation works together with industry partners to provide developer-friendly software and services to game developers across the globe. The foundation was created in May 2020 and is registered in Stockholm, Sweden.',
     isVerified: true,
     verifications: [
       {
@@ -525,7 +528,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.designclub.org.uk/',
     logo: 'https://assets.website-files.com/5eefa8d10be60432e64b3709/60075ab3b7ed0e18643c81f8_logo-grey.svg',
     foundedYear: '2017',
-    description: 'Design Club is a non-profit that nurture empathy, collaboration & problem-solving skills with their free design projects.',
+    description:
+      'Design Club is a non-profit that nurture empathy, collaboration & problem-solving skills with their free design projects.',
     isVerified: true,
     verifications: [
       {
@@ -576,7 +580,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.freecodecamp.org/',
     logo: 'https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png',
     foundedYear: '2014',
-    description: 'freeCodeCamp is a non-profit organization that helps people learn to code for free by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public',
+    description:
+      'freeCodeCamp is a non-profit organization that helps people learn to code for free by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public',
     isVerified: true,
     verifications: [
       {
@@ -627,7 +632,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://devcareer.io/',
     logo: 'https://res.cloudinary.com/dctmgu7mb/image/upload/v1601332391/devLogo_ocngza.png',
     foundedYear: '2018',
-    description: 'DevCareers helps individuals who are trying to get a foothold in tech and are having problems selecting an area of programming they wish to major in and those who need tools to aid your learning',
+    description:
+      'DevCareers helps individuals who are trying to get a foothold in tech and are having problems selecting an area of programming they wish to major in and those who need tools to aid your learning',
     isVerified: true,
     verifications: [
       {
@@ -678,7 +684,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.libraryfutures.net/',
     logo: 'https://uploads-ssl.webflow.com/5f308d0beb0dcb479f2d2b7c/5f7955e0883b4dbba5fc34ee_LibraryFutures_400px.png',
     foundedYear: '2021',
-    description: 'Library Futures is one of the leading digital library policy and advocacy organizations, becoming a crucial voice in the fight for balanced digital rights in only a year.',
+    description:
+      'Library Futures is one of the leading digital library policy and advocacy organizations, becoming a crucial voice in the fight for balanced digital rights in only a year.',
     isVerified: true,
     verifications: [
       {
@@ -729,7 +736,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://newspeak.house/',
     logo: 'https://newspeak.house/assets/book-logo-black-2-3a8ce80382fd8a6cd410a3aee23c91dfa01344ec1b76659b0f5b5d9457b4ae21.png',
     foundedYear: '2015',
-    description: 'Newspeak House is an independent residential college founded in 2015 to study, nurture and inspire emerging communities of practice across civil society and the public sector in the UK',
+    description:
+      'Newspeak House is an independent residential college founded in 2015 to study, nurture and inspire emerging communities of practice across civil society and the public sector in the UK',
     isVerified: true,
     verifications: [
       {
@@ -780,7 +788,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.stopspying.org/',
     logo: 'https://images.squarespace-cdn.com/content/v1/5c1bfc7eee175995a4ceb638/a00edef0-b046-449c-8e0d-3451b020d27d/Reverse-STOP+Logo-Final.png?format=1500w',
     foundedYear: '2013',
-    description: 'S.T.O.P. fights to end discriminatory surveillance. Our team challenges both individual misconduct and broader systemic failures. We craft policies that balance new technologies and age-old rights. And we educate impacted communities on how they can protect their rights.',
+    description:
+      'S.T.O.P. fights to end discriminatory surveillance. Our team challenges both individual misconduct and broader systemic failures. We craft policies that balance new technologies and age-old rights. And we educate impacted communities on how they can protect their rights.',
     isVerified: true,
     verifications: [
       {
@@ -831,7 +840,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://theteacherfund.com/',
     logo: 'https://theteacherfund.com/images/Logo_with_text.png',
     foundedYear: '2015',
-    description: ' The Teacher Fund supports teachers in need of everything from the most basic of classroom supplies to extracurricular and after-school funding and equipment.',
+    description:
+      ' The Teacher Fund supports teachers in need of everything from the most basic of classroom supplies to extracurricular and after-school funding and equipment.',
     isVerified: true,
     verifications: [
       {
@@ -881,7 +891,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://tosdr.org/',
     logo: 'https://s3.tosdr.org/branding/tosdr-logo-128.svg',
     foundedYear: '2012',
-    description: ' ToS;DR is a young project started in June 2012 to help fix the “biggest lie on the web”: almost no one really reads the terms of service we agree to all the time.',
+    description:
+      ' ToS;DR is a young project started in June 2012 to help fix the “biggest lie on the web”: almost no one really reads the terms of service we agree to all the time.',
     isVerified: true,
     verifications: [
       {
@@ -932,7 +943,8 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.ushahidi.com/',
     logo: 'https://www.ushahidi.com/logos/ushahidi-logo-nav.svg?_cchid=01f567aad3dbc0affe45f4525eb46e8b',
     foundedYear: '2008',
-    description: 'Ushahidi is an open source software application which utilises user-generated reports to collate and map data. It uses the concept of crowdsourcing serving as an initial model for what has been coined as "activist mapping" - the combination of social activism, citizen journalism and geographic information.',
+    description:
+      'Ushahidi is an open source software application which utilises user-generated reports to collate and map data. It uses the concept of crowdsourcing serving as an initial model for what has been coined as "activist mapping" - the combination of social activism, citizen journalism and geographic information.',
     isVerified: true,
     verifications: [
       {
