@@ -211,12 +211,12 @@ const nonProfits: readonly NonProfit[] = [
   {
     npCode: 'CreativeCommons',
     name: 'Creative Commons',
-    email: '',
-    country: '',
-    website: '',
-    logo: '',
-    foundedYear: '',
-    description: '',
+    email: 'info@creativecommons.org',
+    country: 'United States',
+    website: 'creativecommons.org',
+    logo: 'https://creativecommons.org/wp-content/themes/cc/images/cc.logo.white.svg',
+    foundedYear: '2001',
+    description: 'Creative Commons make it easier for people to share their creative and academic work, as well as to access and build upon the work of others',
     isVerified: true,
     verifications: [
       {
@@ -257,12 +257,12 @@ const nonProfits: readonly NonProfit[] = [
   {
     npCode: 'DefoldFoundation',
     name: 'Defold Foundation',
-    email: '',
-    country: '',
-    website: '',
-    logo: '',
-    foundedYear: '',
-    description: '',
+    email: 'press@defold.se.',
+    country: 'Sweden',
+    website: 'https://www.defold.com',
+    logo: 'https://defold.com/images/logo/defold/logo/logo-ver-classic-white-160.png',
+    foundedYear: '2020',
+    description: ' The foundation works together with industry partners to provide developer-friendly software and services to game developers across the globe.',
     isVerified: true,
     verifications: [
       {
@@ -280,12 +280,12 @@ const nonProfits: readonly NonProfit[] = [
   {
     npCode: 'DesignClub',
     name: 'Design Club',
-    email: '',
-    country: '',
-    website: '',
-    logo: '',
-    foundedYear: '',
-    description: '',
+    email: 'hello@designclub.org.uk',
+    country: 'London',
+    website: 'http://www.designclub.org.uk/',
+    logo: 'https://assets.website-files.com/5eefa8d10be60432e64b3709/60075ab3b7ed0e18643c81f8_logo-grey.svg',
+    foundedYear: '2017',
+    description: 'Educate children to learn design thinking as a life skill',
     isVerified: true,
     verifications: [
       {
