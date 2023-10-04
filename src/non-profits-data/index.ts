@@ -51,6 +51,17 @@ const nonProfits: readonly NonProfit[] = [
         type: 'ens',
         paymentID: '',
       },
+      {
+        type: 'flutterwave',
+        paymentID: 'https://flutterwave.com/pay/shecodeafrica',
+      },
+
+      {
+        type: 'wire Transfer',
+        paymentID: '',
+      },
+      
+      
     ],
   },
   {
@@ -133,6 +144,31 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'xrp',
         paymentID: 'rGeyCsqc6vKXuyTGF39WJxmTRemoV3c97h',
+      },
+
+      {
+        type: 'Bitcoin',
+        paymentID: '1Archive1n2C579dMsAu3iC6tWzuQJz8dN',
+      },
+      {
+        type: 'Etherum',
+        paymentID: '0x1B40ed3d89fd40f875bF62A0ce79f562714d011E',
+      },
+      {
+        type: 'Filecoin',
+        paymentID: 'f1wciag5ma6bzyiighlgeehnd4f4gpfyhh6i7coei',
+      },
+      {
+        type: 'Zcash',
+        paymentID: '1t1ZmpK4QFcvyQZ3ghTgSboBW8b4HgiZHQF9',
+      },
+      {
+        type: 'Paypal',
+        paymentID: '',
+      },
+      {
+        type: 'Gpay',
+        paymentID: '',
       },
     ],
   },
