@@ -528,14 +528,14 @@ const nonProfits: readonly NonProfit[] = [
     isVerified: true,
     verifications: [
       {
-        date: new Date('Oct 11, 2021'),
-        verifier: '@uchibeke',
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
       },
     ],
     paymentMethods: [
       {
-        type: 'xrp',
-        paymentID: 'rUKvxJHsSbQXzvfQzwrmELdwnQ2kAsH7Ge',
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 0019052855 - Sterling Bank Plc 0034611000 Diamond Bank Plc Account ',
       },
     ],
   },
