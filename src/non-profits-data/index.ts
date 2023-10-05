@@ -151,7 +151,7 @@ const nonProfits: readonly NonProfit[] = [
         paymentID: '1Archive1n2C579dMsAu3iC6tWzuQJz8dN',
       },
       {
-        type: 'Etherum',
+        type: 'Eth',
         paymentID: '0x1B40ed3d89fd40f875bF62A0ce79f562714d011E',
       },
       {
