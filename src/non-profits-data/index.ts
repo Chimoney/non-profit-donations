@@ -51,6 +51,19 @@ const nonProfits: readonly NonProfit[] = [
         type: 'ens',
         paymentID: '',
       },
+      {
+        type: 'flutterwave',
+        paymentID: 'https://flutterwave.com/pay/shecodeafrica',
+        // This address was gotten from https://shecodeafrica.org/donate-partner under the card donation option.
+      },
+
+
+      {
+        type: 'wire Transfer',
+        paymentID: '',
+      },
+      
+      
     ],
   },
   {
@@ -133,6 +146,32 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'xrp',
         paymentID: 'rGeyCsqc6vKXuyTGF39WJxmTRemoV3c97h',
+      },
+
+      {
+        type: 'Bitcoin',
+        paymentID: '1Archive1n2C579dMsAu3iC6tWzuQJz8dN',
+        // All Internet Achieve addresses added by me were gotten from https://archive.org/donate/cryptocurrency/ 
+      },
+      {
+        type: 'Eth',
+        paymentID: '0x1B40ed3d89fd40f875bF62A0ce79f562714d011E',
+      },
+      {
+        type: 'Filecoin',
+        paymentID: 'f1wciag5ma6bzyiighlgeehnd4f4gpfyhh6i7coei',
+      },
+      {
+        type: 'Zcash',
+        paymentID: '1t1ZmpK4QFcvyQZ3ghTgSboBW8b4HgiZHQF9',
+      },
+      {
+        type: 'Paypal',
+        paymentID: '',
+      },
+      {
+        type: 'Gpay',
+        paymentID: '',
       },
     ],
   },
@@ -483,6 +522,171 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+
+  {
+    npCode: 'techsoupafrica',
+    name: 'techsoupafrica',
+    email: 'tsafrica@techsoup.org',
+    country: 'Africa',
+    website: 'https://www.techsoupafrica.org/',
+    logo: 'https://techsoupafrica.org/wp-content/uploads/2018/09/techsoup-africa-logo.png',
+    foundedYear: '2016',
+    description:
+      'TechSoup Africa is a regional hub of the TechSoup Global Network. The four network members that form TechSoup Africa and serve the region are local capacity-building organizations that have won awards for their accomplishments. Together, we help nonprofits in 56 African countries and territories get the resources they need to build their organizational capacity and their technology expertise. We combine the local knowledge of TechSoup Africa members with the capacity of the global network to successfully collaborate with corporations and funders worldwide.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2021'),
+        verifier: '@uchibeke',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'interledger',
+        paymentID: '',
+      },
+      {
+        type: 'mobile-money',
+        paymentID: '',
+      },
+      {
+        type: 'airtime',
+        paymentID: '',
+      },
+    ],
+  },
+  {
+    npCode: 'High-Tech Center',
+    name: 'High-Tech Center for Nigerian Women and Youths',
+    email: 'info@hightechwomen.org.ng',
+    country: 'Nigeria',
+    website: 'http://www.hightechwomen.org.ng/',
+    logo: '',
+    foundedYear: '2004',
+    description: 'To see every Nigerian Woman and Youth become ICT literate',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 0019052855 - Sterling Bank Plc 0034611000 Diamond Bank Plc Account ',
+        // This PaymentID was gotten from http://www.hightechwomen.org.ng/donate-sponsor/
+      },
+    ],
+  },
+  {
+    npCode: 'American Red Cross',
+    name: 'American Red Cross',
+    email: 'publicinformation@aspca.org',
+    country: 'United States',
+    website: 'https://www.redcross.org/',
+    logo: '',
+    foundedYear: '1881',
+    description: 'The American Red Cross prevents and alleviates human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mail',
+        paymentID: '',
+      },
+{
+        type: 'Phone',
+        paymentID: '1-800-HELP NOW (1-800-435-7669)',
+},
+{
+        type: 'Donor Advised Funds',
+        paymentID: 'https://www.redcross.org/donations/ways-to-donate/donor-advised-funds.html',
+      },
+{
+        type: 'Stocks, Wire Transfers and Mutual Funds',
+        paymentID: 'https://www.redcross.org/donations/ways-to-donate/stocks-mutual-funds.html',
+      },
+{
+        type: 'Gofundme',
+        paymentID: 'https://www.gofundme.com/f/nugck-american-red-cross/donate',
+      },
+
+    ],
+  },
+
+
+
+{
+    npCode: 'HerTechTrail',
+    name: 'HerTechTrail',
+    email: 'hertechtrail@gmail.com',
+    country: 'Nigeria',
+    website: 'https://www.hertechtrail.org/',
+    logo: '',
+    foundedYear: '2019',
+    description: 'To support and inspire women to outclass and trail in Tech careers and businesses in Africa.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Flutterwave',
+        paymentID: 'https://dashboard.flutterwave.com/donate/quro4ogcnplo',
+      },
+    ],
+  },
+
+
+
+{
+    npCode: 'ASPCA',
+    name: 'The American Society for the Prevention of Cruelty to Animals (ASPCA)',
+    email: 'publicinformation@aspca.org',
+    country: 'United States',
+    website: 'https://www.aspca.org',
+    logo: '',
+    foundedYear: '1866',
+    description: 'To provide effective means for the prevention of cruelty to animals throughout the United States.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Credit Card',
+        paymentID: '',
+      },
+{
+        type: 'Checking or savings account',
+        paymentID: '',
+      },
+{
+        type: 'Paypal',
+        paymentID: '',
+      },
+{
+        type: 'Gofundme',
+        paymentID: 'https://www.gofundme.com/f/ag9t4-aspca/donate',
+      },
+    ],
+  },
+
+
 ];
+
+
 
 export default nonProfits;

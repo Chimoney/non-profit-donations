@@ -23,6 +23,7 @@
 **Content**
 
 - [Features](#features)
+- [Payment Types](#payment types)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
@@ -37,6 +38,26 @@
 - Get a random non-profit to make an instant donation
 - Get non-profits that accept your preferred donation medium
 - And more. Please, contribute.
+
+## Payment Types
+These are the existing payment types that support.
+- Airtime
+- Bank Transfer
+- bitcoin
+- ens
+- eth
+- Filecoin
+- flutterwave
+- Gofundme
+- Gpay
+- interledger
+- Mail
+- mobile-money
+- paypal
+- pay-string
+- wire Transfer
+- xrp
+- Zcash
 
 ## Installation 🐙
 
