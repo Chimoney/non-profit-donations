@@ -54,7 +54,9 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'flutterwave',
         paymentID: 'https://flutterwave.com/pay/shecodeafrica',
+        // This address was gotten from https://shecodeafrica.org/donate-partner under the card donation option.
       },
+
 
       {
         type: 'wire Transfer',
@@ -149,6 +151,7 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'Bitcoin',
         paymentID: '1Archive1n2C579dMsAu3iC6tWzuQJz8dN',
+        // All Internet Achieve addresses added by me were gotten from https://archive.org/donate/cryptocurrency/ 
       },
       {
         type: 'Eth',
@@ -557,8 +560,8 @@ const nonProfits: readonly NonProfit[] = [
     name: 'High-Tech Center for Nigerian Women and Youths',
     email: 'info@hightechwomen.org.ng',
     country: 'Nigeria',
-    website: 'https://newstorycharity.org/',
-    logo: 'https://newstorycharity.org/wp-content/themes/newstory/src/img/mark.png',
+    website: 'http://www.hightechwomen.org.ng/',
+    logo: '',
     foundedYear: '2004',
     description: 'To see every Nigerian Woman and Youth become ICT literate',
     isVerified: true,
@@ -572,6 +575,7 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'Bank tranfer',
         paymentID: 'Account No: 0019052855 - Sterling Bank Plc 0034611000 Diamond Bank Plc Account ',
+        // This PaymentID was gotten from http://www.hightechwomen.org.ng/donate-sponsor/
       },
     ],
   },

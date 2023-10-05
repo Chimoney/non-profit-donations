@@ -51,15 +51,13 @@ These are the existing payment types that support.
 - Gofundme
 - Gpay
 - interledger
+- Mail
 - mobile-money
 - paypal
 - pay-string
 - wire Transfer
 - xrp
 - Zcash
-- new-type 1
-- new-type 2
-- new-type3
 
 ## Installation 🐙
 
