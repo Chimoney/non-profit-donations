@@ -117,7 +117,9 @@ const NonProfitDialog = ({
                 <Typography variant="h6">Donation Methods</Typography>
                 <List>
                   {nonProfit.paymentMethods
-                    .filter((method) => getPaymentID(method))
+                    .filter(
+                      (method) => method.paymentID && getPaymentID(method)
+                    )
                     .map((method, index) => (
                       <DonationForm
                         key={method.type}

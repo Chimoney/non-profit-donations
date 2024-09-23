@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { handlers } from 'non-profit-donations';
 import { useState } from 'react';
 
-
 const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const router = useRouter();
   const [donationAmount, setDonationAmount] = useState('');
@@ -17,6 +16,18 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const useTestPaymentID = router.query.useTestPaymentID;
 
   const handleDonateClick = async (paymentID) => {
+    paymentID =
+      typeof paymentID === 'string' && paymentID.length > 0
+        ? paymentID
+        : method?.paymentID;
+    console.log('paymentID', paymentID);
+    const walletID =
+      paymentID && paymentID.test
+        ? useTestPaymentID
+          ? paymentID.test
+          : paymentID.production
+        : paymentID;
+
     if (method.type !== 'chimoney') {
       try {
         await navigator.clipboard.writeText(paymentID);
@@ -60,12 +71,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
             payerEmail,
             redirect_url: `${window.location.origin}/donation-success`,
             useTestPaymentID,
-            walletID:
-              paymentID && paymentID.test
-                ? useTestPaymentID
-                  ? paymentID.test
-                  : paymentID.production
-                : paymentID,
+            walletID,
           }),
         });
 

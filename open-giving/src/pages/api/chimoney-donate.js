@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       amount,
       currency = 'USD',
       payerEmail,
-      walletID,
+      walletID: walletIDFromBody,
       redirect_url,
       useTestPaymentID,
     } = req.body;
@@ -15,6 +15,13 @@ export default async function handler(req, res) {
     const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
 
     try {
+      const walletID =
+        useTestPaymentID && typeof walletIDFromBody?.test !== 'undefined'
+          ? walletIDFromBody?.test
+          : typeof walletIDFromBody?.production !== 'undefined'
+          ? walletIDFromBody?.production
+          : walletIDFromBody;
+
       if (!walletID) {
         res.status(400).json({
           error: `Wallet ID is not set for this Organization in ${
