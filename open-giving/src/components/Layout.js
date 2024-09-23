@@ -4,6 +4,8 @@ import { Box, Button, Container, IconButton } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
 
+import TestModeSwitcher from './TestModeSwitcher';
+
 const Layout = ({ children, plain = false }) => {
   const theme = useTheme();
 
@@ -45,13 +47,14 @@ const Layout = ({ children, plain = false }) => {
             startIcon={<LockIcon sx={{ width: '0.5em' }} color="success" />}
             style={{
               color: theme.palette.common.black,
-              margin: 'auto',
+              margin: '0',
               position: 'fixed',
               left: 0,
               bottom: 0,
               width: '100%',
               background: theme.palette.background.paper,
               zIndex: '1000000',
+              borderRadius: '0',
             }}
             fullWidth
           >
@@ -59,6 +62,7 @@ const Layout = ({ children, plain = false }) => {
           </Button>
         </Container>
       )}
+      <TestModeSwitcher />
     </Box>
   );
 };
