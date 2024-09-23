@@ -34,7 +34,7 @@ test('nonProfitsAcceptingPaymentType', async (t) => {
 });
 
 test('randomWithPaymentType', async (t) => {
-  const paymentType = 'xrp';
+  const paymentType = 'chimoney';
   const nonProfit = randomWithPaymentType(paymentType);
   t.not(typeof nonProfit, 'undefined');
   t.is(
