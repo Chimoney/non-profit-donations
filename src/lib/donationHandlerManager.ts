@@ -2,7 +2,7 @@ import { DonationHandler } from '../types/donation-handler';
 
 import defaultDonationHandlers from './defaultDonationHandlers';
 
-const handlers: Record<string, DonationHandler> = {
+export const handlers: Record<string, DonationHandler> = {
   ...defaultDonationHandlers,
 };
 
@@ -14,5 +14,3 @@ export function registerHandler(type: string, handler: DonationHandler) {
 export function getHandler(type: string): DonationHandler | undefined {
   return handlers[type];
 }
-
-// Remove the class and the donationHandlerManager instance

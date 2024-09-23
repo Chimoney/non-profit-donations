@@ -3,7 +3,7 @@ import PaymentWidget from 'chimoney-payment-widget';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-import donationHandlers from '../../../build/main/lib/donationHandlers';
+import { handlers } from 'non-profit-donations';
 
 const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const router = useRouter();
@@ -79,8 +79,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
 
         openPaymentWidget(result.data.paymentLink);
       } else {
-        const handler =
-          donationHandlers[method.donationHandler || 'copyToClipboard'];
+        const handler = handlers[method.donationHandler || 'copyToClipboard'];
         if (handler) {
           const result = await handler(method, {
             amount: donationAmount,

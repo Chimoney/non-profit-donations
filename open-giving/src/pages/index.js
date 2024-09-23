@@ -1,8 +1,8 @@
 import { Box, Container, Pagination, Snackbar } from '@mui/material';
 import { useRouter } from 'next/router';
+import { verifiedNonprofits } from 'non-profit-donations';
 import React, { useEffect, useState } from 'react';
 
-import { verifiedNonprofits } from '../../../build/main/index';
 import FilterAccordion from '../components/FilterAccordion';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
