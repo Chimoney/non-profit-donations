@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { Box, Container, Pagination, Snackbar } from '@mui/material';
 import { useRouter } from 'next/router';
-import { Container, Snackbar, Box, Pagination } from '@mui/material';
-import Layout from '../components/Layout';
-import Header from '../components/Header';
-import FilterAccordion from '../components/FilterAccordion';
-import NonProfitGrid from '../components/NonProfitGrid';
-import NonProfitDialog from '../components/NonProfitDialog';
+import React, { useEffect, useState } from 'react';
+
 import { verifiedNonprofits } from '../../../build/main/index';
+import FilterAccordion from '../components/FilterAccordion';
+import Header from '../components/Header';
+import Layout from '../components/Layout';
+import NonProfitDialog from '../components/NonProfitDialog';
+import NonProfitGrid from '../components/NonProfitGrid';
 import { PAYMENT_METHODS } from '../utils/paymentMethods';
 
 const ITEMS_PER_PAGE = 9;
@@ -26,7 +27,7 @@ export default function Home() {
     const allNonProfits = verifiedNonprofits();
     setNonProfits(allNonProfits);
 
-    const { paymentMethod, page, npCode } = router.query;
+    const { paymentMethod, npCode } = router.query;
     if (paymentMethod) {
       const methods = paymentMethod.split(',');
       setSelectedPaymentMethods(methods);

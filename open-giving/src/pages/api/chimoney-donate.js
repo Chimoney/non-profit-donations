@@ -49,7 +49,9 @@ export default async function handler(req, res) {
       if (response.ok) {
         res.status(200).json(data);
       } else {
-        throw new Error(data.message || 'Failed to initiate Chimoney donation');
+        res.status(500).json({
+          error: data.message || 'Failed to initiate Chimoney donation',
+        });
       }
     } catch (error) {
       console.error('Chimoney donation failed:', error);

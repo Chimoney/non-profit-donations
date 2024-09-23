@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import LinkIcon from '@mui/icons-material/Link';
+import PaymentIcon from '@mui/icons-material/Payment';
 import {
-  ListItem,
-  ListItemText,
-  IconButton,
-  Typography,
-  Link,
   Accordion,
-  AccordionSummary,
   AccordionDetails,
+  AccordionSummary,
   Box,
-  TextField,
   Button,
   CircularProgress,
+  Link,
+  ListItem,
+  ListItemText,
+  TextField,
+  Typography,
 } from '@mui/material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import PaymentIcon from '@mui/icons-material/Payment';
-import LinkIcon from '@mui/icons-material/Link';
-import { formatPaymentMethodName } from '../utils/paymentMethods';
+import React from 'react';
+
 import useDonation from '../hooks/useDonation';
+import { formatPaymentMethodName } from '../utils/paymentMethods';
 
 const DonationForm = ({
   method,

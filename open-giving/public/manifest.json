@@ -1,7 +1,7 @@
 {
-    "name": "Chimoney UPA",
+    "name": "Chimoney Open Giving",
     "short_name": "Chimoney App",
-    "description": "Chimoney Universal Payment Application",
+    "description": "Donate to Verified Non-Profits",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

@@ -1,22 +1,23 @@
-import React, { useState } from 'react';
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Typography,
-  Grid,
-  Box,
-  Chip,
-  Link,
-  Divider,
-  List,
-} from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import LanguageIcon from '@mui/icons-material/Language';
 import EmailIcon from '@mui/icons-material/Email';
+import LanguageIcon from '@mui/icons-material/Language';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import {
+  Box,
+  Button,
+  Chip,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  Grid,
+  Link,
+  List,
+  Typography,
+} from '@mui/material';
+import React, { useState } from 'react';
+
 import DonationForm from './DonationForm';
 
 const NonProfitDialog = ({

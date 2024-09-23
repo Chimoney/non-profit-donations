@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { Box, Button, Container, Paper, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+
 import Layout from '../components/Layout';
 
 const DonationSuccess = () => {
@@ -30,7 +31,7 @@ const DonationSuccess = () => {
   };
 
   return (
-    <Layout>
+    <Layout plain={true}>
       <Container maxWidth="sm">
         <Box sx={{ mt: 8, mb: 4 }}>
           <Paper elevation={3} sx={{ p: 4, textAlign: 'center' }}>

@@ -7,6 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 import React from 'react';
+
 import QRCodeComponent from './QRCodeComponent';
 
 export default function NonProfitCard({ nonProfit, onLearnMore, showQRCode }) {
@@ -85,7 +86,14 @@ export default function NonProfitCard({ nonProfit, onLearnMore, showQRCode }) {
           />
         </Box>
       ) : (
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: '20px' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'right',
+            mb: '20px',
+            mr: '30px',
+          }}
+        >
           {hasValidPaymentMethods && (
             <Button
               size="small"

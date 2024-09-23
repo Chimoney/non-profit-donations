@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 
 const dev = process.env.NODE_ENV == 'development';
 
-const UPA = () => {
+const Footer = () => {
   const theme = useTheme();
   return (
     <div style={{ textAlign: 'center', paddingBottom: '60px' }}>
@@ -50,4 +50,4 @@ const UPA = () => {
   );
 };
 
-export default UPA;
+export default Footer;

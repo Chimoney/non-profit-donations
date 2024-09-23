@@ -1,5 +1,6 @@
-import React from 'react';
 import { Grid } from '@mui/material';
+import React from 'react';
+
 import NonProfitCard from './NonProfitCard';
 
 const NonProfitGrid = ({ nonProfits, onOpenDialog, showQRCode }) => (
