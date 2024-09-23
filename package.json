@@ -1,6 +1,6 @@
 {
   "name": "non-profit-donations",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Support non-profits globally. Get the details of verified non profits to support",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",

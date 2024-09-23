@@ -27,6 +27,7 @@ const NonProfitDialog = ({
   setSnackbarMessage,
   setSnackbarOpen,
   defaultLogo,
+  useTestPaymentID,
 }) => {
   const [dialogImgSrc, setDialogImgSrc] = useState(
     nonProfit?.logo || defaultLogo
@@ -37,6 +38,18 @@ const NonProfitDialog = ({
   };
 
   if (!nonProfit) return null;
+  const getPaymentID = (method) => {
+    if (!method.paymentID) {
+      return true;
+    }
+    if (typeof method.paymentID !== 'string' || method.paymentID.length > 0) {
+      return true;
+    }
+    if (typeof method.paymentID === 'object') {
+      return method.paymentID[useTestPaymentID ? 'test' : 'production'];
+    }
+    return method.paymentID;
+  };
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
@@ -104,12 +117,7 @@ const NonProfitDialog = ({
                 <Typography variant="h6">Donation Methods</Typography>
                 <List>
                   {nonProfit.paymentMethods
-                    .filter(
-                      (method) =>
-                        method.paymentID &&
-                        (typeof method.paymentID !== 'string' ||
-                          method.paymentID.length > 0)
-                    )
+                    .filter((method) => getPaymentID(method))
                     .map((method, index) => (
                       <DonationForm
                         key={method.type}
@@ -117,6 +125,7 @@ const NonProfitDialog = ({
                         index={index}
                         setSnackbarMessage={setSnackbarMessage}
                         setSnackbarOpen={setSnackbarOpen}
+                        useTestPaymentID={useTestPaymentID}
                       />
                     ))}
                 </List>

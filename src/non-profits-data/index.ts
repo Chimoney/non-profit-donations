@@ -143,7 +143,7 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'chimoney',
         paymentID: {
-          test: '',
+          test: '69b9MVYsDMIWRbj5Oja5',
           production: 'CoEp7GHW62Q2nQ6PbO8i',
         },
         donationHandler: 'chimoneyDonation',
