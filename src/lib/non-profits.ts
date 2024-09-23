@@ -120,7 +120,7 @@ export const verifiedNonprofits = () => {
 export const nonProfitsAcceptingPaymentType = (paymentType: string) => {
   return nonProfits.filter((n) =>
     n.paymentMethods.find(
-      (org) => org.type === paymentType && org.paymentID.length > 0
+      (org) => org.type === paymentType && typeof org.paymentID !== 'undefined'
     )
   );
 };
