@@ -35,7 +35,7 @@ const ContactForm = () => {
         body: JSON.stringify({
           email,
           message,
-          notificationContext: "UPA Contact Form"
+          notificationContext: "Contact Form"
         })
       }
     );

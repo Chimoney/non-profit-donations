@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import PaymentWidget from 'chimoney-payment-widget';
 import { useTheme } from '@mui/material/styles';
+import PaymentWidget from 'chimoney-payment-widget';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+
 import donationHandlers from '../../../build/main/lib/donationHandlers';
 
 const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
@@ -61,7 +62,12 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
         });
 
         if (!response.ok) {
-          throw new Error('Failed to initiate Chimoney donation');
+          setSnackbarMessage(
+            'Error processing donation: ' +
+              'Failed to initiate Chimoney donation'
+          );
+          setSnackbarOpen(true);
+          return;
         }
 
         const result = await response.json();
@@ -84,7 +90,12 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
           setSnackbarOpen(true);
           console.log(`Donation result:`, result);
         } else {
-          throw new Error(`No handler found for ${method.type}`);
+          setSnackbarMessage(
+            'Error processing donation: ' +
+              `No handler found for ${method.type}`
+          );
+          setSnackbarOpen(true);
+          return;
         }
       }
     } catch (error) {

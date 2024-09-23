@@ -1,9 +1,9 @@
 import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import { QRCodeSVG } from 'qrcode.react';
 import React from 'react';
 
-import { QRCodeSVG } from 'qrcode.react';
 
-import { Box } from '@mui/material';
 
 const QRCodeComponent = ({ link, cta }) => {
   return (

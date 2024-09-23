@@ -21,10 +21,6 @@ const theme = {
       main: '#9370DB',
       contrastText: '#fff',
     },
-    common: {
-      black: '#000',
-      white: '#fff',
-    },
     // accent: {
     //   ...accent
     // },
@@ -36,12 +32,6 @@ const theme = {
     },
     text: {
       primary: '#8A2BE2',
-    },
-  },
-  typography: {
-    fontFamily: font,
-    button: {
-      textTransform: 'none',
     },
   },
   overrides: {
@@ -102,6 +92,7 @@ const theme = {
     },
   },
   typography: {
+    fontFamily: font,
     // fontFamily: font,
     button: {
       textTransform: 'none',
