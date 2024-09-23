@@ -3,7 +3,12 @@ import React from 'react';
 
 import NonProfitCard from './NonProfitCard';
 
-const NonProfitGrid = ({ nonProfits, onOpenDialog, showQRCode }) => (
+const NonProfitGrid = ({
+  nonProfits,
+  onOpenDialog,
+  showQRCode,
+  useTestPaymentID,
+}) => (
   <Grid container spacing={3}>
     {nonProfits.map((nonProfit) => (
       <Grid
@@ -18,6 +23,7 @@ const NonProfitGrid = ({ nonProfits, onOpenDialog, showQRCode }) => (
           nonProfit={nonProfit}
           onLearnMore={() => onOpenDialog(nonProfit)}
           showQRCode={showQRCode}
+          useTestPaymentID={useTestPaymentID}
         />
       </Grid>
     ))}

@@ -1,9 +1,9 @@
 import { useTheme } from '@mui/material/styles';
 import PaymentWidget from 'chimoney-payment-widget';
 import { useRouter } from 'next/router';
+import { handlers } from 'non-profit-donations';
 import { useState } from 'react';
 
-import { handlers } from 'non-profit-donations';
 
 const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const router = useRouter();
@@ -14,6 +14,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const [paymentAmount, setPaymentAmount] = useState(null);
   const [paymentCurrency, setPaymentCurrency] = useState(null);
   const theme = useTheme();
+  const useTestPaymentID = router.query.useTestPaymentID;
 
   const handleDonateClick = async (paymentID) => {
     if (method.type !== 'chimoney') {
@@ -58,19 +59,26 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
             currency: 'USD',
             payerEmail,
             redirect_url: `${window.location.origin}/donation-success`,
+            useTestPaymentID,
+            walletID:
+              paymentID && paymentID.test
+                ? useTestPaymentID
+                  ? paymentID.test
+                  : paymentID.production
+                : paymentID,
           }),
         });
 
+        const result = await response.json();
         if (!response.ok) {
           setSnackbarMessage(
-            'Error processing donation: ' +
+            'Error processing donation: ' + result.error ||
               'Failed to initiate Chimoney donation'
           );
           setSnackbarOpen(true);
           return;
         }
 
-        const result = await response.json();
         console.log('Chimoney donation initiated:', result);
 
         setPaymentLink(result.data.paymentLink);

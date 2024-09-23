@@ -25,6 +25,7 @@ const DonationForm = ({
   index,
   setSnackbarMessage,
   setSnackbarOpen,
+  useTestPaymentID,
 }) => {
   const {
     donationAmount,
@@ -61,6 +62,12 @@ const DonationForm = ({
   };
 
   const formattedMethodName = formatPaymentMethodName(method.type);
+  const formattedPaymentID =
+    method.paymentID && typeof method.paymentID !== 'undefined'
+      ? useTestPaymentID
+        ? method.paymentID.test
+        : method.paymentID.production
+      : method.paymentID;
 
   if (method.type === 'donation-link') {
     return (
@@ -88,13 +95,13 @@ const DonationForm = ({
           }
           secondary={
             <Link
-              href={method.paymentID}
+              href={formattedPaymentID}
               target="_blank"
               rel="noopener noreferrer"
               display="flex"
               alignItems="center"
             >
-              {method.paymentID}
+              {formattedPaymentID}
             </Link>
           }
         />
@@ -128,6 +135,9 @@ const DonationForm = ({
               handleDonateClick();
             }}
           >
+            <Typography variant="caption" color="textSecondary">
+              Will be deposited to {formattedPaymentID}.
+            </Typography>
             <TextField
               label="Amount"
               type="number"
@@ -197,7 +207,7 @@ const DonationForm = ({
                 alignItems: 'center',
                 cursor: 'pointer',
               }}
-              onClick={() => handleDonateClick(method.paymentID)}
+              onClick={() => handleDonateClick(formattedPaymentID)}
             >
               <span
                 style={{
@@ -214,7 +224,7 @@ const DonationForm = ({
           }
           secondary={
             <Typography display="flex" alignItems="center">
-              {method.paymentID}
+              {formattedPaymentID}
             </Typography>
           }
         />
@@ -228,7 +238,7 @@ const DonationForm = ({
         primary={
           <Typography
             style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
-            onClick={() => handleDonateClick(method.paymentID)}
+            onClick={() => handleDonateClick(formattedPaymentID)}
           >
             <span
               style={{
@@ -245,7 +255,7 @@ const DonationForm = ({
         }
         secondary={
           <Typography display="flex" alignItems="center">
-            {method.paymentID}
+            {formattedPaymentID}
           </Typography>
         }
       />

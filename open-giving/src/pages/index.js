@@ -126,6 +126,7 @@ export default function Home() {
           nonProfits={paginatedNonProfits}
           onOpenDialog={handleOpenDialog}
           showQRCode={router.query.showQRCode}
+          useTestPaymentID={router.query.useTestPaymentID}
         />
         {filteredNonProfits.length > ITEMS_PER_PAGE && (
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
@@ -146,6 +147,7 @@ export default function Home() {
             setSnackbarMessage={setSnackbarMessage}
             setSnackbarOpen={setSnackbarOpen}
             defaultLogo={defaultLogo}
+            useTestPaymentID={router.query.useTestPaymentID}
           />
         )}
       </Container>

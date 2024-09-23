@@ -3,8 +3,6 @@ import { Box } from '@mui/material';
 import { QRCodeSVG } from 'qrcode.react';
 import React from 'react';
 
-
-
 const QRCodeComponent = ({ link, cta }) => {
   return (
     <Box marginBottom={2}>
@@ -17,11 +15,7 @@ const QRCodeComponent = ({ link, cta }) => {
         alignItems="center"
         height="100%"
       >
-        <QRCodeSVG
-          value={'https://www.google.com'}
-          bgColor="inherit"
-          fgColor="white"
-        />
+        <QRCodeSVG value={link} bgColor="inherit" fgColor="white" />
       </Box>
     </Box>
   );

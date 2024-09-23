@@ -1,13 +1,6 @@
 export default async function handler(req, res) {
   const dev = process.env.NODE_ENV == 'development';
 
-  const server = dev
-    ? 'http://localhost:4600/v0.2'
-    : process.env.STRIPE_DOMAIN?.includes('sandbox.chimoney.io')
-    ? 'https://api-v2-sandbox.chimoney.io/v0.2'
-    : 'https://api.chimoney.io/v0.2';
-  console.log({ dev, server });
-
   if (req.method === 'POST') {
     console.log({ body: req.body });
     const {
@@ -16,14 +9,34 @@ export default async function handler(req, res) {
       payerEmail,
       walletID,
       redirect_url,
+      useTestPaymentID,
     } = req.body;
     const apiKEY = process.env.CHIMONEY_API_SECRET;
+    const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
 
     try {
+      if (!walletID) {
+        res.status(400).json({
+          error: `Wallet ID is not set for this Organization in ${
+            useTestPaymentID ? 'Test' : 'Production'
+          } mode`,
+        });
+        return;
+      }
+      const server = dev
+        ? 'http://localhost:4600/v0.2'
+        : process.env.STRIPE_DOMAIN?.includes('sandbox.chimoney.io') ||
+          useTestPaymentID
+        ? 'https://api-v2-sandbox.chimoney.io/v0.2'
+        : 'https://api.chimoney.io/v0.2';
+
       const headers = {
         accept: 'application/json',
         'content-type': 'application/json',
-        'X-api-key': apiKEY,
+        'X-api-key':
+          useTestPaymentID && typeof apiKEYTest !== 'undefined'
+            ? apiKEYTest
+            : apiKEY,
       };
       const config = {
         method: 'POST',

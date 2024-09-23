@@ -82,7 +82,7 @@ export default function NonProfitCard({ nonProfit, onLearnMore, showQRCode }) {
         <Box mt={2}>
           <QRCodeComponent
             link={generateQRCodeLink(nonProfit.npCode)}
-            cta={'Scan me to Donate'}
+            cta={'Scan to Donate'}
           />
         </Box>
       ) : (
