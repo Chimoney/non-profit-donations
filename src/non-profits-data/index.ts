@@ -690,8 +690,6 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
-
-
   {
     npCode: 'ChessInSlumsAfrica',
     name: 'Chess in Slums Africa',
@@ -755,14 +753,14 @@ const nonProfits: readonly NonProfit[] = [
     ]
   },
   {
-    npCode: 'cece_yara',
+    npCode: 'CeceYara',
     name: 'Cece Yara Child Advocacy Centre',
-    email: 'fidanigeria@yahoo.com',
+    email: 'info@ceceyara.org',
     country: 'Nigeria',
-    website: 'https://fida.org.ng/',
-    logo: 'https://shorturl.at/yPEnK',
+    website: 'https://ceceyara.org/',
+    logo: 'https://shorturl.at/7F87l',
     foundedYear: '2016',
-    description: 'FIDA Nigeria’s primary role is to protect, promote and preserve the rights of women and children in Nigeria.',
+    description: 'The Cece Yara Foundation is a child-centered non-profit organization established in 2016 to prevent child sexual abuse and to provide access to care, information, protection and emergency intervention.',
     isVerified: true,
     verifications: [
       {
@@ -773,7 +771,7 @@ const nonProfits: readonly NonProfit[] = [
     paymentMethods: [
       {
         type: 'donation-link',
-        paymentID: 'https://paystack.com/pay/fida_donate',
+        paymentID: 'https://ceceyara.org/donation/',
       },
       {
         type: 'chimoney',
@@ -785,8 +783,6 @@ const nonProfits: readonly NonProfit[] = [
       }
     ]
   }
-
-
 ];
 
 export default nonProfits;
