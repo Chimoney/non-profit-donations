@@ -2,7 +2,6 @@ export default async function handler(req, res) {
   const dev = process.env.NODE_ENV == 'development';
 
   if (req.method === 'POST') {
-    console.log({ body: req.body });
     const {
       amount,
       currency = 'USD',
@@ -61,7 +60,6 @@ export default async function handler(req, res) {
           },
         }),
       };
-
       const response = await fetch(`${server}/payment/initiate`, config);
 
       const data = await response.json();
