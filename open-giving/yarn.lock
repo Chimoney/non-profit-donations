@@ -1076,10 +1076,10 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chimoney-payment-widget@^0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/chimoney-payment-widget/-/chimoney-payment-widget-0.0.28.tgz#889b42b47e0ab239110e3aa43afe782b5e112195"
-  integrity sha512-ptt9Sp3gks/WCSrTkSiluXeUuIEbDVgrUE2SyvoT3udjL/bhFFA1E38LJvZugzklEDZDwmwqL5vt901+Z33OdQ==
+chimoney-payment-widget@^0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/chimoney-payment-widget/-/chimoney-payment-widget-0.0.30.tgz#177c6e565a572352f7df37aa28eabc4d82644792"
+  integrity sha512-oFKIWXmAScnk8SQRXzHssYbJK4pJfKrQwlKZdSb1jNgvD5gsiC3+3eWR8cgRtSmiPbgBsO2606bF6hAGuY/gbw==
 
 cli-cursor@^3.1.0:
   version "3.1.0"
