@@ -2,6 +2,34 @@ import { NonProfit } from '../types/non-profit';
 
 const nonProfits: readonly NonProfit[] = [
   {
+    npCode: 'Gamble Alert',
+    name: 'Gamble Alert',
+    email: 'info@gamblealert.org',
+    country: 'Nigeria',
+    website: 'https://gamblealert.org/',
+    logo: 'https://gamblealert.org/wp-content/uploads/2023/11/cropped-logo.png',
+    foundedYear: '2021',
+    description:
+      "Awareness on Gambling Risk Initiative (Gamble Alert) is a nonprofit dedicated to the prevention of gambling harm, and the provision of support for persons adversely affected by their gambling or that of their significant others.Gamble Alert also works to sensitize the youths on internet safety and protect them from risks associated with the use of the internet, including in-game bullying, online grooming, and gaming/gambling addiction.",
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 10, 2024'),
+        verifier: '@HammedBabatunde',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '8aGbJOS5GJsXfezsxhHV',
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
     npCode: 'Renbi Women',
     name: 'Renbi Women',
     email: 'info@renbiwomen.org',
