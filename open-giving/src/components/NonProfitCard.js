@@ -31,8 +31,8 @@ export default function NonProfitCard({ nonProfit, onLearnMore, showQRCode }) {
 
   return (
     <Card
-      sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-      elevation={2}
+    sx={{ height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease, box-shadow 0.3s ease', '&:hover': { transform: 'translateY(-8px)', boxShadow: 6 }}}
+    elevation={2}
     >
       <CardMedia
         component="div"
