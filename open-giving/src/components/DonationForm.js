@@ -2,6 +2,7 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import LinkIcon from '@mui/icons-material/Link';
 import PaymentIcon from '@mui/icons-material/Payment';
+import WalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import {
   Accordion,
   AccordionDetails,
@@ -15,13 +16,18 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import Web3 from "web3";
 
 import useDonation from '../hooks/useDonation';
 import { formatPaymentMethodName } from '../utils/paymentMethods';
 
 const DonationForm = React.memo(
   ({ method, index, setSnackbarMessage, setSnackbarOpen }) => {
+    const [account, setAccount] = useState(null);
+    const [isConnected, setIsConnected] = useState(false);
+
     const {
       donationAmount,
       setDonationAmount,
@@ -51,12 +57,68 @@ const DonationForm = React.memo(
           return <PaymentIcon fontSize="small" />;
         case 'donation-link':
           return <LinkIcon fontSize="small" />;
+        case 'wallet-connect':
+          return <WalletIcon fontSize="small" />; // Icon for WalletConnect
         default:
           return <CardGiftcardIcon fontSize="small" />;
       }
     };
 
     const formattedMethodName = formatPaymentMethodName(method.type);
+
+
+    const connectWalletConnect = async () => {
+      const provider = new WalletConnectProvider({
+        rpc: {
+          1: "https://cloudflare-eth.com/",
+          137: "https://polygon-rpc.com/",
+        },
+      });
+      await provider.enable();
+      const web3 = new Web3(provider);
+      const accounts = await web3.eth.getAccounts();
+      setAccount(accounts[0]);
+      setIsConnected(true);
+    };
+
+    if (method.type === 'wallet-connect') {
+      return (
+        <Accordion key={method.type} elevation={0}>
+          <AccordionSummary>
+            <Typography style={{ display: 'flex', alignItems: 'center' }}>
+              <span
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginRight: '5px',
+                  fontWeight: '600',
+                }}
+              >
+                {index + 1}. {formattedMethodName}
+              </span>
+              {getIcon(method.type)}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Box>
+              {!isConnected ? (
+                <Button
+                  variant="contained"
+                  onClick={connectWalletConnect}
+                  fullWidth
+                >
+                  Connect Wallet
+                </Button>
+              ) : (
+                <Typography>
+                  Wallet Connected: {account}
+                </Typography>
+              )}
+            </Box>
+          </AccordionDetails>
+        </Accordion>
+      );
+    }
 
     if (method.type === 'donation-link') {
       return (
