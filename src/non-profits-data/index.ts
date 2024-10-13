@@ -36,6 +36,37 @@ const nonProfits: readonly NonProfit[] = [
     ],
   },
   {
+    npCode: 'Akili Dada',
+    name: 'Akili Dada',
+    email: 'info@akilidada.org',
+    country: 'Kenya',
+    website: 'https://akilidada.org',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDuBgEDvEPkpD0u-LTtO0lYKhuyJdsQ3RIg&s',
+    foundedYear: '2005',
+    description: 'Akili Dada is an international leadership incubator aimed at empowering high-achieving young women from underprivileged backgrounds',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-13'),
+        verifier: '@Codegirl254',
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://akilidada.org/how-to-support.html',
+      },
+      // {
+      //   type: 'chimoney',
+      //   paymentID: {
+      //     test: '',
+      //     production: 'uniqueChimoneyID', //if present
+      //   },
+      //   donationHandler: 'chimoneyDonation',
+      // }
+    ],
+},
+  {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
     email: 'info@shecodeafrica.org',
