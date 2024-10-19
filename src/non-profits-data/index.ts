@@ -724,6 +724,260 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+  {
+    npCode: 'InternetSociety',
+    name: 'Internet Society',
+    email: 'donate@isoc.org',
+    country: 'Global',
+    website: 'https://www.internetsociety.org/',
+    logo: 'https://www.internetsociety.org/wp-content/themes/isoc/images/logo.svg',
+    foundedYear: '1992',
+    description:
+      'The Internet Society is a global nonprofit organization advocating for an open, globally connected, and secure Internet, empowering people worldwide to shape the Internet’s future.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Sept 19, 2024'),
+        verifier: '@uchibeke',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.internetsociety.org/donate/',
+      },
+    ],
+  },
+  {
+    npCode: 'CRY01',
+    name: 'CRY - Child Rights and You',
+    email: 'support@cry.org',
+    country: 'India',
+    website: 'https://www.cry.org',
+    logo: 'https://www.cry.org/images/cry-logo.png',
+    foundedYear: '1979',
+    description: 'CRY works towards ensuring children\'s rights to education, health, and protection from abuse and exploitation.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.cry.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'GDS02',
+    name: 'Goonj',
+    email: 'contact@goonj.org',
+    country: 'India',
+    website: 'https://www.goonj.org',
+    logo: 'https://www.goonj.org/images/goonj-logo.png',
+    foundedYear: '1999',
+    description: 'Goonj addresses basic needs of people in rural India by upcycling urban waste into resources for development work.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.goonj.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'PRJ03',
+    name: 'Pratham',
+    email: 'info@pratham.org',
+    country: 'India',
+    website: 'https://www.pratham.org',
+    logo: 'https://www.pratham.org/images/pratham-logo.png',
+    foundedYear: '1994',
+    description: 'Pratham focuses on improving the quality of education for underprivileged children across India.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.pratham.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'SMJ04',
+    name: 'Smile Foundation',
+    email: 'donor@smilefoundationindia.org',
+    country: 'India',
+    website: 'https://www.smilefoundationindia.org',
+    logo: 'https://www.smilefoundationindia.org/images/smile-logo.png',
+    foundedYear: '2002',
+    description: 'Smile Foundation works to improve the lives of underprivileged children, youth, and women through education, healthcare, and livelihood programs.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.smilefoundationindia.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'HEF05',
+    name: 'HelpAge India',
+    email: 'info@helpageindia.org',
+    country: 'India',
+    website: 'https://www.helpageindia.org',
+    logo: 'https://www.helpageindia.org/images/helpage-logo.png',
+    foundedYear: '1978',
+    description: 'HelpAge India advocates for the needs of the elderly and supports healthcare, livelihood, and pension programs for senior citizens.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.helpageindia.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'AKSH06',
+    name: 'Akshaya Patra Foundation',
+    email: 'info@akshayapatra.org',
+    country: 'India',
+    website: 'https://www.akshayapatra.org',
+    logo: 'https://www.akshayapatra.org/images/akshaya-logo.png',
+    foundedYear: '2000',
+    description: 'Akshaya Patra runs mid-day meal programs across India to provide nutritious meals to school children.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.akshayapatra.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'OXF07',
+    name: 'Oxfam India',
+    email: 'info@oxfamindia.org',
+    country: 'India',
+    website: 'https://www.oxfamindia.org',
+    logo: 'https://www.oxfamindia.org/images/oxfam-logo.png',
+    foundedYear: '2008',
+    description: 'Oxfam India works on reducing inequality, poverty, and injustice by empowering marginalized communities.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.oxfamindia.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'WWF08',
+    name: 'WWF India',
+    email: 'info@wwfindia.org',
+    country: 'India',
+    website: 'https://www.wwfindia.org',
+    logo: 'https://www.wwfindia.org/images/wwf-logo.png',
+    foundedYear: '1969',
+    description: 'WWF India works on conservation of wildlife and habitats, with a focus on endangered species, ecosystems, and climate action.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.wwfindia.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'SDS09',
+    name: 'SNEHA',
+    email: 'contact@snehamumbai.org',
+    country: 'India',
+    website: 'https://www.snehamumbai.org',
+    logo: 'https://www.snehamumbai.org/images/sneha-logo.png',
+    foundedYear: '1999',
+    description: 'SNEHA addresses the health and empowerment of women and children in urban slums through comprehensive healthcare initiatives.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.snehamumbai.org/donate'
+      },
+    ]
+  },
+  {
+    npCode: 'NGO11',
+    name: 'Nanhi Kali',
+    email: 'info@nanhikali.org',
+    country: 'India',
+    website: 'https://www.nanhikali.org',
+    logo: 'https://www.nanhikali.org/images/nanhi-kali-logo.png',
+    foundedYear: '1996',
+    description: 'Nanhi Kali supports the education of underprivileged girls in India by providing academic, material, and social support to help them complete their schooling.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-01'),
+        verifier: '@blindaks'
+      }
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.nanhikali.org/donate'
+      },
+    ]
+  },
 ];
 
 export default nonProfits;
