@@ -15,13 +15,37 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import React, { useCallback } from 'react';
+import React, { useEffect } from 'react';
 
 import useDonation from '../hooks/useDonation';
 import { formatPaymentMethodName } from '../utils/paymentMethods';
 
+const dev = process.env.NODE_ENV == 'development';
 const DonationForm = React.memo(
   ({ method, index, setSnackbarMessage, setSnackbarOpen }) => {
+    useEffect(() => {
+      const handleMessage = (event) => {
+        const isApprovedOrigin = dev
+          ? event.origin === 'http://localhost:4000' ||
+            event.origin?.includes('sandbox')
+          : event.origin?.includes('chimoney');
+
+        if (event.data.type === 'openUrl' && isApprovedOrigin) {
+          const newWindow =
+            event.data.url && window.open(event.data.url, '_blank');
+          if (newWindow) {
+            newWindow.focus();
+          }
+        }
+      };
+
+      window.addEventListener('message', handleMessage);
+
+      // Clean up the event listener when the component unmounts
+      return () => {
+        window.removeEventListener('message', handleMessage);
+      };
+    }, []);
     const {
       donationAmount,
       setDonationAmount,
