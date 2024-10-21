@@ -724,6 +724,30 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+   {
+    npCode: 'SmileFoundation',
+    name: 'Smile Foundation',
+    email: 'info@smilefoundationindia.org',
+    country: 'India',
+    website: 'https://www.smilefoundationindia.org/',
+    logo: 'https://drive.google.com/file/d/1GWKjCN6Bn64miM-Iq1F-zwLUdzqlVJhy/view?usp=sharing',
+    foundedYear: '2002',
+    description:
+      'Smile Foundation is a national level development organization currently benefitting more than 300,000 underprivileged children & youth directly through 158 welfare projects through initiatives in education, healthcare, livelihood, women empowerment, and advocacy across 25 states of India.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date(''),
+        verifier: '',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://donate.smilefoundationindia.org/',
+      },
+    ],
+  },
 ];
 
 export default nonProfits;
