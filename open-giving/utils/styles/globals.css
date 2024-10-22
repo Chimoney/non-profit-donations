@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  tab-size: 4; /* 3 */
+  font-family: theme(
+    'fontFamily.sans',
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji',
+    'Source Sans 3'
+  ); /* 4 */
+}
+.font-sans {
+  font-family: 'Source Sans 3', sans-serif !important;
+}
+
+.hero-bg {
+  background-image: url('../../public/new/hero-bg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* 
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -83,6 +123,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'primary';
 }
 
 body {
@@ -104,4 +145,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
