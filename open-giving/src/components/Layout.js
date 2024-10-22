@@ -1,70 +1,24 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LockIcon from '@mui/icons-material/Lock';
-import { Box, Button, Container, IconButton } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import React from 'react';
-
 import TestModeSwitcher from './TestModeSwitcher';
-
+import Header from './Header';
+import { FaHeart } from "react-icons/fa6";
+import Image from 'next/image';
 const Layout = ({ children, plain = false }) => {
-  const theme = useTheme();
-
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
+    <div className="min-h-screen  bg-gray-50 w-full">
       {!plain && (
-        <Box
-          sx={{
-            position: 'fixed',
-            top: 16,
-            right: 16,
-            zIndex: 1000,
-          }}
-        >
-          <IconButton
-            color="primary"
-            aria-label="github repository"
-            component="a"
-            href="https://github.com/Chimoney/non-profit-donations"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon />
-          </IconButton>
-        </Box>
+        <Header />
       )}
       {children}
       {!plain && (
-        <Container
-          style={{
-            textAlign: 'center',
-            marginTop: '50px',
-          }}
-          maxWidth="xl"
-        >
-          <Button
-            variant="text"
-            disabled
-            startIcon={<LockIcon sx={{ width: '0.5em' }} color="success" />}
-            style={{
-              color: theme.palette.common.black,
-              margin: '0',
-              position: 'fixed',
-              left: 0,
-              bottom: 0,
-              width: '100%',
-              background: theme.palette.background.paper,
-              zIndex: '1000000',
-              borderRadius: '0',
-            }}
-            fullWidth
-          >
-            Built with ❤️ by Chimoney
-          </Button>
-        </Container>
+        <div className="fixed bg-white left-6 md:left-0 bottom-0 w-2/3 md:w-full  py-4 border-t border-[#AE6DEA45] justify-center z-50 text-center flex flex-row items-center">
+          <span className='font-sans text-[#1A1A1A] text-[12px] md:text-xs flex flex-row items-center justify-center gap-1'>Built with <FaHeart className='text-primary'/> by <Image src="/new/chimoney.svg" alt="chimoney logo" width={90} height={23}/></span>
+        </div>
       )}
       <TestModeSwitcher />
-    </Box>
+    </div>
   );
 };
 
 export default Layout;
+

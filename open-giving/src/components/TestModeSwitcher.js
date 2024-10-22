@@ -1,6 +1,7 @@
 import { Box, FormControlLabel, Switch } from '@mui/material';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 const TestModeSwitcher = () => {
   const router = useRouter();
@@ -19,30 +20,16 @@ const TestModeSwitcher = () => {
   };
 
   return (
-    <Box
-      sx={{
-        position: 'fixed',
-        bottom: 26,
-        right: 0,
-        zIndex: 1000,
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        borderRadius: '8px',
-        paddingBottom: '8px',
-      }}
-    >
-      <FormControlLabel
-        control={
-          <Switch
+    <div className="fixed bg-white right-6 2xl:right-[20%] bottom-0 py-4 justify-center z-50 text-center flex flex-row items-center">
+      <Switch
             checked={isTestMode}
             onChange={handleToggle}
             color={isTestMode ? 'primary' : 'default'}
             size="small"
           />
-        }
-        label="Test Mode"
-        style={{ color: isTestMode ? 'inherit' : 'grey' }}
-      />
-    </Box>
+          <p className={`font-sans text-[11px] md:text-xs ${isTestMode ?  'text-primary':'text-gray-400'}`}>Test Mode</p>
+      
+    </div>
   );
 };
 
