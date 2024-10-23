@@ -1,25 +1,37 @@
 export default async function handler(req, res) {
   const dev = process.env.NODE_ENV == 'development';
 
+  const getPaymentID = (paymentID, useTestPaymentID) => {
+    return useTestPaymentID && typeof paymentID?.test !== 'undefined'
+      ? paymentID?.test
+      : typeof paymentID?.production !== 'undefined'
+      ? paymentID?.production
+      : paymentID;
+  };
+
   if (req.method === 'POST') {
     const {
       amount,
       currency = 'USD',
       payerEmail,
-      walletID: walletIDFromBody,
+      walletID,
       redirect_url,
       useTestPaymentID,
+      interledgerWalletAddress,
     } = req.body;
     const apiKEY = process.env.CHIMONEY_API_SECRET;
     const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
 
     try {
-      const walletID =
-        useTestPaymentID && typeof walletIDFromBody?.test !== 'undefined'
-          ? walletIDFromBody?.test
-          : typeof walletIDFromBody?.production !== 'undefined'
-          ? walletIDFromBody?.production
-          : walletIDFromBody;
+      const redeemData = {};
+      if (walletID) {
+        redeemData.walletID = getPaymentID(walletID, useTestPaymentID);
+      } else if (interledgerWalletAddress) {
+        redeemData.interledgerWalletAddress = getPaymentID(
+          interledgerWalletAddress,
+          useTestPaymentID
+        );
+      }
 
       if (!walletID) {
         res.status(400).json({
@@ -55,9 +67,7 @@ export default async function handler(req, res) {
           paymentMethod: 'chimoney',
           type: 'donation',
           redirect_url,
-          redeemData: {
-            walletID,
-          },
+          redeemData,
         }),
       };
       const response = await fetch(`${server}/payment/initiate`, config);
