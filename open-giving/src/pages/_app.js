@@ -4,7 +4,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { createContext } from 'react';
-
+import '../../utils/styles/globals.css';
 import themeSettings from '../../utils/themeSettings';
 
 export const GlobalContext = createContext({});
