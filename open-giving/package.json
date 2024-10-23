@@ -20,7 +20,7 @@
     "@opentelemetry/api": "^1.6.0",
     "chimoney-payment-widget": "^0.0.30",
     "next": "^12.2.5",
-    "non-profit-donations": "^0.0.9",
+    "non-profit-donations": "^0.1.0",
     "qrcode.react": "^4.0.1",
     "react": "^18",
     "react-dom": "^18",
