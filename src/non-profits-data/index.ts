@@ -57,7 +57,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'PR3tl5CsAhQWW19sQuPH',
+          production: 'https://ilp.chimoney.com/shecodeafrica',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -146,7 +146,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'uEBebfE7ISin8JkilFRq',
+          production: 'https://ilp.chimoney.com/devcareer',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -177,8 +177,8 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'chimoney',
         paymentID: {
-          test: '69b9MVYsDMIWRbj5Oja5',
-          production: 'CoEp7GHW62Q2nQ6PbO8i',
+          test: 'https://ilp-sandbox.chimoney.com/africahacks',
+          production: 'https://ilp.chimoney.com/worldinnovationleague',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -270,7 +270,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'uFm29ZPvzBKABthw7Gi',
+          production: 'https://ilp.chimoney.com/41703163_1729687433664',
         },
         donationHandler: 'chimoneyDonation',
       },

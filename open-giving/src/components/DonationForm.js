@@ -14,6 +14,7 @@ import {
   ListItemText,
   TextField,
   Typography,
+  Grid,
 } from '@mui/material';
 import React, { useEffect } from 'react';
 
@@ -160,24 +161,31 @@ const DonationForm = React.memo(
                 handleDonateClick();
               }}
             >
-              <TextField
-                label="Amount"
-                type="number"
-                value={donationAmount}
-                onChange={(e) => setDonationAmount(e.target.value)}
-                fullWidth
-                margin="normal"
-                required
-              />
-              <TextField
-                label="Email"
-                type="email"
-                value={payerEmail}
-                onChange={(e) => setPayerEmail(e.target.value)}
-                fullWidth
-                margin="normal"
-                required
-              />
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={4}>
+                  <TextField
+                    label="Amount"
+                    type="number"
+                    value={donationAmount}
+                    onChange={(e) => setDonationAmount(e.target.value)}
+                    fullWidth
+                    margin="normal"
+                    required
+                  />
+                </Grid>
+                <Grid item xs={12} md={8}>
+                  <TextField
+                    label="Email"
+                    type="email"
+                    value={payerEmail}
+                    onChange={(e) => setPayerEmail(e.target.value)}
+                    fullWidth
+                    margin="normal"
+                    required
+                  />
+                </Grid>
+              </Grid>
+
               {paymentLink && parseFloat(donationAmount) === paymentAmount ? (
                 <Box>
                   <Button

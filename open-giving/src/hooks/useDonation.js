@@ -20,13 +20,11 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
       typeof paymentID === 'string' && paymentID.length > 0
         ? paymentID
         : method?.paymentID;
-    console.log('paymentID', paymentID);
-    const walletID =
-      paymentID && paymentID.test
-        ? useTestPaymentID
-          ? paymentID.test
-          : paymentID.production
-        : paymentID;
+
+    paymentID =
+      paymentID && paymentID.test && useTestPaymentID
+        ? paymentID.test
+        : paymentID.production || paymentID;
 
     if (method.type !== 'chimoney') {
       try {
@@ -60,6 +58,21 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
           return;
         }
 
+        const chimoneyInterledgerDomains = [
+          'ilp.chimoney.com',
+
+          'ilp-sandbox.chimoney.com',
+        ];
+        const settlementData = chimoneyInterledgerDomains.some((domain) =>
+          paymentID?.includes(domain)
+        )
+          ? {
+              interledgerWalletAddress: paymentID,
+            }
+          : {
+              walletID: paymentID,
+            };
+
         const response = await fetch('/api/chimoney-donate', {
           method: 'POST',
           headers: {
@@ -71,7 +84,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
             payerEmail,
             redirect_url: `${window.location.origin}/donation-success`,
             useTestPaymentID,
-            walletID,
+            ...settlementData,
           }),
         });
 
