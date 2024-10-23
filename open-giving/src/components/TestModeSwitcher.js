@@ -1,7 +1,7 @@
-import { Box, FormControlLabel, Switch } from '@mui/material';
+import { Switch } from '@mui/material';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { isMobile } from 'react-device-detect';
+
 
 const TestModeSwitcher = () => {
   const router = useRouter();
