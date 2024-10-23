@@ -1,4 +1,5 @@
 import { Hero } from '@/components/landingpage/Hero';
+import { Snackbar } from '@mui/material';
 import { DonationOrganizations } from '@/components/landingpage/Orgs';
 import { SelectDonationMethod } from '@/components/landingpage/SelectDonationMethod';
 import Layout from '@/components/Layout';
@@ -17,6 +18,8 @@ export default function Home() {
   const [filteredNonProfits, setFilteredNonProfits] = useState([]);
   const [nonProfits, setNonProfits] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
 
   useEffect(() => {
     const allNonProfits = verifiedNonprofits();
@@ -105,7 +108,6 @@ export default function Home() {
   );
   const defaultLogo = `https://placehold.co/300x200/?text=${selectedNonProfit?.name}`;
 
- 
   return (
     <Layout>
       <Hero />
@@ -115,11 +117,11 @@ export default function Home() {
         selectedPaymentMethods={selectedPaymentMethods}
       />
       <div className="md:px-12 2xl:px-[20%] pb-28 w-full">
-        <DonationOrganizations 
-        data={paginatedNonProfits} 
-        onOpenDialog={handleOpenDialog}
-        showQRCode={router.query.showQRCode}
-        useTestPaymentID={router.query.useTestPaymentID}
+        <DonationOrganizations
+          data={paginatedNonProfits}
+          onOpenDialog={handleOpenDialog}
+          showQRCode={router.query.showQRCode}
+          useTestPaymentID={router.query.useTestPaymentID}
         />
         {filteredNonProfits.length > ITEMS_PER_PAGE && (
           <Pagination
@@ -130,14 +132,23 @@ export default function Home() {
         )}
       </div>
       {selectedNonProfit?.name && (
-          <NonProfitDialog
-            nonProfit={selectedNonProfit}
-            open={Boolean(selectedNonProfit)}
-            onClose={handleCloseDialog}
-            defaultLogo={defaultLogo}
-            useTestPaymentID={router.query.useTestPaymentID}
-          />
-        )}
+        <NonProfitDialog
+          nonProfit={selectedNonProfit}
+          open={Boolean(selectedNonProfit)}
+          onClose={handleCloseDialog}
+          defaultLogo={defaultLogo}
+          setSnackbarMessage={setSnackbarMessage}
+          setSnackbarOpen={setSnackbarOpen}
+          useTestPaymentID={router.query.useTestPaymentID}
+        />
+      )}
+      <Snackbar
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={() => setSnackbarOpen(false)}
+        message={snackbarMessage}
+      />
     </Layout>
   );
 }
