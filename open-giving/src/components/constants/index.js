@@ -6,43 +6,53 @@ export const HeroContent = {
 
 export const donationMethods = [
   {
-    method:'Chimoney',
+    method: 'Chimoney',
+    type: 'chimoney',
     icon: '/new/donation/chimoney.svg',
   },
   {
-    method:'Interledger',
+    method: 'Interledger',
+    type: 'interledger',
     icon: '/new/donation/interledger.svg',
   },
   {
-    method:'Paypal',
+    method: 'Paypal',
+    type: 'paypal',
     icon: '/new/donation/paypal.svg',
   },
   {
-    method:'Stripe',
+    method: 'Stripe',
+    type: 'stripe',
     icon: '/new/donation/stripe.svg',
   },
   {
-    method:'Venmo',
+    method: 'Venmo',
+    type: 'venmo',
     icon: '/new/donation/venmo.svg',
   },
   {
-    method:'Cashapp',
+    method: 'Cashapp',
+    type: 'cashapp',
     icon: '/new/donation/cashapp.svg',
   },
   {
-    method:'Patreon',
+    method: 'Patreon',
+    type: 'patreon',
     icon: '/new/donation/patreon.svg',
   },
   {
-    method:'Donorbox',
+    method: 'Donorbox',
+    type: 'donorbox',
     icon: '/new/donation/donorbox.svg',
   },
   {
-    method:'Donation Link',
+    method: 'Donation Link',
+    type: 'donation-link',
     icon: '/new/donation/donationlink.svg',
   },
   {
-    method:'Stablecoin',
+    method: 'Stablecoin',
+    type: 'stablecoin',
     icon: '/new/donation/stablecoin.svg',
   },
-]
+];

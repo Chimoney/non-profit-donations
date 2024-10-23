@@ -1,3 +1,5 @@
+import { donationMethods } from "@/components/constants";
+
 export const PAYMENT_METHODS = [
   'chimoney',
   'interledger',
@@ -18,4 +20,17 @@ export const formatPaymentMethodName = (methodName) => {
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
+};
+
+export const filterDonationMethods = (org) => {
+  const { paymentMethods } = org;
+  const filteredMethods = donationMethods.filter((method) =>
+    paymentMethods.some((payment) => payment.type === method.type)
+  );
+  return filteredMethods;
+};
+
+export const getIconByMethod = (method) => {
+  const foundMethod = donationMethods.find(item => item.type === method);
+  return foundMethod ? foundMethod.icon : null;
 };

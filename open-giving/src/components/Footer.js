@@ -2,7 +2,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import { Button, Container, Divider, Typography } from '@mui/material/';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const dev = process.env.NODE_ENV == 'development';
 
@@ -43,7 +43,6 @@ const Footer = () => {
             height={45}
             priority
           />
-          {/* <br />© {currentYear} Chi Technologies Inc. */}
         </Typography>
       </Container>
     </div>

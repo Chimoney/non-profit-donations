@@ -2,24 +2,12 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import LinkIcon from '@mui/icons-material/Link';
 import PaymentIcon from '@mui/icons-material/Payment';
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Button,
-  CircularProgress,
-  Link,
-  ListItem,
-  ListItemText,
-  TextField,
-  Typography,
-  Grid,
-} from '@mui/material';
+import { Link } from '@mui/material';
 import React, { useEffect } from 'react';
 
 import useDonation from '../hooks/useDonation';
-import { formatPaymentMethodName } from '../utils/paymentMethods';
+import DonateButton from './landingpage/donateButton';
+import CopyWithTooltip from './landingpage/copy';
 
 const dev = process.env.NODE_ENV == 'development';
 const DonationForm = React.memo(
@@ -61,239 +49,141 @@ const DonationForm = React.memo(
       resetPayment,
     } = useDonation(method, setSnackbarMessage, setSnackbarOpen);
 
-    const getIcon = (methodType) => {
+    const getTitle = (methodType) => {
       switch (methodType) {
         case 'interledger':
+          return 'Interledger Wallet Address';
         case 'paypal':
+          return 'Paypal Email Address';
         case 'stripe':
         case 'venmo':
         case 'cashapp':
         case 'airtime':
         case 'mobile-money':
         case 'stablecoin':
-          return <ContentCopyIcon fontSize="small" />;
-        case 'chimoney':
-          return <PaymentIcon fontSize="small" />;
-        case 'donation-link':
-          return <LinkIcon fontSize="small" />;
+          return 'Wallet Address';
+
         default:
-          return <CardGiftcardIcon fontSize="small" />;
+          return 'Address';
       }
     };
 
-    const formattedMethodName = formatPaymentMethodName(method.type);
-
     if (method.type === 'donation-link') {
       return (
-        <ListItem key={method.type}>
-          <ListItemText
-            primary={
-              <Typography
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  fontWeight: '600',
-                }}
-              >
-                <span
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginRight: '5px',
-                  }}
-                >
-                  {index + 1}. {formattedMethodName}{' '}
-                  <a
-                    href={method.paymentID}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginLeft: '5px',
-                      color: 'inherit',
-                    }}
-                  >
-                    {getIcon(method.type)}
-                  </a>
-                </span>
-              </Typography>
-            }
-            secondary={
-              <Link
-                href={method.paymentID}
-                target="_blank"
-                rel="noopener noreferrer"
-                display="flex"
-                alignItems="center"
-              >
-                {method.paymentID}
-              </Link>
-            }
-          />
-        </ListItem>
+        <div className="w-full py-3">
+          <p className="font-sans text-xs text-[#1A1A1A]">Donation Link:</p>
+          <Link
+            href={method.paymentID}
+            target="_blank"
+            className="font-sans text-[17px] font-semibold"
+            rel="noopener noreferrer"
+          >
+            {method.paymentID}
+          </Link>
+          <DonateButton
+            otherClass="bg-primary text-white disabled:opacity-50 mt-6"
+            onClick={() => window.open(method.paymentID, '_blank')}
+          >
+            Visit link
+          </DonateButton>
+        </div>
       );
     }
 
     if (method.type === 'chimoney') {
       return (
-        <Accordion key={method.type} elevation={0}>
-          <AccordionSummary>
-            <Typography style={{ display: 'flex', alignItems: 'center' }}>
-              <span
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  marginRight: '5px',
-                  fontWeight: '600',
-                }}
+        <div>
+          {[
+            {
+              label: 'Amount',
+              type: 'number',
+              name: 'amount',
+              value: donationAmount,
+              onChange: setDonationAmount,
+            },
+            {
+              label: 'Email Address',
+              type: 'email',
+              name: 'email',
+              value: payerEmail,
+              onChange: setPayerEmail,
+            },
+          ].map((i) => {
+            return (
+              <div key={i.name} className="relative my-3 w-full">
+                {i.name === 'amount' && (
+                  <span
+                    className={`absolute inset-y-0 left-0 pl-3 flex text-xs font-sans items-center ${
+                      donationAmount === ''
+                        ? 'text-[#1A1A1A30]'
+                        : 'text-[#1A1A1A]'
+                    }`}
+                  >
+                    $
+                  </span>
+                )}
+                <input
+                  type={i.type}
+                  value={i.value}
+                  disabled={
+                    paymentLink && parseFloat(donationAmount) === paymentAmount
+                  }
+                  onChange={(e) => i.onChange(e.target.value)}
+                  placeholder={i.label}
+                  name={i.name}
+                  className={`border w-full text-xs border-[#C4C4C490] placeholder:text-[#1A1A1A30] text-[#1A1A1A] rounded-[8px] p-3 focus:outline focus:outline-primary ${
+                    i.name === 'amount' ? 'pl-5' : ''
+                  }`}
+                />
+              </div>
+            );
+          })}
+          {paymentLink && parseFloat(donationAmount) === paymentAmount ? (
+            <div className="flex flex-row items-center gap-6">
+              <button
+                onClick={() => openPaymentWidget(paymentLink)}
+                type="button"
+                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 px-3 py-2 border border-[#8A2BE2]  rounded-[5px] text-white bg-primary`}
               >
-                {index + 1}. {formattedMethodName}
-              </span>
-              {getIcon(method.type)}
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Box
-              component="form"
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleDonateClick();
-              }}
+                Complete Payment for {paymentCurrency} {paymentAmount}
+              </button>
+              <button
+                onClick={resetPayment}
+                type="button"
+                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 px-3 py-2 border border-[#8A2BE2]  rounded-[5px] bg-[#8A2BE210] text-primary`}
+              >
+                Restart Donation
+              </button>
+            </div>
+          ) : (
+            <DonateButton
+              otherClass="bg-primary text-white disabled:opacity-50"
+              disabled={donationAmount === '' || payerEmail === '' || isLoading}
+              loading={isLoading}
+              onClick={handleDonateClick}
             >
-              <Grid container spacing={2}>
-                <Grid item xs={12} md={4}>
-                  <TextField
-                    label="Amount"
-                    type="number"
-                    value={donationAmount}
-                    onChange={(e) => setDonationAmount(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                    required
-                  />
-                </Grid>
-                <Grid item xs={12} md={8}>
-                  <TextField
-                    label="Email"
-                    type="email"
-                    value={payerEmail}
-                    onChange={(e) => setPayerEmail(e.target.value)}
-                    fullWidth
-                    margin="normal"
-                    required
-                  />
-                </Grid>
-              </Grid>
-
-              {paymentLink && parseFloat(donationAmount) === paymentAmount ? (
-                <Box>
-                  <Button
-                    variant="contained"
-                    onClick={() => openPaymentWidget(paymentLink)}
-                    type="button"
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    Complete Payment for {paymentCurrency} {paymentAmount}
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    onClick={resetPayment}
-                    type="button"
-                    sx={{ mt: 1 }}
-                  >
-                    Restart Donation
-                  </Button>
-                </Box>
-              ) : (
-                <Button
-                  variant="contained"
-                  fullWidth
-                  disabled={isLoading}
-                  type="submit"
-                  sx={{ mt: 1 }}
-                >
-                  {isLoading ? (
-                    <CircularProgress size={24} color="inherit" />
-                  ) : (
-                    `Donate via ${formattedMethodName}`
-                  )}
-                </Button>
-              )}
-            </Box>
-          </AccordionDetails>
-        </Accordion>
-      );
-    }
-
-    if (method.type !== 'chimoney' && method.type !== 'donation-link') {
-      return (
-        <ListItem key={method.type}>
-          <ListItemText
-            primary={
-              <Typography
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  cursor: 'pointer',
-                }}
-                onClick={() => handleDonateClick(method.paymentID)}
-              >
-                <span
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    marginRight: '5px',
-                    fontWeight: '600',
-                  }}
-                >
-                  {index + 1}. {formattedMethodName}
-                </span>
-                {getIcon(method.type)}
-              </Typography>
-            }
-            secondary={
-              <Typography display="flex" alignItems="center">
-                {method.paymentID}
-              </Typography>
-            }
-          />
-        </ListItem>
+              Donate Now
+            </DonateButton>
+          )}
+        </div>
       );
     }
 
     return (
-      <ListItem key={method.type}>
-        <ListItemText
-          primary={
-            <Typography
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                cursor: 'pointer',
-              }}
-              onClick={() => handleDonateClick(method.paymentID)}
-            >
-              <span
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  marginRight: '5px',
-                  fontWeight: '600',
-                }}
-              >
-                {index + 1}. {formattedMethodName}
-              </span>
-              {getIcon(method.type)}
-            </Typography>
-          }
-          secondary={
-            <Typography display="flex" alignItems="center">
-              {method.paymentID}
-            </Typography>
-          }
-        />
-      </ListItem>
+      <div className="w-full py-3">
+        <p className="font-sans text-xs text-[#1A1A1A] flex flex-row gap-2 items-center">
+          {getTitle(method.type)}:{' '}
+        </p>
+        <Link
+          href={method.paymentID}
+          target="_blank"
+          className="font-sans text-[17px] font-semibold line-clamp-2 overflow-hidden"
+          rel="noopener noreferrer"
+        >
+          {method.paymentID}
+        </Link>
+        <CopyWithTooltip paymentID={method.paymentID} text={`Copy Address`} />
+      </div>
     );
   }
 );
