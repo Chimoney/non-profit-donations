@@ -2778,10 +2778,10 @@ next@^12.2.5:
     "@next/swc-win32-ia32-msvc" "12.3.4"
     "@next/swc-win32-x64-msvc" "12.3.4"
 
-non-profit-donations@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/non-profit-donations/-/non-profit-donations-0.0.9.tgz#2a2d3f937c5e186cf2699fd252877ad3febcd6b4"
-  integrity sha512-SZjCcOjWgji4FfY9AzlHxALDD8GU+TnlpTBdsd7kwwNJHRT5FHlqLPDkZgUYts80s26niplAY2WuZioaOIDtLQ==
+non-profit-donations@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/non-profit-donations/-/non-profit-donations-0.1.0.tgz#578f4104ad9b3cb59bbce1a47153bffb75e5c06c"
+  integrity sha512-VqJ80QIOEv/vwbPPaTW/oQusYrE8CfcRhlK6CcGGP24JLb669sTDCYGTSIJ6d/UKYdjYtLJDTp/incNoeQLKqg==
   dependencies:
     "@bitauth/libauth" "^1.17.1"
     commitizen "^4.2.4"
