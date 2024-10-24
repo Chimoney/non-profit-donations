@@ -33,7 +33,7 @@ export default async function handler(req, res) {
         );
       }
 
-      if (!walletID) {
+      if (!walletID && !interledgerWalletAddress) {
         res.status(400).json({
           error: `Wallet ID is not set for this Organization in ${
             useTestPaymentID ? 'Test' : 'Production'
