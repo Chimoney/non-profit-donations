@@ -17,7 +17,7 @@ const FilterAccordion = ({
   onMethodToggle,
   paymentMethods,
 }) => (
-  <Accordion expanded={isExpanded} onChange={() => setIsExpanded(!isExpanded)}>
+  <Accordion sx={{marginBottom:"0.5rem"}} expanded={isExpanded} onChange={() => setIsExpanded(!isExpanded)}>
     <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
       aria-controls="filter-content"
