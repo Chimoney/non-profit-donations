@@ -1,25 +1,33 @@
+import useIsMobileScreen from '@/hooks/mobile';
 import Image from 'next/image';
-import { useMediaQuery, useTheme } from '@mui/material';
 
 export const SelectDonationMethod = ({
   paymentMethods,
   handleToggle,
   selectedPaymentMethods,
 }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useIsMobileScreen();
   return (
-    <div className="font-sans py-12 md:py-28 px-6 md:px-12 2xl:px-[20%] w-full flex flex-col items-center justify-center gap-6">
-      <p className="text-[#1A1A1A] text-3xl text-center font-medium">
+    <div
+      id="orgs"
+      className={`font-sans pt-[35px] pb-[20px] md:py-[30px] lg:pt-[68px] px-6 md:px-12 2xl:px-[20%] w-full flex flex-col items-center justify-center gap-[18px] md:gap-[20px] ${
+        selectedPaymentMethods && selectedPaymentMethods.length > 0
+          ? ''
+          : 'mb-12'
+      }`}
+    >
+      <p className="text-[#301d41] text-2xl md:text-3xl text-center font-medium">
         Choose donation method
       </p>
-      <div className="flex flex-row md:max-w-[80%] flex-wrap md:p-6 gap-2 md:gap-3 items-center justify-center">
+      <div className="flex flex-row md:max-w-[80%] flex-wrap gap-2 md:gap-[20px] items-center justify-center">
         {paymentMethods.map((i) => {
           const isActive = selectedPaymentMethods.includes(i.type);
           return (
             <div
-              className={`p-2 md:p-3 border ${
-                isActive ? 'border-primary' : 'border-[#C4C4C450]'
+              className={`px-3 py-2 md:p-3 border ${
+                isActive
+                  ? 'border-primary'
+                  : 'border-[#C4C4C450] bg-[#f1a7f205]'
               } gap-1 md:gap-3 rounded-[10px] text-base flex flex-row items-center cursor-pointer`}
               key={i.method}
               onClick={() => handleToggle(i.type)}
@@ -32,13 +40,13 @@ export const SelectDonationMethod = ({
                   className="opacity-0 absolute h-0 w-0"
                 />
                 <div
-                  className={`w-4 md:w-6 h-4 md:h-6 border md:border-[1.3px] ${
-                    isActive ? 'border-primary' : 'border-gray-400'
+                  className={`md:w-6 size-[14px] md:h-6 border-[1.2px] ${
+                    isActive ? 'border-primary' : 'border-[#323232] opacity-80'
                   } rounded flex items-center justify-center`}
                 >
                   {isActive && (
                     <svg
-                      className="w-2 md:w-4 h-2 md:h-4 text-primary"
+                      className="size-[12px] md:w-4 md:h-4 text-primary"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -58,11 +66,11 @@ export const SelectDonationMethod = ({
                 <Image
                   src={i.icon}
                   alt={`${i.method} logo`}
-                  width={isMobile ? 14 : 24}
-                  height={isMobile ? 14 : 24}
+                  width={isMobile ? 19 : 24}
+                  height={isMobile ? 19 : 24}
                 />
                 <span
-                  className={`text-[12px] md:text-xs font-sans text-[#1A1A1A] ${
+                  className={`text-[12px] md:text-[15px] font-sans text-[#301d41] ${
                     isActive ? 'font-medium' : 'font-normal'
                   }`}
                 >

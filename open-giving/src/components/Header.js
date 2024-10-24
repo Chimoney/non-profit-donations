@@ -1,11 +1,10 @@
-import { useMediaQuery, useTheme } from '@mui/material';
+import useIsMobileScreen from '@/hooks/mobile';
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 const Header = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useIsMobileScreen()
   return (
     <div className="py-8 px-6 md:px-12 2xl:px-[20%] h-20 w-full border-b border-[#AE6DEA45] flex flex-row items-center justify-between">
       <Image
@@ -20,7 +19,7 @@ const Header = () => {
         rel="noopener noreferrer"
         aria-label="github repository"
       >
-        <FaGithub className="size-[25px] md:size-[35px] cursor-pointer" />
+        <FaGithub className="size-[25px] md:size-[35px] cursor-pointer text-primary" />
       </a>
     </div>
   );

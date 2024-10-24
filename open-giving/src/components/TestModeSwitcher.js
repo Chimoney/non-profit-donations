@@ -1,7 +1,6 @@
-import { Switch } from '@mui/material';
 import { useRouter } from 'next/router';
 import React from 'react';
-
+import { FaToggleOn, FaToggleOff } from 'react-icons/fa';
 
 const TestModeSwitcher = () => {
   const router = useRouter();
@@ -20,15 +19,24 @@ const TestModeSwitcher = () => {
   };
 
   return (
-    <div className="fixed bg-white right-6 2xl:right-[20%] bottom-0 py-4 justify-center z-50 text-center flex flex-row items-center">
-      <Switch
-            checked={isTestMode}
-            onChange={handleToggle}
-            color={isTestMode ? 'primary' : 'default'}
-            size="small"
-          />
-          <p className={`font-sans text-[11px] md:text-xs ${isTestMode ?  'text-primary':'text-gray-400'}`}>Test Mode</p>
-      
+    <div className="fixed bg-white right-6 2xl:right-[20%] bottom-0 pb-4 justify-center z-50 text-center flex flex-row items-center">
+      <div
+        className="cursor-pointer text-3xl"
+        onClick={handleToggle}
+      >
+        {isTestMode ? (
+          <FaToggleOn className="text-primary" />
+        ) : (
+          <FaToggleOff className="text-gray-400" />
+        )}
+      </div>
+      <p
+        className={`ml-2 font-sans text-[11px] md:text-xs ${
+          isTestMode ? 'text-primary' : 'text-gray-400'
+        }`}
+      >
+        Test Mode
+      </p>
     </div>
   );
 };

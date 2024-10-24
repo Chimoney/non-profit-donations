@@ -30,7 +30,7 @@ const DonationSuccess = () => {
 
   return (
     <Layout plain={true}>
-      <div className="hero-bg h-screen w-full flex flex-col items-center justify-center gap-6 p-3">
+      <div className="hero-bg h-screen w-full flex flex-col items-center justify-center gap-6 p-3 font-sans">
         <div className="border border-[#8A2BE2] w-full md:w-1/2 xl:w-1/3 px-6 py-12 gap-6 rounded-[10px] flex flex-col items-center justify-center-">
           <img src="/new/success.svg" alt="succcess logo" className="size-24" />
           <p className="font-semibold font-sans text-2xl text-[#a1a1a1] text-center">

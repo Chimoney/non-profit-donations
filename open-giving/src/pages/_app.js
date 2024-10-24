@@ -1,21 +1,16 @@
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
 import App from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { createContext } from 'react';
 import '../../utils/styles/globals.css';
-import themeSettings from '../../utils/themeSettings';
 
 export const GlobalContext = createContext({});
-const theme = createTheme(themeSettings);
 
 function MyApp({ Component, pageProps }) {
   const { global } = pageProps;
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <Head>
         <link rel="shortcut icon" href="/chimoney-logo.svg" />
         <meta
@@ -64,7 +59,7 @@ function MyApp({ Component, pageProps }) {
       <GlobalContext.Provider value={global.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
-    </ThemeProvider>
+    </>
   );
 }
 

@@ -1,5 +1,5 @@
 import { Hero } from '@/components/landingpage/Hero';
-import { Snackbar } from '@mui/material';
+
 import { DonationOrganizations } from '@/components/landingpage/Orgs';
 import { SelectDonationMethod } from '@/components/landingpage/SelectDonationMethod';
 import Layout from '@/components/Layout';
@@ -9,6 +9,7 @@ import { verifiedNonprofits } from 'non-profit-donations';
 import { donationMethods } from '@/components/constants';
 import Pagination from '@/components/landingpage/pagination';
 import NonProfitDialog from '@/components/NonProfitDialog';
+import Snackbar from '@/components/landingpage/snackbar';
 
 const ITEMS_PER_PAGE = 9;
 export default function Home() {
@@ -116,21 +117,24 @@ export default function Home() {
         handleToggle={handleToggle}
         selectedPaymentMethods={selectedPaymentMethods}
       />
-      <div className="md:px-12 2xl:px-[20%] pb-28 w-full">
-        <DonationOrganizations
-          data={paginatedNonProfits}
-          onOpenDialog={handleOpenDialog}
-          showQRCode={router.query.showQRCode}
-          useTestPaymentID={router.query.useTestPaymentID}
-        />
-        {filteredNonProfits.length > ITEMS_PER_PAGE && (
-          <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            handleChangePage={handleChangePage}
+
+      {selectedPaymentMethods && selectedPaymentMethods.length > 0 && (
+        <div className="md:px-12 2xl:px-[20%] pb-28 w-full">
+          <DonationOrganizations
+            data={paginatedNonProfits}
+            onOpenDialog={handleOpenDialog}
+            showQRCode={router.query.showQRCode}
+            useTestPaymentID={router.query.useTestPaymentID}
           />
-        )}
-      </div>
+          {filteredNonProfits.length > ITEMS_PER_PAGE && (
+            <Pagination
+              totalPages={totalPages}
+              currentPage={currentPage}
+              handleChangePage={handleChangePage}
+            />
+          )}
+        </div>
+      )}
       {selectedNonProfit?.name && (
         <NonProfitDialog
           nonProfit={selectedNonProfit}
@@ -143,11 +147,10 @@ export default function Home() {
         />
       )}
       <Snackbar
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={snackbarOpen}
+        message={snackbarMessage}
         autoHideDuration={3000}
         onClose={() => setSnackbarOpen(false)}
-        message={snackbarMessage}
       />
     </Layout>
   );

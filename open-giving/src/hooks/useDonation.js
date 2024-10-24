@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material/styles';
 import PaymentWidget from 'chimoney-payment-widget';
 import { useRouter } from 'next/router';
 import { handlers } from 'non-profit-donations';
@@ -12,7 +11,6 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const [paymentLink, setPaymentLink] = useState(null);
   const [paymentAmount, setPaymentAmount] = useState(null);
   const [paymentCurrency, setPaymentCurrency] = useState(null);
-  const theme = useTheme();
   const useTestPaymentID = router.query.useTestPaymentID;
 
   const handleDonateClick = async (paymentID) => {
@@ -136,7 +134,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const openPaymentWidget = (link) => {
     const paymentWidget = new PaymentWidget({
       paymentLink: link,
-      brandColor: theme.palette.primary.main,
+      brandColor: '#8A2BE2',
       brandName: 'Open Giving',
       onPaymentSuccess: (event) => {
         console.log('Payment successful:', event);

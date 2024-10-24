@@ -1,10 +1,3 @@
-import {
-  Dialog,
-  DialogContent,
-  Link,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
 import React, { useState } from 'react';
 import { MdClose, MdLocationOn } from 'react-icons/md';
 import { FaRegCalendarAlt } from 'react-icons/fa';
@@ -16,6 +9,23 @@ import {
   formatPaymentMethodName,
   getIconByMethod,
 } from '@/utils/paymentMethods';
+import useIsMobileScreen from '@/hooks/mobile';
+
+const Modal = ({ open, onClose, children }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black bg-opacity-50">
+      <div className="bg-white w-full max-w-3xl mx-auto rounded-md shadow-lg">
+        
+        {children}
+      </div>
+    </div>
+  );
+};
+
+const ModalContent = ({ children }) => {
+  return <div className="p-6">{children}</div>;
+};
 
 const NonProfitDialog = ({
   nonProfit,
@@ -26,8 +36,6 @@ const NonProfitDialog = ({
   defaultLogo,
   useTestPaymentID,
 }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const [dialogImgSrc, setDialogImgSrc] = useState(
     nonProfit?.logo || defaultLogo
   );
@@ -38,6 +46,8 @@ const NonProfitDialog = ({
   };
 
   if (!nonProfit) return null;
+
+  const isMobile = useIsMobileScreen()
   const getPaymentID = (method) => {
     if (!method.paymentID) {
       return true;
@@ -58,11 +68,12 @@ const NonProfitDialog = ({
     const paymentId = getPaymentID(s);
     setSelectedPaymentType(s);
   };
+
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
-      <DialogContent>
-        <div className="w-full mb-6 flex flex-row items-center justify-between">
-          <p className="font-sans font-medium text-[23px] text-[#1A1A1A]">
+    <Modal open={open} onClose={onClose}>
+      <ModalContent>
+      <div className="w-full mb-[28px] flex flex-row items-center justify-between">
+          <p className="font-sans font-medium text-[23px] text-[#453454]">
             {nonProfit.name}
           </p>
           <MdClose
@@ -83,25 +94,25 @@ const NonProfitDialog = ({
                   className="w-auto h-[100px] object-contain"
                 />
               </div>
-              <div className="flex flex-row items-center gap-3 my-3">
+              <div className="flex flex-row items-center gap-3 mt-[10px] mb-[15px] md:mb-[20px]">
                 {[
-                  { icon: <MdLocationOn size={18} />, name: nonProfit.country },
+                  { icon: <MdLocationOn size={14} />, name: nonProfit.country },
                   {
-                    icon: <FaRegCalendarAlt size={18} />,
+                    icon: <FaRegCalendarAlt size={14} />,
                     name: `Founded: ${nonProfit.foundedYear}`,
                   },
                 ].map((i) => {
                   return (
-                    <span className="bg-[#4E455610] font-sans flex flex-row items-center px-3 py-2 text-[#1A1A1A] font-medium text-xs rounded-full gap-1">
+                    <span className="bg-[#EDEAEC] font-sans flex flex-row items-center px-[11px] py-[6px] text-[#4A4152] font-medium text-[11px] md:text-[12px] rounded-full gap-1">
                       {i.icon} {i.name}
                     </span>
                   );
                 })}
               </div>
-              <p className="text-[#1A1A1A90] md:w-[90%] text-xs my-6 line-clamp-3 overflow-hidden">
+              <p className="text-[#4E4556] md:w-[90%] font-normal text-xs mb-[20px] md:mb-[25px] line-clamp-3 overflow-hidden font-sans">
                 {nonProfit.description ? nonProfit.description : nonProfit.name}
               </p>
-              <div className="flex flex-col md:flex-row md:items-center gap-3 my-3">
+              <div className="flex flex-col md:flex-row md:items-center gap-[11px] mb-[18px]">
                 {[
                   {
                     icon: '/new/websiteIcon.svg',
@@ -114,12 +125,11 @@ const NonProfitDialog = ({
                     link: null,
                   },
                 ]
-                  .filter((i) => i.link && i.name)
                   .map((i) => {
                     return (
                       <span
                         key={i.name}
-                        className="font-sans flex flex-row items-center text-[#1A1A1A] font-medium text-xs rounded-full gap-1"
+                        className="font-sans flex flex-row items-center text-primary underline font-medium text-xs rounded-full gap-1"
                       >
                         <Image
                           src={i.icon}
@@ -128,13 +138,13 @@ const NonProfitDialog = ({
                           height={12}
                         />
                         {i.link ? (
-                          <Link
+                          <a
                             href={i.link}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             {i.name}
-                          </Link>
+                          </a>
                         ) : (
                           <span>{i.name}</span>
                         )}
@@ -147,16 +157,16 @@ const NonProfitDialog = ({
 
           {/* donation options side */}
           {selectedPaymentType ? (
-            <div className="md:w-1/2 border-t md:border-t-0 pt-4 md:pt-0 md:border-l border-[#8A2BE2]">
+            <div className="md:w-1/2 border-t md:border-t-0 pt-4 md:pt-0 md:border-l border-[#8A2BE225]">
               <div className="md:w-[90%] md:ml-auto bg-[#FEFCFC] flex flex-col justify-center">
                 <button
                   onClick={() => setSelectedPaymentType(null)}
-                  className="flex flex-row mb-3 items-center text-xs text-primary gap-2"
+                  className="flex flex-row mb-[30px] md:mb-[35px] items-center text-[14px] font-medium font-sans text-primary gap-2"
                 >
                   <FaArrowLeft />
                   Back
                 </button>
-                <p className="font-sans font-medium text-[20px] md:text-[23px] text-[#1A1A1A] flex flex-row gap-2 items-center">
+                <p className="font-sans font-medium  text-[23px] text-[#453454] flex flex-row gap-2 items-center">
                   Donate via {formatPaymentMethodName(selectedPaymentType.type)}
                   <img
                     src={getIconByMethod(selectedPaymentType.type)}
@@ -174,18 +184,18 @@ const NonProfitDialog = ({
               </div>
             </div>
           ) : (
-            <div className="md:w-1/2 border-t md:border-t-0  md:border-l border-[#8A2BE2]">
+            <div className="md:w-1/2 pt-[20px] md:pt-0 border-t md:border-t-0  md:border-l border-[#8A2BE225]">
               <div className="md:w-[90%] md:ml-auto bg-[#FEFCFC] flex flex-col justify-center">
-                <p className="font-sans font-medium text-[23px] text-[#1A1A1A]">
+                <p className="font-sans font-medium text-[23px] text-[#453454] mb-[17px] md:mb-[15px]">
                   Donate via
                 </p>
                 {options.map((i) => {
                   return (
                     <button
                       onClick={() => handleSelect(i.type)}
-                      className="border w-full p-2 my-2  border-[#C4C4C470] rounded-[8px] flex flex-row items-center justify-between"
+                      className="border w-full px-[12px] py-[13px] md:py-[11px] mb-[10px]  border-[#C4C4C470] bg-[#F1E7F208] rounded-[8px] flex flex-row items-center justify-between"
                     >
-                      <span className="flex flex-row items-center gap-2 text-sm text-[#1A1A1A] font-sans">
+                      <span className="flex flex-row items-center gap-2 text-sm text-[#453454] font-sans">
                         <img
                           src={i.icon}
                           alt={i.method}
@@ -193,7 +203,7 @@ const NonProfitDialog = ({
                         />
                         {i.method}
                       </span>
-                      <FaAngleRight size={15} />
+                      <FaAngleRight size={15} color="#453454"/>
                     </button>
                   );
                 })}
@@ -201,9 +211,10 @@ const NonProfitDialog = ({
             </div>
           )}
         </div>
-      </DialogContent>
-    </Dialog>
+      </ModalContent>
+    </Modal>
   );
 };
 
 export default NonProfitDialog;
+

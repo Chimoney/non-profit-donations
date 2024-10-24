@@ -1,8 +1,3 @@
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import LinkIcon from '@mui/icons-material/Link';
-import PaymentIcon from '@mui/icons-material/Payment';
-import { Link } from '@mui/material';
 import React, { useEffect } from 'react';
 
 import useDonation from '../hooks/useDonation';
@@ -70,18 +65,18 @@ const DonationForm = React.memo(
 
     if (method.type === 'donation-link') {
       return (
-        <div className="w-full py-3">
-          <p className="font-sans text-xs text-[#1A1A1A]">Donation Link:</p>
-          <Link
+        <div className="w-full pb-3 mt-[25px]">
+          <p className="font-sans text-sm text-[#453454]">Donation Link:</p>
+          <a
             href={method.paymentID}
             target="_blank"
-            className="font-sans text-[17px] font-semibold"
+            className="font-sans text-[17px] mb-[20px] font-semibold line-clamp-2 overflow-hidden text-primary"
             rel="noopener noreferrer"
           >
             {method.paymentID}
-          </Link>
+          </a>
           <DonateButton
-            otherClass="bg-primary text-white disabled:opacity-50 mt-6"
+            otherClass="bg-primary text-white disabled:opacity-50"
             onClick={() => window.open(method.paymentID, '_blank')}
           >
             Visit link
@@ -92,7 +87,7 @@ const DonationForm = React.memo(
 
     if (method.type === 'chimoney') {
       return (
-        <div>
+        <div className='mt-[20px] md:mt-[15px]'>
           {[
             {
               label: 'Amount',
@@ -110,13 +105,13 @@ const DonationForm = React.memo(
             },
           ].map((i) => {
             return (
-              <div key={i.name} className="relative my-3 w-full">
+              <div key={i.name} className="relative mb-[10px] w-full">
                 {i.name === 'amount' && (
                   <span
                     className={`absolute inset-y-0 left-0 pl-3 flex text-xs font-sans items-center ${
                       donationAmount === ''
-                        ? 'text-[#1A1A1A30]'
-                        : 'text-[#1A1A1A]'
+                        ? 'text-[#92889a]'
+                        : 'text-[#453454]'
                     }`}
                   >
                     $
@@ -131,7 +126,7 @@ const DonationForm = React.memo(
                   onChange={(e) => i.onChange(e.target.value)}
                   placeholder={i.label}
                   name={i.name}
-                  className={`border w-full text-xs border-[#C4C4C490] placeholder:text-[#1A1A1A30] text-[#1A1A1A] rounded-[8px] p-3 focus:outline focus:outline-primary ${
+                  className={`border w-full text-sm border-[#C4C4C490] placeholder:text-[#92889a] placeholder:font-normal font-medium text-[#453454] rounded-[8px] px-[12px] py-[14px] focus:outline focus:outline-primary bg-[#F1E7F207]focus:bg-[#F1E7F207] font-sans ${
                     i.name === 'amount' ? 'pl-5' : ''
                   }`}
                 />
@@ -139,25 +134,25 @@ const DonationForm = React.memo(
             );
           })}
           {paymentLink && parseFloat(donationAmount) === paymentAmount ? (
-            <div className="flex flex-row items-center gap-6">
+            <div className="flex flex-row items-center gap-6 mt-[15px]">
               <button
                 onClick={() => openPaymentWidget(paymentLink)}
                 type="button"
-                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 px-3 py-2 border border-[#8A2BE2]  rounded-[5px] text-white bg-primary`}
+                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 p-[12px] border border-[#8A2BE2]  rounded-[5px] text-white bg-primary`}
               >
                 Complete Payment for {paymentCurrency} {paymentAmount}
               </button>
               <button
                 onClick={resetPayment}
                 type="button"
-                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 px-3 py-2 border border-[#8A2BE2]  rounded-[5px] bg-[#8A2BE210] text-primary`}
+                className={`text-xs font-sans flex flex-row items-center justify-center font-medium gap-2 p-[12px] border border-[#8A2BE2]  rounded-[5px] bg-[#8A2BE210] text-primary`}
               >
                 Restart Donation
               </button>
             </div>
           ) : (
             <DonateButton
-              otherClass="bg-primary text-white disabled:opacity-50"
+              otherClass="bg-primary text-white disabled:opacity-50 mt-[15px]"
               disabled={donationAmount === '' || payerEmail === '' || isLoading}
               loading={isLoading}
               onClick={handleDonateClick}
@@ -170,18 +165,18 @@ const DonationForm = React.memo(
     }
 
     return (
-      <div className="w-full py-3">
-        <p className="font-sans text-xs text-[#1A1A1A] flex flex-row gap-2 items-center">
+      <div className="w-full pb-3 mt-[25px]">
+        <p className="font-sans text-sm text-[#453454] flex flex-row gap-2 items-center">
           {getTitle(method.type)}:{' '}
         </p>
-        <Link
+        <a
           href={method.paymentID}
           target="_blank"
-          className="font-sans text-[17px] font-semibold line-clamp-2 overflow-hidden"
+          className="font-sans text-[17px] mb-[20px] font-semibold line-clamp-2 overflow-hidden text-primary"
           rel="noopener noreferrer"
         >
           {method.paymentID}
-        </Link>
+        </a>
         <CopyWithTooltip paymentID={method.paymentID} text={`Copy Address`} />
       </div>
     );
