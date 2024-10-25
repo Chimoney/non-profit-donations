@@ -12,6 +12,7 @@
     "plugin:import/typescript",
     "plugin:functional/lite",
     "prettier",
+    "next", "next/core-web-vitals",
     "prettier/@typescript-eslint"
   ],
   "globals": { "BigInt": true, "console": true, "WebAssembly": true },
