@@ -98,8 +98,7 @@ export const DonationOrganizations = ({
   useTestPaymentID,
 }) => {
   return (
-    <>
-      {data && data.length > 0 ? (
+ 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
           {data.map((i) => {
             return (
@@ -113,15 +112,6 @@ export const DonationOrganizations = ({
             );
           })}
         </div>
-      ) : (
-        <div className="font-sans text-xl gap-6 p-12 flex flex-col items-center justify-center">
-          <LuSearchSlash size={50} className='text-gray-400'/>
-          <p className="font-sans font-medium text-sm text-center text-gray-500">
-            Sorry, there are no Donation Organizations currently using this
-            payment method yet!
-          </p>
-        </div>
-      )}
-    </>
+
   );
 };

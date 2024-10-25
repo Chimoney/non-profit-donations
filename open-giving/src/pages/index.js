@@ -14,7 +14,7 @@ import Snackbar from '@/components/landingpage/snackbar';
 const ITEMS_PER_PAGE = 9;
 export default function Home() {
   const router = useRouter();
-  const [selectedPaymentMethods, setSelectedPaymentMethods] = useState([]);
+  const [selectedPaymentMethods, setSelectedPaymentMethods] = useState(['chimoney']);
   const [selectedNonProfit, setSelectedNonProfit] = useState(null);
   const [filteredNonProfits, setFilteredNonProfits] = useState([]);
   const [nonProfits, setNonProfits] = useState([]);
@@ -118,7 +118,7 @@ export default function Home() {
         selectedPaymentMethods={selectedPaymentMethods}
       />
 
-      {selectedPaymentMethods && selectedPaymentMethods.length > 0 && (
+
         <div className="md:px-12 2xl:px-[20%] pb-28 w-full">
           <DonationOrganizations
             data={paginatedNonProfits}
@@ -134,7 +134,6 @@ export default function Home() {
             />
           )}
         </div>
-      )}
       {selectedNonProfit?.name && (
         <NonProfitDialog
           nonProfit={selectedNonProfit}
