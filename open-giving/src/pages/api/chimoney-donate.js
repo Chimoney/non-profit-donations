@@ -18,6 +18,7 @@ export default async function handler(req, res) {
       redirect_url,
       useTestPaymentID,
       interledgerWalletAddress,
+      NPOName,
     } = req.body;
     const apiKEY = process.env.CHIMONEY_API_SECRET;
     const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
@@ -68,6 +69,9 @@ export default async function handler(req, res) {
           type: 'donation',
           redirect_url,
           redeemData,
+          meta: {
+            NPOName: NPOName || 'Open Giving',
+          },
         }),
       };
       const response = await fetch(`${server}/payment/initiate`, config);

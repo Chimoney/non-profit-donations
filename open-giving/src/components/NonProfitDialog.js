@@ -16,7 +16,6 @@ const Modal = ({ open, onClose, children }) => {
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white w-full max-w-3xl mx-auto rounded-md shadow-lg">
-        
         {children}
       </div>
     </div>
@@ -47,7 +46,7 @@ const NonProfitDialog = ({
 
   if (!nonProfit) return null;
 
-  const isMobile = useIsMobileScreen()
+  const isMobile = useIsMobileScreen();
   const getPaymentID = (method) => {
     if (!method.paymentID) {
       return true;
@@ -72,7 +71,7 @@ const NonProfitDialog = ({
   return (
     <Modal open={open} onClose={onClose}>
       <ModalContent>
-      <div className="w-full mb-[28px] flex flex-row items-center justify-between">
+        <div className="w-full mb-[28px] flex flex-row items-center justify-between">
           <p className="font-sans font-medium text-[23px] text-[#453454]">
             {nonProfit.name}
           </p>
@@ -124,33 +123,27 @@ const NonProfitDialog = ({
                     name: nonProfit.email,
                     link: null,
                   },
-                ]
-                  .map((i) => {
-                    return (
-                      <span
-                        key={i.name}
-                        className="font-sans flex flex-row items-center text-primary underline font-medium text-xs rounded-full gap-1"
-                      >
-                        <Image
-                          src={i.icon}
-                          alt={i.name}
-                          width={12}
-                          height={12}
-                        />
-                        {i.link ? (
-                          <a
-                            href={i.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {i.name}
-                          </a>
-                        ) : (
-                          <span>{i.name}</span>
-                        )}
-                      </span>
-                    );
-                  })}
+                ].map((i) => {
+                  return (
+                    <span
+                      key={i.name}
+                      className="font-sans flex flex-row items-center text-primary underline font-medium text-xs rounded-full gap-1"
+                    >
+                      <Image src={i.icon} alt={i.name} width={12} height={12} />
+                      {i.link ? (
+                        <a
+                          href={i.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {i.name}
+                        </a>
+                      ) : (
+                        <span>{i.name}</span>
+                      )}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -180,6 +173,7 @@ const NonProfitDialog = ({
                   setSnackbarMessage={setSnackbarMessage}
                   setSnackbarOpen={setSnackbarOpen}
                   useTestPaymentID={useTestPaymentID}
+                  NPOName={nonProfit.name}
                 />
               </div>
             </div>
@@ -203,7 +197,7 @@ const NonProfitDialog = ({
                         />
                         {i.method}
                       </span>
-                      <FaAngleRight size={15} color="#453454"/>
+                      <FaAngleRight size={15} color="#453454" />
                     </button>
                   );
                 })}
@@ -217,4 +211,3 @@ const NonProfitDialog = ({
 };
 
 export default NonProfitDialog;
-

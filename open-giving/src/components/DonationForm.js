@@ -6,7 +6,7 @@ import CopyWithTooltip from './landingpage/copy';
 
 const dev = process.env.NODE_ENV == 'development';
 const DonationForm = React.memo(
-  ({ method, index, setSnackbarMessage, setSnackbarOpen }) => {
+  ({ method, index, setSnackbarMessage, setSnackbarOpen, NPOName }) => {
     useEffect(() => {
       const handleMessage = (event) => {
         const isApprovedOrigin = dev
@@ -42,7 +42,7 @@ const DonationForm = React.memo(
       handleDonateClick,
       openPaymentWidget,
       resetPayment,
-    } = useDonation(method, setSnackbarMessage, setSnackbarOpen);
+    } = useDonation(method, setSnackbarMessage, setSnackbarOpen, NPOName);
 
     const getTitle = (methodType) => {
       switch (methodType) {
@@ -87,7 +87,7 @@ const DonationForm = React.memo(
 
     if (method.type === 'chimoney') {
       return (
-        <div className='mt-[20px] md:mt-[15px]'>
+        <div className="mt-[20px] md:mt-[15px]">
           {[
             {
               label: 'Amount',

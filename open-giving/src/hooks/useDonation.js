@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { handlers } from 'non-profit-donations';
 import { useState } from 'react';
 
-const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
+const useDonation = (method, setSnackbarMessage, setSnackbarOpen, NPOName) => {
   const router = useRouter();
   const [donationAmount, setDonationAmount] = useState('');
   const [payerEmail, setPayerEmail] = useState('');
@@ -83,6 +83,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
             redirect_url: `${window.location.origin}/donation-success`,
             useTestPaymentID,
             ...settlementData,
+            NPOName,
           }),
         });
 
