@@ -32,7 +32,7 @@ html {
 }
 
 .hero-bg {
-  background-image: url('../../public/new/hero-bg.svg');
+  background-image: url('https://res.cloudinary.com/chimoney-files/image/upload/v1729981716/hiujxqehhf6avf9ag1cj.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
