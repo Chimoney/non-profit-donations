@@ -10,11 +10,7 @@ export const SelectDonationMethod = ({
   return (
     <div
       id="orgs"
-      className={`font-sans pt-[35px] pb-[20px] md:py-[30px] lg:pt-[68px] px-6 md:px-12 2xl:px-[20%] w-full flex flex-col items-center justify-center gap-[18px] md:gap-[20px] ${
-        selectedPaymentMethods && selectedPaymentMethods.length > 0
-          ? ''
-          : 'mb-12'
-      }`}
+      className="font-sans pt-[35px] pb-[20px] md:py-[30px] lg:pt-[68px] px-6 md:px-12 2xl:px-[20%] w-full flex flex-col items-center justify-center gap-[18px] md:gap-[20px]"
     >
       <p className="text-[#301d41] text-2xl md:text-3xl text-center font-medium">
         Choose donation method
@@ -47,7 +43,6 @@ export const SelectDonationMethod = ({
                   {isActive && (
                     <svg
                       className="size-[12px] md:w-4 md:h-4 text-primary"
-                      xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
