@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/chimoney-logo.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no"
