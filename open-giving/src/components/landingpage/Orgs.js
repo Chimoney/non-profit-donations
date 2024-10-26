@@ -45,7 +45,7 @@ const OrgCard = ({ org, onLearnMore, showQRCode }) => {
             {org.name}
           </p>
 
-          <p className="text-[#4E4556] text-[13px] md:text-[15px] leading-[16px] font-normal line-clamp-2 overflow-hidden">
+          <p className="text-[#4E4556] text-[14px] md:text-[15px] leading-[16px] font-normal line-clamp-2 overflow-hidden">
             {org.description ? org.description : org.name}
           </p>
         </div>

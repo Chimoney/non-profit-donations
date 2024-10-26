@@ -20,31 +20,31 @@ export const donationMethods = [
     type: 'paypal',
     icon: '/new/donation/paypal.svg',
   },
-  {
-    method: 'Stripe',
-    type: 'stripe',
-    icon: '/new/donation/stripe.svg',
-  },
-  {
-    method: 'Venmo',
-    type: 'venmo',
-    icon: '/new/donation/venmo.svg',
-  },
-  {
-    method: 'Cashapp',
-    type: 'cashapp',
-    icon: '/new/donation/cashapp.svg',
-  },
-  {
-    method: 'Patreon',
-    type: 'patreon',
-    icon: '/new/donation/patreon.svg',
-  },
-  {
-    method: 'Donorbox',
-    type: 'donorbox',
-    icon: '/new/donation/donorbox.svg',
-  },
+  // {
+  //   method: 'Stripe',
+  //   type: 'stripe',
+  //   icon: '/new/donation/stripe.svg',
+  // },
+  // {
+  //   method: 'Venmo',
+  //   type: 'venmo',
+  //   icon: '/new/donation/venmo.svg',
+  // },
+  // {
+  //   method: 'Cashapp',
+  //   type: 'cashapp',
+  //   icon: '/new/donation/cashapp.svg',
+  // },
+  // {
+  //   method: 'Patreon',
+  //   type: 'patreon',
+  //   icon: '/new/donation/patreon.svg',
+  // },
+  // {
+  //   method: 'Donorbox',
+  //   type: 'donorbox',
+  //   icon: '/new/donation/donorbox.svg',
+  // },
   {
     method: 'Donation Link',
     type: 'donation-link',

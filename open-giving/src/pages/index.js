@@ -14,7 +14,7 @@ import Snackbar from '@/components/landingpage/snackbar';
 const ITEMS_PER_PAGE = 9;
 export default function Home() {
   const router = useRouter();
-  const [selectedPaymentMethods, setSelectedPaymentMethods] = useState(['chimoney']);
+  const [selectedPaymentMethods, setSelectedPaymentMethods] = useState([]);
   const [selectedNonProfit, setSelectedNonProfit] = useState(null);
   const [filteredNonProfits, setFilteredNonProfits] = useState([]);
   const [nonProfits, setNonProfits] = useState([]);

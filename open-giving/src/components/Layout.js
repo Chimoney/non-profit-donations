@@ -9,7 +9,7 @@ const Layout = ({ children, plain = false }) => {
       {!plain && <Header />}
       {children}
       {!plain && (
-        <div className="fixed bg-white left-6 md:left-0 bottom-0 w-2/3 md:w-full  py-4 border-t border-[#AE6DEA45] justify-center z-50 text-center flex flex-row items-center">
+        <div className="fixed bg-white md:left-0 bottom-0 w-full  py-4 border-t border-[#AE6DEA45] justify-center z-50 text-center flex flex-row items-center">
           <span className="font-sans text-[#1A1A1A] text-[12px] md:text-xs flex flex-row items-center justify-center gap-1">
             Built with <FaHeart className="text-primary" /> by{' '}
             <Image
