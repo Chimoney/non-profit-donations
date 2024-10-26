@@ -77,7 +77,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen, NPOName) => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            amount: parseFloat(donationAmount),
+            amount: +Math.abs(parseFloat(donationAmount)),
             currency: 'USD',
             payerEmail,
             redirect_url: `${window.location.origin}/donation-success`,

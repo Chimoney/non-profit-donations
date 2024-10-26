@@ -85,7 +85,7 @@ const NonProfitDialog = ({
             <div className="md:w-1/2 ">
               <div className="md:w-[90%] md:mr-auto h-[115px] bg-[#FEFCFC] rounded-[10px] border border-[#8A2BE225] flex flex-row items-center justify-center">
                 <img
-                  src={dialogImgSrc}
+                  src={dialogImgSrc || defaultLogo}
                   alt={nonProfit.name}
                   width={100}
                   height={100}

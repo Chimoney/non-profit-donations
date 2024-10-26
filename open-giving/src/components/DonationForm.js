@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import useDonation from '../hooks/useDonation';
 import DonateButton from './landingpage/donateButton';
 import CopyWithTooltip from './landingpage/copy';
+import { sanitizeNumericInput } from '../utils/paymentMethods';
 
 const dev = process.env.NODE_ENV == 'development';
 const DonationForm = React.memo(
@@ -108,7 +109,7 @@ const DonationForm = React.memo(
               <div key={i.name} className="relative mb-[10px] w-full">
                 {i.name === 'amount' && (
                   <span
-                    className={`absolute inset-y-0 left-0 pl-3 flex text-xs font-sans items-center ${
+                    className={`absolute font-extrabold inset-y-0 left-0 pl-3 flex text-sm font-sans items-center ${
                       donationAmount === ''
                         ? 'text-[#92889a]'
                         : 'text-[#453454]'
@@ -123,9 +124,17 @@ const DonationForm = React.memo(
                   disabled={
                     paymentLink && parseFloat(donationAmount) === paymentAmount
                   }
-                  onChange={(e) => i.onChange(e.target.value)}
+                  onChange={(e) => {
+                    const value =
+                      i.type === 'number'
+                        ? sanitizeNumericInput(e.target.value)
+                        : e.target.value;
+                    i.onChange(value);
+                  }}
                   placeholder={i.label}
                   name={i.name}
+                  inputMode={i.type === 'number' ? 'decimal' : 'text'}
+                  pattern={i.type === 'number' ? '[0-9]*[.]?[0-9]*' : undefined}
                   className={`border w-full text-sm border-[#C4C4C490] placeholder:text-[#92889a] placeholder:font-normal font-medium text-[#453454] rounded-[8px] px-[12px] py-[14px] focus:outline focus:outline-primary bg-[#F1E7F207]focus:bg-[#F1E7F207] font-sans ${
                     i.name === 'amount' ? 'pl-5' : ''
                   }`}
@@ -153,7 +162,13 @@ const DonationForm = React.memo(
           ) : (
             <DonateButton
               otherClass="bg-primary text-white disabled:opacity-50 mt-[15px]"
-              disabled={donationAmount === '' || payerEmail === '' || isLoading}
+              disabled={
+                donationAmount === '' ||
+                payerEmail === '' ||
+                isLoading ||
+                isNaN(donationAmount) ||
+                Number(donationAmount) <= 0
+              }
               loading={isLoading}
               onClick={handleDonateClick}
             >

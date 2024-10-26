@@ -42,6 +42,12 @@ export default async function handler(req, res) {
         });
         return;
       }
+      if (isNaN(amount) || amount <= 0) {
+        res.status(400).json({
+          error: 'Invalid amount',
+        });
+        return;
+      }
       const server = dev
         ? 'http://localhost:4600/v0.2'
         : process.env.STRIPE_DOMAIN?.includes('sandbox.chimoney.io') ||

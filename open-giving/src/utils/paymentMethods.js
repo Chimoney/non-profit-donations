@@ -1,4 +1,4 @@
-import { donationMethods } from "@/components/constants";
+import { donationMethods } from '@/components/constants';
 
 export const PAYMENT_METHODS = [
   'chimoney',
@@ -31,6 +31,19 @@ export const filterDonationMethods = (org) => {
 };
 
 export const getIconByMethod = (method) => {
-  const foundMethod = donationMethods.find(item => item.type === method);
+  const foundMethod = donationMethods.find((item) => item.type === method);
   return foundMethod ? foundMethod.icon : null;
+};
+
+export const sanitizeNumericInput = (value) => {
+  const sanitized = value.replace(/[^\d.]/g, '');
+  const decimalCount = (sanitized.match(/\./g) || []).length;
+  if (decimalCount <= 1) {
+    const parts = sanitized.split('.');
+    if (parts.length === 2) {
+      return `${parts[0]}.${parts[1].slice(0, 2)}`;
+    }
+    return sanitized;
+  }
+  return sanitized.slice(0, sanitized.lastIndexOf('.'));
 };
