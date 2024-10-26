@@ -18,6 +18,7 @@ export default async function handler(req, res) {
       redirect_url,
       useTestPaymentID,
       interledgerWalletAddress,
+      NPOName,
     } = req.body;
     const apiKEY = process.env.CHIMONEY_API_SECRET;
     const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
@@ -38,6 +39,12 @@ export default async function handler(req, res) {
           error: `Wallet ID is not set for this Organization in ${
             useTestPaymentID ? 'Test' : 'Production'
           } mode`,
+        });
+        return;
+      }
+      if (isNaN(amount) || amount <= 0) {
+        res.status(400).json({
+          error: 'Invalid amount',
         });
         return;
       }
@@ -68,6 +75,9 @@ export default async function handler(req, res) {
           type: 'donation',
           redirect_url,
           redeemData,
+          meta: {
+            NPOName: NPOName || 'Open Giving',
+          },
         }),
       };
       const response = await fetch(`${server}/payment/initiate`, config);

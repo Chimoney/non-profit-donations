@@ -1,23 +1,14 @@
-import { Typography } from '@mui/material';
-import { Box } from '@mui/material';
 import { QRCodeSVG } from 'qrcode.react';
 import React from 'react';
 
 const QRCodeComponent = ({ link, cta }) => {
   return (
-    <Box marginBottom={2}>
-      <Typography variant="subtitle2" color="textSecondary" textAlign="center">
-        {cta || 'Scan me'}
-      </Typography>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-      >
+    <div className="mb-4">
+      <p className="text-sm text-gray-600 text-center">{cta || 'Scan me'}</p>
+      <div className="flex justify-center items-center h-full">
         <QRCodeSVG value={link} bgColor="inherit" fgColor="white" />
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

@@ -1,10 +1,9 @@
-import { useTheme } from '@mui/material/styles';
 import PaymentWidget from 'chimoney-payment-widget';
 import { useRouter } from 'next/router';
 import { handlers } from 'non-profit-donations';
 import { useState } from 'react';
 
-const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
+const useDonation = (method, setSnackbarMessage, setSnackbarOpen, NPOName) => {
   const router = useRouter();
   const [donationAmount, setDonationAmount] = useState('');
   const [payerEmail, setPayerEmail] = useState('');
@@ -12,7 +11,6 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const [paymentLink, setPaymentLink] = useState(null);
   const [paymentAmount, setPaymentAmount] = useState(null);
   const [paymentCurrency, setPaymentCurrency] = useState(null);
-  const theme = useTheme();
   const useTestPaymentID = router.query.useTestPaymentID;
 
   const handleDonateClick = async (paymentID) => {
@@ -79,12 +77,13 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            amount: parseFloat(donationAmount),
+            amount: +Math.abs(parseFloat(donationAmount)),
             currency: 'USD',
             payerEmail,
             redirect_url: `${window.location.origin}/donation-success`,
             useTestPaymentID,
             ...settlementData,
+            NPOName,
           }),
         });
 
@@ -136,7 +135,7 @@ const useDonation = (method, setSnackbarMessage, setSnackbarOpen) => {
   const openPaymentWidget = (link) => {
     const paymentWidget = new PaymentWidget({
       paymentLink: link,
-      brandColor: theme.palette.primary.main,
+      brandColor: '#8A2BE2',
       brandName: 'Open Giving',
       onPaymentSuccess: (event) => {
         console.log('Payment successful:', event);
