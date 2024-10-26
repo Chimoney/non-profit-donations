@@ -722,13 +722,14 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://www.chessinslumsafrica.com/',
     logo: 'https://shorturl.at/fe3Pz',
     foundedYear: '2018',
-    description: 'We are opening doors of opportunities and education for marginalized kids through chess♟. Together, we can do great things from a small place',
+    description:
+      'We are opening doors of opportunities and education for marginalized kids through chess♟. Together, we can do great things from a small place',
     isVerified: true,
     verifications: [
       {
         date: new Date('2024-10-15'),
         verifier: '@DevvEmeka',
-      }
+      },
     ],
     paymentMethods: [
       {
@@ -742,8 +743,8 @@ const nonProfits: readonly NonProfit[] = [
           production: '', //if present
         },
         donationHandler: 'chimoneyDonation',
-      }
-    ]
+      },
+    ],
   },
   {
     npCode: 'FIDANigeria',
@@ -753,13 +754,14 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://fida.org.ng/',
     logo: 'https://shorturl.at/yPEnK',
     foundedYear: '1964',
-    description: 'FIDA Nigeria’s primary role is to protect, promote and preserve the rights of women and children in Nigeria.',
+    description:
+      'FIDA Nigeria’s primary role is to protect, promote and preserve the rights of women and children in Nigeria.',
     isVerified: true,
     verifications: [
       {
         date: new Date('2024-10-15'),
         verifier: '@DevvEmeka',
-      }
+      },
     ],
     paymentMethods: [
       {
@@ -773,8 +775,8 @@ const nonProfits: readonly NonProfit[] = [
           production: '', //if present
         },
         donationHandler: 'chimoneyDonation',
-      }
-    ]
+      },
+    ],
   },
   {
     npCode: 'CeceYara',
@@ -784,13 +786,14 @@ const nonProfits: readonly NonProfit[] = [
     website: 'https://ceceyara.org/',
     logo: 'https://shorturl.at/7F87l',
     foundedYear: '2016',
-    description: 'The Cece Yara Foundation is a child-centered non-profit organization established in 2016 to prevent child sexual abuse and to provide access to care, information, protection and emergency intervention.',
+    description:
+      'The Cece Yara Foundation is a child-centered non-profit organization established in 2016 to prevent child sexual abuse and to provide access to care, information, protection and emergency intervention.',
     isVerified: true,
     verifications: [
       {
         date: new Date('2024-10-15'),
         verifier: '@DevvEmeka',
-      }
+      },
     ],
     paymentMethods: [
       {
@@ -804,10 +807,9 @@ const nonProfits: readonly NonProfit[] = [
           production: '', //if present
         },
         donationHandler: 'chimoneyDonation',
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 export default nonProfits;
-
