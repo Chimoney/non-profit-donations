@@ -20,10 +20,7 @@ const TestModeSwitcher = () => {
 
   return (
     <div className="fixed hidden md:flex bg-white right-6 2xl:right-[20%] bottom-0 pb-4 justify-center z-50 text-center flex-row items-center">
-      <div
-        className="cursor-pointer text-3xl"
-        onClick={handleToggle}
-      >
+      <div className="cursor-pointer text-3xl" onClick={handleToggle}>
         {isTestMode ? (
           <FaToggleOn className="text-primary" />
         ) : (

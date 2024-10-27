@@ -4,7 +4,7 @@ import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
 const Header = () => {
-  const isMobile = useIsMobileScreen()
+  const isMobile = useIsMobileScreen();
   return (
     <div className="py-8 px-6 md:px-12 2xl:px-[20%] h-20 w-full border-b border-[#AE6DEA45] flex flex-row items-center justify-between">
       <Image
