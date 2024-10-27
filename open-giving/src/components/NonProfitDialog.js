@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
-import { MdClose, MdLocationOn } from 'react-icons/md';
-import { FaRegCalendarAlt } from 'react-icons/fa';
-import DonationForm from './DonationForm';
 import Image from 'next/image';
+import React, { useState } from 'react';
+import { FaRegCalendarAlt } from 'react-icons/fa';
 import { FaAngleRight, FaArrowLeft } from 'react-icons/fa6';
+import { MdClose, MdLocationOn } from 'react-icons/md';
+
+import DonationForm from './DonationForm';
+
+import useIsMobileScreen from '@/hooks/mobile';
 import {
   filterDonationMethods,
   formatPaymentMethodName,
   getIconByMethod,
 } from '@/utils/paymentMethods';
-import useIsMobileScreen from '@/hooks/mobile';
 
 const Modal = ({ open, onClose, children }) => {
   if (!open) return null;
@@ -39,6 +41,7 @@ const NonProfitDialog = ({
     nonProfit?.logo || defaultLogo
   );
   const [selectedPaymentType, setSelectedPaymentType] = useState(null);
+  const isMobile = useIsMobileScreen();
 
   const handleDialogImageError = () => {
     setDialogImgSrc(defaultLogo);
@@ -46,7 +49,6 @@ const NonProfitDialog = ({
 
   if (!nonProfit) return null;
 
-  const isMobile = useIsMobileScreen();
   const getPaymentID = (method) => {
     if (!method.paymentID) {
       return true;
@@ -102,7 +104,10 @@ const NonProfitDialog = ({
                   },
                 ].map((i) => {
                   return (
-                    <span className="bg-[#EDEAEC] font-sans flex flex-row items-center px-[11px] py-[6px] text-[#4A4152] font-medium text-[11px] md:text-[12px] rounded-full gap-1">
+                    <span
+                      key={i.name}
+                      className="bg-[#EDEAEC] font-sans flex flex-row items-center px-[11px] py-[6px] text-[#4A4152] font-medium text-[11px] md:text-[12px] rounded-full gap-1"
+                    >
                       {i.icon} {i.name}
                     </span>
                   );
@@ -186,6 +191,7 @@ const NonProfitDialog = ({
                 {options.map((i) => {
                   return (
                     <button
+                      key={i.type}
                       onClick={() => handleSelect(i.type)}
                       className="border w-full px-[12px] py-[13px] md:py-[11px] mb-[10px]  border-[#C4C4C470] bg-[#F1E7F208] rounded-[8px] flex flex-row items-center justify-between"
                     >

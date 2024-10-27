@@ -1,7 +1,8 @@
-import useIsMobileScreen from '@/hooks/mobile';
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
+
+import useIsMobileScreen from '@/hooks/mobile';
 
 const Header = () => {
   const isMobile = useIsMobileScreen();

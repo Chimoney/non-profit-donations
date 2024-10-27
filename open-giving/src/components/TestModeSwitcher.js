@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import { FaToggleOn, FaToggleOff } from 'react-icons/fa';
+import { FaToggleOff, FaToggleOn } from 'react-icons/fa';
 
 const TestModeSwitcher = () => {
   const router = useRouter();

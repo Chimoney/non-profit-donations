@@ -1,8 +1,9 @@
-import React from 'react';
-import TestModeSwitcher from './TestModeSwitcher';
-import Header from './Header';
-import { FaHeart } from 'react-icons/fa6';
 import Image from 'next/image';
+import React from 'react';
+import { FaHeart } from 'react-icons/fa6';
+
+import Header from './Header';
+import TestModeSwitcher from './TestModeSwitcher';
 const Layout = ({ children, plain = false }) => {
   return (
     <div className="min-h-screen  bg-gray-50 w-full">

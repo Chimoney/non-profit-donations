@@ -1,14 +1,14 @@
-import { Hero } from '@/components/landingpage/Hero';
+import { useRouter } from 'next/router';
+import { verifiedNonprofits } from 'non-profit-donations';
+import { useEffect, useState } from 'react';
 
+import Layout from '@/components/Layout';
+import NonProfitDialog from '@/components/NonProfitDialog';
+import { donationMethods } from '@/components/constants';
+import { Hero } from '@/components/landingpage/Hero';
 import { DonationOrganizations } from '@/components/landingpage/Orgs';
 import { SelectDonationMethod } from '@/components/landingpage/SelectDonationMethod';
-import Layout from '@/components/Layout';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { verifiedNonprofits } from 'non-profit-donations';
-import { donationMethods } from '@/components/constants';
 import Pagination from '@/components/landingpage/pagination';
-import NonProfitDialog from '@/components/NonProfitDialog';
 import Snackbar from '@/components/landingpage/snackbar';
 
 const ITEMS_PER_PAGE = 9;
