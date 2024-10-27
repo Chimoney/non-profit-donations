@@ -50,18 +50,18 @@ export default async function handler(req, res) {
       }
       const server = dev
         ? 'http://localhost:4600/v0.2'
-        : process.env.STRIPE_DOMAIN?.includes('sandbox.chimoney.io') ||
-          useTestPaymentID
+        : useTestPaymentID
         ? 'https://api-v2-sandbox.chimoney.io/v0.2'
         : 'https://api.chimoney.io/v0.2';
 
+      const xApiKey =
+        (useTestPaymentID || dev) && typeof apiKEYTest !== 'undefined'
+          ? apiKEYTest
+          : apiKEY;
       const headers = {
         accept: 'application/json',
         'content-type': 'application/json',
-        'X-api-key':
-          useTestPaymentID && typeof apiKEYTest !== 'undefined'
-            ? apiKEYTest
-            : apiKEY,
+        'X-api-key': xApiKey,
       };
       const config = {
         method: 'POST',
@@ -88,7 +88,10 @@ export default async function handler(req, res) {
         res.status(200).json(data);
       } else {
         res.status(500).json({
-          error: data.message || 'Failed to initiate Chimoney donation',
+          error:
+            data.message ||
+            data.error ||
+            'Failed to initiate Chimoney donation',
         });
       }
     } catch (error) {
