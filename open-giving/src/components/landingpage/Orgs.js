@@ -1,8 +1,11 @@
-import { FaHeart } from 'react-icons/fa6';
 import { useState } from 'react';
-import QRCodeComponent from '../QRCodeComponent';
-import { filterDonationMethods } from '@/utils/paymentMethods';
+import { FaHeart } from 'react-icons/fa6';
 import { LuSearchSlash } from 'react-icons/lu';
+
+import QRCodeComponent from '../QRCodeComponent';
+
+import { filterDonationMethods } from '@/utils/paymentMethods';
+
 
 const OrgCard = ({ org, onLearnMore, showQRCode }) => {
   const paymentOptions = filterDonationMethods(org);

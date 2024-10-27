@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa6';
+
 import { HeroContent } from '../constants';
 
 export const Hero = () => {

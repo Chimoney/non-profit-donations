@@ -1,5 +1,6 @@
-import useIsMobileScreen from '@/hooks/mobile';
 import Image from 'next/image';
+
+import useIsMobileScreen from '@/hooks/mobile';
 
 export const SelectDonationMethod = ({
   paymentMethods,

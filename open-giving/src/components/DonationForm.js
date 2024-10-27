@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 
 import useDonation from '../hooks/useDonation';
-import DonateButton from './landingpage/donateButton';
-import CopyWithTooltip from './landingpage/copy';
 import { sanitizeNumericInput } from '../utils/paymentMethods';
+
+import CopyWithTooltip from './landingpage/copy';
+import DonateButton from './landingpage/donateButton';
 
 const dev = process.env.NODE_ENV == 'development';
 const DonationForm = React.memo(

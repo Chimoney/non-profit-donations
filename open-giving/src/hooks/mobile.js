@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useIsMobileScreen = (mobileBreakpoint = 768) => {
   const [isMobile, setIsMobile] = useState(false);
