@@ -143,7 +143,7 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'chimoney',
         paymentID: {
-          test: 'https://ilp-sandbox.chimoney.com/africahacks',
+          test: 'https://ilp-sandbox.chimoney.com/61365396',
           production: 'https://ilp.chimoney.com/worldinnovationleague',
         },
         donationHandler: 'chimoneyDonation',
