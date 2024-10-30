@@ -1,28 +1,40 @@
 export default async function handler(req, res) {
   const dev = process.env.NODE_ENV == 'development';
 
+  const getPaymentID = (paymentID, useTestPaymentID) => {
+    return useTestPaymentID && typeof paymentID?.test !== 'undefined'
+      ? paymentID?.test
+      : typeof paymentID?.production !== 'undefined'
+      ? paymentID?.production
+      : paymentID;
+  };
+
   if (req.method === 'POST') {
-    console.log({ body: req.body });
     const {
       amount,
       currency = 'USD',
       payerEmail,
-      walletID: walletIDFromBody,
+      walletID,
       redirect_url,
       useTestPaymentID,
+      interledgerWalletAddress,
+      NPOName,
     } = req.body;
     const apiKEY = process.env.CHIMONEY_API_SECRET;
     const apiKEYTest = process.env.CHIMONEY_API_SECRET_TEST;
 
     try {
-      const walletID =
-        useTestPaymentID && typeof walletIDFromBody?.test !== 'undefined'
-          ? walletIDFromBody?.test
-          : typeof walletIDFromBody?.production !== 'undefined'
-          ? walletIDFromBody?.production
-          : walletIDFromBody;
+      const redeemData = {};
+      if (walletID) {
+        redeemData.walletID = getPaymentID(walletID, useTestPaymentID);
+      } else if (interledgerWalletAddress) {
+        redeemData.interledgerWalletAddress = getPaymentID(
+          interledgerWalletAddress,
+          useTestPaymentID
+        );
+      }
 
-      if (!walletID) {
+      if (!walletID && !interledgerWalletAddress) {
         res.status(400).json({
           error: `Wallet ID is not set for this Organization in ${
             useTestPaymentID ? 'Test' : 'Production'
@@ -30,20 +42,26 @@ export default async function handler(req, res) {
         });
         return;
       }
+      if (isNaN(amount) || amount <= 0) {
+        res.status(400).json({
+          error: 'Invalid amount',
+        });
+        return;
+      }
       const server = dev
         ? 'http://localhost:4600/v0.2'
-        : process.env.STRIPE_DOMAIN?.includes('sandbox.chimoney.io') ||
-          useTestPaymentID
+        : useTestPaymentID
         ? 'https://api-v2-sandbox.chimoney.io/v0.2'
         : 'https://api.chimoney.io/v0.2';
 
+      const xApiKey =
+        (useTestPaymentID || dev) && typeof apiKEYTest !== 'undefined'
+          ? apiKEYTest
+          : apiKEY;
       const headers = {
         accept: 'application/json',
         'content-type': 'application/json',
-        'X-api-key':
-          useTestPaymentID && typeof apiKEYTest !== 'undefined'
-            ? apiKEYTest
-            : apiKEY,
+        'X-api-key': xApiKey,
       };
       const config = {
         method: 'POST',
@@ -56,12 +74,12 @@ export default async function handler(req, res) {
           paymentMethod: 'chimoney',
           type: 'donation',
           redirect_url,
-          redeemData: {
-            walletID,
+          redeemData,
+          meta: {
+            NPOName: NPOName || 'Open Giving',
           },
         }),
       };
-
       const response = await fetch(`${server}/payment/initiate`, config);
 
       const data = await response.json();
@@ -70,7 +88,10 @@ export default async function handler(req, res) {
         res.status(200).json(data);
       } else {
         res.status(500).json({
-          error: data.message || 'Failed to initiate Chimoney donation',
+          error:
+            data.message ||
+            data.error ||
+            'Failed to initiate Chimoney donation',
         });
       }
     } catch (error) {

@@ -1,6 +1,6 @@
-import { Box, FormControlLabel, Switch } from '@mui/material';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { FaToggleOff, FaToggleOn } from 'react-icons/fa';
 
 const TestModeSwitcher = () => {
   const router = useRouter();
@@ -19,30 +19,22 @@ const TestModeSwitcher = () => {
   };
 
   return (
-    <Box
-      sx={{
-        position: 'fixed',
-        bottom: 26,
-        right: 0,
-        zIndex: 1000,
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        borderRadius: '8px',
-        paddingBottom: '8px',
-      }}
-    >
-      <FormControlLabel
-        control={
-          <Switch
-            checked={isTestMode}
-            onChange={handleToggle}
-            color={isTestMode ? 'primary' : 'default'}
-            size="small"
-          />
-        }
-        label="Test Mode"
-        style={{ color: isTestMode ? 'inherit' : 'grey' }}
-      />
-    </Box>
+    <div className="fixed hidden md:flex bg-white right-6 2xl:right-[20%] bottom-0 pb-4 justify-center z-50 text-center flex-row items-center">
+      <div className="cursor-pointer text-3xl" onClick={handleToggle}>
+        {isTestMode ? (
+          <FaToggleOn className="text-primary" />
+        ) : (
+          <FaToggleOff className="text-gray-400" />
+        )}
+      </div>
+      <p
+        className={`ml-2 font-sans text-[11px] md:text-xs ${
+          isTestMode ? 'text-primary' : 'text-gray-400'
+        }`}
+      >
+        Test Mode
+      </p>
+    </div>
   );
 };
 

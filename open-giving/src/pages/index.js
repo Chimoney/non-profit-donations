@@ -1,27 +1,26 @@
-import { Box, Container, Pagination, Snackbar } from '@mui/material';
 import { useRouter } from 'next/router';
 import { verifiedNonprofits } from 'non-profit-donations';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import FilterAccordion from '../components/FilterAccordion';
-import Header from '../components/Header';
-import Layout from '../components/Layout';
-import NonProfitDialog from '../components/NonProfitDialog';
-import NonProfitGrid from '../components/NonProfitGrid';
-import { PAYMENT_METHODS } from '../utils/paymentMethods';
+import Layout from '@/components/Layout';
+import NonProfitDialog from '@/components/NonProfitDialog';
+import { donationMethods } from '@/components/constants';
+import { Hero } from '@/components/landingpage/Hero';
+import { DonationOrganizations } from '@/components/landingpage/Orgs';
+import { SelectDonationMethod } from '@/components/landingpage/SelectDonationMethod';
+import Pagination from '@/components/landingpage/pagination';
+import Snackbar from '@/components/landingpage/snackbar';
 
 const ITEMS_PER_PAGE = 9;
-
 export default function Home() {
   const router = useRouter();
-  const [nonProfits, setNonProfits] = useState([]);
-  const [filteredNonProfits, setFilteredNonProfits] = useState([]);
   const [selectedPaymentMethods, setSelectedPaymentMethods] = useState([]);
-  const [isFilterExpanded, setIsFilterExpanded] = useState(false);
   const [selectedNonProfit, setSelectedNonProfit] = useState(null);
+  const [filteredNonProfits, setFilteredNonProfits] = useState([]);
+  const [nonProfits, setNonProfits] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
-  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     const allNonProfits = verifiedNonprofits();
@@ -31,7 +30,6 @@ export default function Home() {
     if (paymentMethod) {
       const methods = paymentMethod.split(',');
       setSelectedPaymentMethods(methods);
-      setIsFilterExpanded(true);
     }
     if (npCode) {
       const nonProfit = allNonProfits.find((np) => np.npCode === npCode);
@@ -53,7 +51,7 @@ export default function Home() {
     setTotalPages(Math.ceil(filtered.length / ITEMS_PER_PAGE));
   }, [nonProfits, selectedPaymentMethods]);
 
-  const handlePaymentMethodToggle = (method) => {
+  const handleToggle = (method) => {
     const newSelectedMethods = selectedPaymentMethods.includes(method)
       ? selectedPaymentMethods.filter((m) => m !== method)
       : [...selectedPaymentMethods, method];
@@ -113,50 +111,44 @@ export default function Home() {
 
   return (
     <Layout>
-      <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Header />
-        <FilterAccordion
-          isExpanded={isFilterExpanded}
-          setIsExpanded={setIsFilterExpanded}
-          selectedMethods={selectedPaymentMethods}
-          onMethodToggle={handlePaymentMethodToggle}
-          paymentMethods={PAYMENT_METHODS}
-        />
-        <NonProfitGrid
-          nonProfits={paginatedNonProfits}
+      <Hero />
+      <SelectDonationMethod
+        paymentMethods={donationMethods}
+        handleToggle={handleToggle}
+        selectedPaymentMethods={selectedPaymentMethods}
+      />
+
+      <div className="md:px-12 2xl:px-[20%] pb-28 w-full">
+        <DonationOrganizations
+          data={paginatedNonProfits}
           onOpenDialog={handleOpenDialog}
           showQRCode={router.query.showQRCode}
           useTestPaymentID={router.query.useTestPaymentID}
         />
         {filteredNonProfits.length > ITEMS_PER_PAGE && (
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-            <Pagination
-              count={totalPages}
-              page={currentPage}
-              onChange={handleChangePage}
-              color="primary"
-              size="large"
-            />
-          </Box>
-        )}
-        {selectedNonProfit?.name && (
-          <NonProfitDialog
-            nonProfit={selectedNonProfit}
-            open={Boolean(selectedNonProfit)}
-            onClose={handleCloseDialog}
-            setSnackbarMessage={setSnackbarMessage}
-            setSnackbarOpen={setSnackbarOpen}
-            defaultLogo={defaultLogo}
-            useTestPaymentID={router.query.useTestPaymentID}
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            handleChangePage={handleChangePage}
           />
         )}
-      </Container>
+      </div>
+      {selectedNonProfit?.name && (
+        <NonProfitDialog
+          nonProfit={selectedNonProfit}
+          open={Boolean(selectedNonProfit)}
+          onClose={handleCloseDialog}
+          defaultLogo={defaultLogo}
+          setSnackbarMessage={setSnackbarMessage}
+          setSnackbarOpen={setSnackbarOpen}
+          useTestPaymentID={router.query.useTestPaymentID}
+        />
+      )}
       <Snackbar
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
         open={snackbarOpen}
+        message={snackbarMessage}
         autoHideDuration={3000}
         onClose={() => setSnackbarOpen(false)}
-        message={snackbarMessage}
       />
     </Layout>
   );

@@ -1,5 +1,3 @@
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import { Box, Button, Container, Paper, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
@@ -32,40 +30,33 @@ const DonationSuccess = () => {
 
   return (
     <Layout plain={true}>
-      <Container maxWidth="sm">
-        <Box sx={{ mt: 8, mb: 4 }}>
-          <Paper elevation={3} sx={{ p: 4, textAlign: 'center' }}>
-            <CheckCircleOutlineIcon
-              color="success"
-              sx={{ fontSize: 60, mb: 2 }}
-            />
-            <Typography variant="h4" gutterBottom>
-              Thank You for Your Donation!
-            </Typography>
-            {donationDetails.amount && donationDetails.currency && (
-              <Typography variant="h6" gutterBottom>
-                You have donated {donationDetails.amount}{' '}
-                {donationDetails.currency}
-              </Typography>
-            )}
-            {donationDetails.email && (
-              <Typography variant="body1" gutterBottom>
-                A receipt will be sent to: {donationDetails.email}
-              </Typography>
-            )}
+      <div className="hero-bg h-screen w-full flex flex-col items-center justify-center gap-6 p-3 font-sans">
+        <div className="border border-[#8A2BE2] w-full md:w-1/2 xl:w-1/3 px-6 py-12 gap-6 rounded-[10px] flex flex-col items-center justify-center-">
+          <img src="/new/success.svg" alt="succcess logo" className="size-24" />
+          <p className="font-semibold font-sans text-2xl text-[#a1a1a1] text-center">
+            Thank You for Your Donation!
+          </p>
 
-            <Box sx={{ mt: 4 }}>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={handleReturnHome}
-              >
-                Return to Home
-              </Button>
-            </Box>
-          </Paper>
-        </Box>
-      </Container>
+          {donationDetails.amount && donationDetails.currency && (
+            <p className="font-medium font-sans text-lg text-center">
+              You have donated {donationDetails.amount}{' '}
+              {donationDetails.currency}
+            </p>
+          )}
+          {donationDetails.email && (
+            <p className="font-medium font-sans text-lg text-center">
+              A receipt will be sent to: {donationDetails.email}
+            </p>
+          )}
+
+          <button
+            onClick={handleReturnHome}
+            className="text-lg flex flex-row items-center justify-center font-medium gap-2 px-3 py-1 bg-[#8A2BE2] text-white rounded-[5px]"
+          >
+            Return back to Home
+          </button>
+        </div>
+      </div>
     </Layout>
   );
 };

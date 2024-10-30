@@ -88,7 +88,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'PR3tl5CsAhQWW19sQuPH',
+          production: 'https://ilp.chimoney.com/shecodeafrica',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -177,7 +177,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'uEBebfE7ISin8JkilFRq',
+          production: 'https://ilp.chimoney.com/devcareer',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -208,8 +208,8 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'chimoney',
         paymentID: {
-          test: '69b9MVYsDMIWRbj5Oja5',
-          production: 'CoEp7GHW62Q2nQ6PbO8i',
+          test: 'https://ilp-sandbox.chimoney.com/61365396',
+          production: 'https://ilp.chimoney.com/worldinnovationleague',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -301,7 +301,7 @@ const nonProfits: readonly NonProfit[] = [
         type: 'chimoney',
         paymentID: {
           test: '',
-          production: 'uFm29ZPvzBKABthw7Gi',
+          production: 'https://ilp.chimoney.com/41703163_1729687433664',
         },
         donationHandler: 'chimoneyDonation',
       },
@@ -328,6 +328,30 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'donation-link',
         paymentID: 'https://girlswhocode.com/donate',
+      },
+    ],
+  },
+  {
+    npCode: 'Renbi Women',
+    name: 'Renbi Women',
+    email: 'info@renbiwomen.org',
+    country: 'Nigeria',
+    website: 'https://renbiwomen.org/',
+    logo: 'https://renbiwomen.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-1500.24cb05a5.png&w=3840&q=75',
+    foundedYear: '2022',
+    description:
+      'Renbi Women Empowerment Initiative focuses on the economic empowerment of women in vulnerable communities in Nigeria.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2024'),
+        verifier: '@HammedBabatunde',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://renbiwomen.org/donate',
       },
     ],
   },
@@ -752,6 +776,102 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'donation-link',
         paymentID: 'https://www.internetsociety.org/donate/',
+      },
+    ],
+  },
+  {
+    npCode: 'ChessInSlumsAfrica',
+    name: 'Chess in Slums Africa',
+    email: 'hello@chessinslumsafrica.com',
+    country: 'Nigeria',
+    website: 'https://www.chessinslumsafrica.com/',
+    logo: 'https://shorturl.at/fe3Pz',
+    foundedYear: '2018',
+    description:
+      'We are opening doors of opportunities and education for marginalized kids through chess♟. Together, we can do great things from a small place',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-15'),
+        verifier: '@DevvEmeka',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.chessinslumsafrica.com/donate',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'FIDANigeria',
+    name: 'International Federation of Women Lawyers (FIDA) Nigeria',
+    email: 'fidanigeria@yahoo.com',
+    country: 'Nigeria',
+    website: 'https://fida.org.ng/',
+    logo: 'https://shorturl.at/yPEnK',
+    foundedYear: '1964',
+    description:
+      'FIDA Nigeria’s primary role is to protect, promote and preserve the rights of women and children in Nigeria.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-15'),
+        verifier: '@DevvEmeka',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://paystack.com/pay/fida_donate',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'CeceYara',
+    name: 'Cece Yara Child Advocacy Centre',
+    email: 'info@ceceyara.org',
+    country: 'Nigeria',
+    website: 'https://ceceyara.org/',
+    logo: 'https://shorturl.at/7F87l',
+    foundedYear: '2016',
+    description:
+      'The Cece Yara Foundation is a child-centered non-profit organization established in 2016 to prevent child sexual abuse and to provide access to care, information, protection and emergency intervention.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2024-10-15'),
+        verifier: '@DevvEmeka',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://ceceyara.org/donation/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
       },
     ],
   },
