@@ -288,7 +288,37 @@ const nonProfits: readonly NonProfit[] = [
 },
 
 
-
+{
+  npCode: 'ActionAid Kenya',
+  name: 'ActionAid Kenya',
+  email: 'info@actionaid-kenya.org',
+  country: 'Kenya',
+  website: 'https://actionaid-kenya.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqgdWOH0TPEbwPxjDel71Ljajpkkn-U_KB_A&s',
+  foundedYear: ' 1972',
+  description: ' Works to fight poverty and injustice, especially for women and marginalized communities.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://actionaid-kenya.org/donate/actionaid-kenya-donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
 
   {
     npCode: 'SheCodeAfrica',
