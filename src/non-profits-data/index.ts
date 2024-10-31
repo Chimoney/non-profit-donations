@@ -190,6 +190,37 @@ const nonProfits: readonly NonProfit[] = [
     // }
   ],
 },
+{
+  npCode: 'World Vision Kenya',
+  name: 'World Vision Kenya',
+  email: 'info@wvi.org',
+  country: 'Kenya',
+  website: 'https://www.wvi.org/kenya',
+  logo: 'https://w7.pngwing.com/pngs/379/158/png-transparent-world-vision-international-world-vision-india-charitable-organization-child-sponsorship-study-in-canada-thumbnail.png',
+  foundedYear: '1974',
+  description: 'A global organization that supports Kenyan communities with health, education, and emergency response programs',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.wvi.org/kenya/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
 
   {
     npCode: 'SheCodeAfrica',
