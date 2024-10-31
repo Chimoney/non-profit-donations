@@ -190,15 +190,16 @@ const nonProfits: readonly NonProfit[] = [
     // }
   ],
 },
+
 {
-  npCode: 'World Vision Kenya',
-  name: 'World Vision Kenya',
-  email: 'info@wvi.org',
+  npCode: 'Kenya Red Cross Society',
+  name: 'Kenya Red Cross Society',
+  email: 'info@redcross.or.ke',
   country: 'Kenya',
-  website: 'https://www.wvi.org/kenya',
-  logo: 'https://w7.pngwing.com/pngs/379/158/png-transparent-world-vision-international-world-vision-india-charitable-organization-child-sponsorship-study-in-canada-thumbnail.png',
-  foundedYear: '1974',
-  description: 'A global organization that supports Kenyan communities with health, education, and emergency response programs',
+  website: 'https://www.redcross.or.ke/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKqO_A0XpQu6D887IlOSOtyWSOEBgyJ-Gl5g&s',
+  foundedYear: '1965',
+  description: ' Provides emergency relief, healthcare, and disaster response across Kenya.',
   isVerified: true,
   verifications: [
     {
@@ -209,7 +210,7 @@ const nonProfits: readonly NonProfit[] = [
   paymentMethods: [
     {
       type: 'donation-link',
-      paymentID: 'https://www.wvi.org/kenya/donate',
+      paymentID: 'https://www.redcross.or.ke/donate',
     },
     // {
     //   type: 'chimoney',
