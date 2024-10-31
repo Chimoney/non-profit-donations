@@ -255,6 +255,41 @@ const nonProfits: readonly NonProfit[] = [
   ],
 },
 
+{
+  npCode: 'MYSA (Mathare Youth Sports Association)',
+  name: 'MYSA',
+  email: 'info@mysakenya.org',
+  country: 'Kenya',
+  website: 'https://www.mysakenya.org',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ub_ZwaN7gprf_T_0WiORuXmWDBc9DBctMQ&s',
+  foundedYear: ' 1987',
+  description: 'Uses sports as a tool to educate and empower youth in Mathare.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.mysakenya.org/index.php/more/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+
+
+
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
