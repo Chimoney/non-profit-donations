@@ -99,13 +99,13 @@ const nonProfits: readonly NonProfit[] = [
 },
 {
   npCode: 'Shining Hope for Communities (SHOFCO)',
-  name: 'Amref Health Africa',
-  email: 'info@amref.org',
+  name: 'Shining Hope for Communities (SHOFCO)',
+  email: 'info@shofco.org',
   country: 'Kenya',
-  website: 'https://amref.org',
-  logo: 'https://amrefusa.org/wp-content/uploads/2019/09/amref-logo.png',
-  foundedYear: '1957',
-  description: ' Amref Health Africa provides healthcare and medical services, with a focus on maternal health, HIV/AIDS, and other community health issues in Africa.',
+  website: 'https://www.shofco.org/',
+  logo: 'https://i0.wp.com/philanthropycircuit.org/wp-content/uploads/2021/11/highcompress_PC-Insights-website-3.jpg?fit=900%2C313&ssl=1',
+  foundedYear: '2004',
+  description: 'SHOFCO works in urban slums to provide essential services such as education, healthcare, and clean water, as well as to empower women and children.',
   isVerified: true,
   verifications: [
     {
@@ -116,7 +116,7 @@ const nonProfits: readonly NonProfit[] = [
   paymentMethods: [
     {
       type: 'donation-link',
-      paymentID: 'https://amref.org/donate/',
+      paymentID: 'https://www.shofco.org/donate',
     },
     // {
     //   type: 'chimoney',
