@@ -159,6 +159,37 @@ const nonProfits: readonly NonProfit[] = [
     // }
   ],
 },
+{
+  npCode: 'ChildFund Kenya',
+  name: 'ChildFund Kenya',
+  email: 'info@childfundkenya.org',
+  country: 'Kenya',
+  website: 'https://www.childfund.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_uIlsWA_OsVnHTZJtUPqIgLiB9Ae1-1EUQ&s',
+  foundedYear: '1960',
+  description: '  Focuses on supporting vulnerable children and families through education, health, and community development initiatives.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.childfund.org/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
 
   {
     npCode: 'SheCodeAfrica',
