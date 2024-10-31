@@ -223,6 +223,38 @@ const nonProfits: readonly NonProfit[] = [
   ],
 },
 
+{
+  npCode: 'St. John Ambulance Kenya',
+  name: 'St. John Ambulance Kenya',
+  email: 'info@stjohnkenya.org',
+  country: 'Kenya',
+  website: 'https://stjohnkenya.org',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUpZv5CPg-YhWbiNUpFezJKC8GTW7wE6T3lA&s',
+  foundedYear: '1923',
+  description: ' Provides emergency response, first aid training, and healthcare outreach services.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://stjohnkenya.org/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
