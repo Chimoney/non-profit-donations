@@ -128,6 +128,38 @@ const nonProfits: readonly NonProfit[] = [
     // }
   ],
 },
+{
+  npCode: 'Green Belt Movement',
+  name: 'Green Belt Movement',
+  email: 'info@greenbeltmovement.org',
+  country: 'Kenya',
+  website: 'https://www.greenbeltmovement.org/',
+  logo: 'https://yt3.googleusercontent.com/ytc/AIdro_m21UBBBPmqZFRaQmxGiDxL26c-S3BPl5YlqjMWAzNy8Zw=s900-c-k-c0x00ffffff-no-rj',
+  foundedYear: '1977',
+  description: ' Founded by Wangari Maathai, the Green Belt Movement focuses on environmental conservation, community empowerment, and sustainable development.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.greenbeltmovement.org/get-involved/support-our-work',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
