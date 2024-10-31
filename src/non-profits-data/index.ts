@@ -66,6 +66,68 @@ const nonProfits: readonly NonProfit[] = [
       // }
     ],
 },
+{
+  npCode: 'Amref Health Africa',
+  name: 'Amref Health Africa',
+  email: 'info@amref.org',
+  country: 'Kenya',
+  website: 'https://amref.org',
+  logo: 'https://amrefusa.org/wp-content/uploads/2019/09/amref-logo.png',
+  foundedYear: '1957',
+  description: ' Amref Health Africa provides healthcare and medical services, with a focus on maternal health, HIV/AIDS, and other community health issues in Africa.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('Oct 31, 2024'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://amref.org/donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+{
+  npCode: 'Shining Hope for Communities (SHOFCO)',
+  name: 'Amref Health Africa',
+  email: 'info@amref.org',
+  country: 'Kenya',
+  website: 'https://amref.org',
+  logo: 'https://amrefusa.org/wp-content/uploads/2019/09/amref-logo.png',
+  foundedYear: '1957',
+  description: ' Amref Health Africa provides healthcare and medical services, with a focus on maternal health, HIV/AIDS, and other community health issues in Africa.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('Oct 31, 2024'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://amref.org/donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
