@@ -320,6 +320,39 @@ const nonProfits: readonly NonProfit[] = [
   ],
 },
 
+
+
+{
+  npCode: 'The Earth Organization Kenya',
+  name: 'The Earth Organization Kenya',
+  email: 'info@earthorganization.org',
+  country: 'Kenya',
+  website: 'https://www.earthorganization.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKN8vvX0Djkn16L26Ha0mp0URb5lPPaUEwHA&s',
+  foundedYear: ' 2000',
+  description: 'Works on environmental conservation and sustainable development projects.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.earthorganization.org/donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
