@@ -94,6 +94,293 @@ const nonProfits: readonly NonProfit[] = [
       // }
     ],
 },
+{
+  npCode: 'Amref Health Africa',
+  name: 'Amref Health Africa',
+  email: 'info@amref.org',
+  country: 'Kenya',
+  website: 'https://amref.org',
+  logo: 'https://amrefusa.org/wp-content/uploads/2019/09/amref-logo.png',
+  foundedYear: '1957',
+  description: ' Amref Health Africa provides healthcare and medical services, with a focus on maternal health, HIV/AIDS, and other community health issues in Africa.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('Oct 31, 2024'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://amref.org/donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+{
+  npCode: 'Shining Hope for Communities (SHOFCO)',
+  name: 'Shining Hope for Communities (SHOFCO)',
+  email: 'info@shofco.org',
+  country: 'Kenya',
+  website: 'https://www.shofco.org/',
+  logo: 'https://i0.wp.com/philanthropycircuit.org/wp-content/uploads/2021/11/highcompress_PC-Insights-website-3.jpg?fit=900%2C313&ssl=1',
+  foundedYear: '2004',
+  description: 'SHOFCO works in urban slums to provide essential services such as education, healthcare, and clean water, as well as to empower women and children.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('Oct 31, 2024'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.shofco.org/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+{
+  npCode: 'Green Belt Movement',
+  name: 'Green Belt Movement',
+  email: 'info@greenbeltmovement.org',
+  country: 'Kenya',
+  website: 'https://www.greenbeltmovement.org/',
+  logo: 'https://yt3.googleusercontent.com/ytc/AIdro_m21UBBBPmqZFRaQmxGiDxL26c-S3BPl5YlqjMWAzNy8Zw=s900-c-k-c0x00ffffff-no-rj',
+  foundedYear: '1977',
+  description: ' Founded by Wangari Maathai, the Green Belt Movement focuses on environmental conservation, community empowerment, and sustainable development.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.greenbeltmovement.org/get-involved/support-our-work',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+{
+  npCode: 'ChildFund Kenya',
+  name: 'ChildFund Kenya',
+  email: 'info@childfundkenya.org',
+  country: 'Kenya',
+  website: 'https://www.childfund.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_uIlsWA_OsVnHTZJtUPqIgLiB9Ae1-1EUQ&s',
+  foundedYear: '1960',
+  description: '  Focuses on supporting vulnerable children and families through education, health, and community development initiatives.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.childfund.org/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+{
+  npCode: 'Kenya Red Cross Society',
+  name: 'Kenya Red Cross Society',
+  email: 'info@redcross.or.ke',
+  country: 'Kenya',
+  website: 'https://www.redcross.or.ke/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKqO_A0XpQu6D887IlOSOtyWSOEBgyJ-Gl5g&s',
+  foundedYear: '1965',
+  description: ' Provides emergency relief, healthcare, and disaster response across Kenya.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.redcross.or.ke/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+{
+  npCode: 'St. John Ambulance Kenya',
+  name: 'St. John Ambulance Kenya',
+  email: 'info@stjohnkenya.org',
+  country: 'Kenya',
+  website: 'https://stjohnkenya.org',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUpZv5CPg-YhWbiNUpFezJKC8GTW7wE6T3lA&s',
+  foundedYear: '1923',
+  description: ' Provides emergency response, first aid training, and healthcare outreach services.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://stjohnkenya.org/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+{
+  npCode: 'MYSA (Mathare Youth Sports Association)',
+  name: 'MYSA',
+  email: 'info@mysakenya.org',
+  country: 'Kenya',
+  website: 'https://www.mysakenya.org',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ub_ZwaN7gprf_T_0WiORuXmWDBc9DBctMQ&s',
+  foundedYear: ' 1987',
+  description: 'Uses sports as a tool to educate and empower youth in Mathare.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.mysakenya.org/index.php/more/donate',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+
+{
+  npCode: 'ActionAid Kenya',
+  name: 'ActionAid Kenya',
+  email: 'info@actionaid-kenya.org',
+  country: 'Kenya',
+  website: 'https://actionaid-kenya.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqgdWOH0TPEbwPxjDel71Ljajpkkn-U_KB_A&s',
+  foundedYear: ' 1972',
+  description: ' Works to fight poverty and injustice, especially for women and marginalized communities.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://actionaid-kenya.org/donate/actionaid-kenya-donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
+
+
+
+{
+  npCode: 'The Earth Organization Kenya',
+  name: 'The Earth Organization Kenya',
+  email: 'info@earthorganization.org',
+  country: 'Kenya',
+  website: 'https://www.earthorganization.org/',
+  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKN8vvX0Djkn16L26Ha0mp0URb5lPPaUEwHA&s',
+  foundedYear: ' 2000',
+  description: 'Works on environmental conservation and sustainable development projects.',
+  isVerified: true,
+  verifications: [
+    {
+      date: new Date('2024-10-31'),
+      verifier: '@Codegirl254',
+    }
+  ],
+  paymentMethods: [
+    {
+      type: 'donation-link',
+      paymentID: 'https://www.earthorganization.org/donate/',
+    },
+    // {
+    //   type: 'chimoney',
+    //   paymentID: {
+    //     test: '',
+    //     production: 'uniqueChimoneyID', //if present
+    //   },
+    //   donationHandler: 'chimoneyDonation',
+    // }
+  ],
+},
   {
     npCode: 'SheCodeAfrica',
     name: 'She Code Africa',
