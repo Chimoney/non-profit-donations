@@ -1190,6 +1190,38 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+
+  {
+  npCode: 'Code Space',
+  name: 'Code Space',
+  email: 'hello@codespaces.org',
+  country: 'Nigeria',
+  website: 'https://www.codespaces.org/',
+  logo: 'https://i.postimg.cc/X7Pf4QYY/logo.png',
+  foundedYear: '2020',
+  description: ' Code Space is a non-profit organization that unites Gen Zs in tech across Africa, creating a vibrant community where you can thrive. Here, you can connect with like-minded peers, share insights, and gain the support you need to grow, build, and accelerate your career. Don’t navigate your tech career alone.',
+  isVerified: true,
+  isVerified: false,
+     verifications: [],
+    paymentMethods: [
+      /*
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '',
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+      */
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.codespaces.org/donate',
+      },
+    ],
+  },
+
+
 ];
 
 export default nonProfits;
