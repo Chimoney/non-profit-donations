@@ -2,6 +2,273 @@ import { NonProfit } from '../types/non-profit';
 
 const nonProfits: readonly NonProfit[] = [
   {
+    npCode: 'Living Fountain Orphanage',
+    name: 'Living Fountain Orphanage',
+    email: 'info@livingfountainorphanage.org',
+    country: 'Nigeria',
+    website: 'https://livingfountainorphanage.org/',
+    logo: 'https://www.livingfountainorphanage.org/wp-content/uploads/2021/09/lfo-logo.png',
+    foundedYear: '2007',
+    description: ' to ensure that orphans are adequately catered for',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 1012389536  ZENITH BANK',
+        type: 'Paystack',
+        paymentID: 'https://paystack.com/pay/lfo'
+
+        // This PaymentID was gotten from https://livingfountainorphanage.org/donation-page/#////
+      },
+    ],
+  },
+
+  {
+    npCode: 'WARIF',
+    name: 'Women at Risk International Foundation',
+    email: 'info@warifng.org',
+    country: 'Nigeria',
+    website: 'https://warifng.org/',
+    logo: 'https://warifng.org/wp-content/uploads/2017/03/logo-2.png',
+    foundedYear: '2016',
+    description: 'a unique holistic method of tackling Gender Based Violence through the development and implementation of a series of initiatives, targeting both the intervention/treatment of these affected women, as well as providing preventive measures in education and community service to reduce the high incidence.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 0232742469  GTBank'
+        // This PaymentID was gotten from https://warifng.org/get-involved-2/////
+      },
+    ],
+  },
+
+  {
+    npCode: 'eayfdn',
+    name: 'EMPOWERED AFRICAN YOUTHS FOUNDATION',
+    email:info@eayfdn.orgempoweredafricanyouthsfoundation@gmail.com',
+    country: 'Nigeria',
+    website: 'https://eayfdn.org/',
+    logo: 'https://eayfdn.org/wp-content/uploads/2022/12/LOGO-BLACK-Copy.png',
+    foundedYear: '2016',
+    description: 'Empowered African Youths Foundation is a non-profit organization registered in 2016 to empower African youths and promote entrepreneurship among young Africans. ',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+
+        type: 'Flutterwave',
+        paymentID: 'https://flutterwave.com/pay/empoweredafricanyouthsfoundationcdqy'
+
+        // This PaymentID was gotten from https://flutterwave.com/pay/empoweredafricanyouthsfoundationcdqy////
+      },
+    ],
+  },
+
+
+  {
+    npCode: 'Dyslexia Nigeria',
+    name: 'Dyslexia Nigeria',
+    email: 'info@dyslexianigeria.com',
+    country: 'Nigeria',
+    website: 'https://dyslexianigeria.com/',
+    logo: 'https://dyslexianigeria.com/wp-content/uploads/2023/11/logo-dark-small.png',
+    foundedYear: '2019',
+    description: 'A world where individuals with dyslexia can attain their full potential.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Flutterwave',
+        paymentID: 'https://flutterwave.com/donate/jiodbrizbng3'
+
+        // This PaymentID was gotten from https://flutterwave.com/donate/jiodbrizbng3////
+      },
+    ],
+  },
+
+
+
+  {
+    npCode: 'EGO',
+    name: 'EGO Foundation',
+    email: 'info@egofoundation.org.ng',
+    country: 'Nigeria',
+    website: 'https://egofoundation.org.ng/',
+    logo: 'https://egofoundation.org.ng/',
+    foundedYear: '2018',
+    description: 'To foster economic stability at the grassroots through enterprise development and innovation.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 5400399697 Providus Bank Plc',
+        type: 'Paystack',
+        paymentID: ''
+        // This PaymentID was gotten from https://egofoundation.org.ng/donations/donate-to-ego//
+      },
+    ],
+  },
+
+  {
+    npCode: 'Chude and Ego Foundation',
+    name: 'Chude and Ego Foundation',
+    email: 'info@chudeandegofoundation.org',
+    country: 'Nigeria',
+    website: 'https://chudeandegofoundation.org/',
+    logo: 'https://chudeandegofoundation.org/wp-content/uploads/2021/09/Logo.svg',
+    foundedYear: '2021',
+    description: 'We are intentional about working with economically disadvantaged communities by providing access to quality education and healthcare.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Paystack',
+        paymentID: ''
+        // This PaymentID was gotten from https://chudeandegofoundation.org/donate///
+      },
+    ],
+  },
+  {
+    npCode: 'Mirabel Centre',
+    name: 'Mirabel Centre',
+    email: 'sarc@pjnigeria.org',
+    country: 'Nigeria',
+    website: 'https://mirabelcentre.org/',
+    logo: 'https://mirabelcentre.org/wp-content/uploads/2021/03/cropped-cropped-Mirabel_Logo__1_-removebg-preview-1.png',
+    foundedYear: '2013',
+    description: ' to provide holistic and high quality medical and psychosocial services to survivors of sexual assault and rape.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 1228199075  ZENITH BANK',
+        type: 'Fluttetrwave',
+        paymentID: 'https://flutterwave.com/pay/mirabelcentregzak'
+
+        // This PaymentID was gotten from https://mirabelcentre.org/donate////
+      },
+    ],
+  },
+
+
+  {
+    npCode: 'LAGOS FOOD BANK ',
+    name: 'Lagos Food Bank Initiative',
+    email: ' contactus@lagosfoodbank.org',
+    country: 'Nigeria',
+    website: 'https://lagosfoodbank.org/',
+    logo: 'https://lagosfoodbank.org/wp-content/uploads/2020/11/lfbi_logo-Redesign01.png',
+    foundedYear: '2015',
+    description: 'o address the problem of Malnutrition in children under the age of 5 years, improve the nutrition intake of pregnant women and lactating mothers.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 1020057249 United Bank For Africa, 0463977946 Guranty Trust Bank ',
+
+        type: 'Flutterwave',
+        paymentID: ''
+        // This PaymentID was gotten from https://lagosfoodbank.org/donate-money/
+      },
+    ],
+  },
+  {
+    npCode: 'HerTechTrail',
+    name: 'HerTechTrail',
+    email: 'hertechtrail@gmail.com',
+    country: 'Nigeria',
+    website: 'https://www.hertechtrail.org/',
+    logo: '',
+    foundedYear: '2019',
+    description: 'To support and inspire women to outclass and trail in Tech careers and businesses in Africa.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Flutterwave',
+        paymentID: 'https://dashboard.flutterwave.com/donate/quro4ogcnplo',
+      },
+    ],
+  },
+
+  {
+    npCode: 'High-Tech Center',
+    name: 'High-Tech Center for Nigerian Women and Youths',
+    email: 'info@hightechwomen.org.ng',
+    country: 'Nigeria',
+    website: 'http://www.hightechwomen.org.ng/',
+    logo: '',
+    foundedYear: '2004',
+    description: 'To see every Nigerian Woman and Youth become ICT literate',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 4, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Bank tranfer',
+        paymentID: 'Account No: 0019052855 - Sterling Bank Plc 0034611000 Diamond Bank Plc Account ',
+        // This PaymentID was gotten from http://www.hightechwomen.org.ng/donate-sponsor/
+      },
+    ],
+  },
+
+  
+
+  {
     npCode: 'Gamble Alert',
     name: 'Gamble Alert',
     email: 'info@gamblealert.org',
