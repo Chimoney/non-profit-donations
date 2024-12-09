@@ -223,7 +223,7 @@ const nonProfits: readonly NonProfit[] = [
     email: 'hertechtrail@gmail.com',
     country: 'Nigeria',
     website: 'https://www.hertechtrail.org/',
-    logo: '',
+    logo: 'https://www.hertechtrail.org/wp-content/uploads/2021/02/HHT_main_logo.png',
     foundedYear: '2019',
     description: 'To support and inspire women to outclass and trail in Tech careers and businesses in Africa.',
     isVerified: true,
@@ -237,6 +237,7 @@ const nonProfits: readonly NonProfit[] = [
       {
         type: 'Flutterwave',
         paymentID: 'https://dashboard.flutterwave.com/donate/quro4ogcnplo',
+        // This PaymentID was gotten from https://www.hertechtrail.org/donate-partner//
       },
     ],
   },
@@ -247,7 +248,7 @@ const nonProfits: readonly NonProfit[] = [
     email: 'info@hightechwomen.org.ng',
     country: 'Nigeria',
     website: 'http://www.hightechwomen.org.ng/',
-    logo: '',
+    logo: 'https://hightechwomen.org.ng/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-13-at-06.33.29_cdf2f3bc-e1727120072451.jpg',
     foundedYear: '2004',
     description: 'To see every Nigerian Woman and Youth become ICT literate',
     isVerified: true,
