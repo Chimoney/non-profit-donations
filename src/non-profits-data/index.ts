@@ -1510,6 +1510,326 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+  {
+    npCode: 'LFBI',
+    name: 'Lagos Food Bank Initiative',
+    email: 'contact@lagosfoodbank.org',
+    country: 'Nigeria',
+    website: 'https://lagosfoodbank.org/',
+    logo: 'https://shorturl.at/e0Lf4',
+    foundedYear: '2015',
+    description:
+      'Lagos Food Bank is a non-profit, nutrition-focused initiative committed to fighting hunger, reducing food waste and solving the problem of malnutrition through targeted programs that seek to improve the nutrition/food intake of pregnant women and their infants who are not able to get the required nutrients during pregnancy and breastfeeding of their babies.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://lagosfoodbank.org/donate-money/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Dyslexia Nigeria',
+    name: 'Dyslexia Nigeria',
+    email: 'info@dyslexianigeria.com',
+    country: 'Nigeria',
+    website: 'https://dyslexianigeria.com/',
+    logo: 'https://shorturl.at/ieFol',
+    foundedYear: '2019',
+    description:
+      'Dyslexia Nigeria educates, empowers and convenes stakeholders concerned with dyslexia in Nigeria to create an environment where individuals with dyslexia can thrive. This is done through a range of services including dyslexia screening, diagnostic dyslexia assessments, teacher training, coaching, specialist tuition, sale of relevant resources and awareness efforts',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://flutterwave.com/donate/jiodbrizbng3',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'TCIF',
+    name: 'Trauma Care International Foundation',
+    email: 'tcif@traumacareinternational.org',
+    country: 'Nigeria',
+    website: 'https://traumacareinternational.org/',
+    logo: 'https://traumacareinternational.org/images/sticky-logo.png',
+    foundedYear: 'N/A',
+    description:
+      'Trauma Care International Foundation is a registered non-governmental organization focused on improving trauma care and emergency response services through advocacy, health education, and community-based projects.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://traumacareinternational.org/donate/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'DSFN',
+    name: 'Down syndrome Foundation Nigeria',
+    email: 'hello@downsydrome.org.ng',
+    country: 'Nigeria',
+    website: 'https://downsyndrome.org.ng/',
+    logo: 'https://shorturl.at/0hl2n',
+    foundedYear: '2001',
+    description:
+      'Down syndrome Foundation Nigeria (DSFN) operates as a non-governmental, non-political, and not-for-profit entity, aiming to provide support for persons with down syndrome and Intellectual disabilities.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://shorturl.at/RvDZZ',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Devatop',
+    name: "Devatop Centre for Africa Development",
+    email: ' info@devatop.org',
+    country: 'Nigeria',
+    website: 'https://www.devatop.org/',
+    logo: 'https://shorturl.at/uugvh',
+    foundedYear: '2013',
+    description:
+      'Devatop Centre for Africa Development is a leading youth-led anti-human trafficking and human rights organization in Nigeria, with focus on combating human trafficking, gender-based violence, irregular migration, and supporting survivors and at-risk youth.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.devatop.org/make-a-donation/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'W.TEC',
+    name: "Women's Technology Empowerment Centre",
+    email: 'info@wteconline.org',
+    country: 'Nigeria',
+    website: 'https://wteconline.org/',
+    logo: 'https://shorturl.at/7Om8w',
+    foundedYear: '2008',
+    description:
+      'W.TEC was one of the first organisations working in the gender and technology space in Nigeria. They have worked hard to educate the wider public about the importance of gender equality in technology through training, speaking at conferences, hosting public discussions, media interviews and presenting our results and alumnae.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://wteconline.org/donate/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Tech Herfrica',
+    name: 'Tech Herfrica',
+    email: 'info@techherfrica.org',
+    country: 'Nigeria',
+    website: 'https://www.techherfrica.org/',
+    logo: 'https://shorturl.at/SAKKm',
+    foundedYear: '2023',
+    description:
+      'Tech Herfrica is a social impact organization that is striving to bridge the digital divide and also contributing to breaking the cycle of poverty for women and girls in rural African communities through digital and financial inclusion.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.techherfrica.org/donate/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'FIJ',
+    name: 'Foundation For Investigative Journalism',
+    email: 'info@fij.ng',
+    country: 'Nigeria',
+    website: 'https://fij.ng',
+    logo: 'https://fij.ng/img/fij_logo.png',
+    foundedYear: '2015',
+    description:
+      'The Foundation for Investigative Journalism (FIJ) is an independent, not-for-profit organisation that combats injustice, holds power to account and speaks for the voiceless.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://fij.ng/support',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'The Alex and Grace Izinyon Foundation',
+    name: 'The Alex and Grace Izinyon Foundation',
+    email: 'info@agi-foundation.org',
+    country: 'Nigeria',
+    website: 'https://agi-foundation.org/',
+    logo: 'https://shorturl.at/q4YXd',
+    foundedYear: '2018',
+    description:
+      "AGIF (Alex and Grace Izinyon Foundation), is a non-profit, non-governmental organisation aimed at promoting the well-being of the disadvantaged. AGIF has trained and sponsored candidates through secondary and tertiary education, organized children's Christmas programmes in underprivileged communities, provided basic amenities to underserved communities and reconstructed maternity homes etc",
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://agi-foundation.org/donate',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'ACE Charity',
+    name: 'ACE Charity',
+    email: 'info@acecharityafrica.org',
+    country: 'Nigeria',
+    website: 'https://acecharityafrica.org/',
+    logo: 'https://shorturl.at/Tuofu',
+    foundedYear: '2010',
+    description:
+      'ACE Charity is dedicated to creating a realistic and effective difference in the lives of people across Africa, especially women and children. It focuses on educating and training children, providing affordable healthcare, and to generate economic empowerment in the country. It has implemented development and humanitarian interventions aimed at improving the living conditions of orphans, and vulnerable children (especially adolescent girls) and women in Nigeria.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@praiselove',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://acecharityafrica.org/donate/',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
 ];
 
 export default nonProfits;
