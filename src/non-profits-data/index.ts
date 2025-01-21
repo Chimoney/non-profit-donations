@@ -1199,7 +1199,7 @@ const nonProfits: readonly NonProfit[] = [
     logo: 'https://shorturl.at/N7IOp',
     foundedYear: '2020',
     description:
-      'We are a 501(c)3 edtech nonprofit making it easier for African youths to access the resources, training, and opportunities they need to change their lives. We make it easy for individuals and companies to give to support African talents, as we provide them with the tools, training, and support they need to increase their earning power.',
+      'I4G is an edtech nonprofit making it easier for African youths to access the resources, training, and opportunities they need to change their lives. We make it easy for individuals and companies to give to support African talents, as we provide them with the tools, training, and support they need to increase their earning power.',
     isVerified: true,
     verifications: [
       {
@@ -1295,7 +1295,7 @@ const nonProfits: readonly NonProfit[] = [
     logo: 'https://hei.org.ng/wp-content/uploads/2018/04/HEI-Logo.png',
     foundedYear: '2015',
     description:
-      'We are a community of passionate, empathetic individuals dedicated to providing basic healthcare to the poorest segments of society through grassroots initiatives. We believe that every life is precious and should be protected at all costs, which is why our mantra is: ” that None should die.”',
+      'HEI is a community of passionate, empathetic individuals dedicated to providing basic healthcare to the poorest segments of society through grassroots initiatives. We believe that every life is precious and should be protected at all costs, which is why our mantra is: ” that None should die.”',
     isVerified: true,
     verifications: [
       {
@@ -1359,7 +1359,7 @@ const nonProfits: readonly NonProfit[] = [
     logo: 'https://www.sicklecellfoundation.com/frontend/images/logo5.png',
     foundedYear: '1994',
     description:
-      'We believe every person living with sickle cell disorder deserves a chance to live a long, pain-free, productive, and fulfilling life! The Sickle Cell Foundation Nigeria (SCFN) is dedicated to the fight against sickle cell disorder.',
+      'SCFN is a non-profit organisation that believes every person living with sickle cell disorder deserves a chance to live a long, pain-free, productive, and fulfilling life! The Sickle Cell Foundation Nigeria (SCFN) is dedicated to the fight against sickle cell disorder.',
     isVerified: true,
     verifications: [
       {
@@ -1455,7 +1455,7 @@ const nonProfits: readonly NonProfit[] = [
     logo: 'https://shorturl.at/lXPJE',
     foundedYear: '2018',
     description:
-      'At Wetech, we are committed to breaking down barriers and providing access to opportunities for women in the tech industry. Our conferences brings together inspiring female leaders and we offer mentorship, professional development resources, and access to hiring opportunities to accelerate careers.',
+      'Wetech is a community that is committed to breaking down barriers and providing access to opportunities for women in the tech industry. Our conferences brings together inspiring female leaders and we offer mentorship, professional development resources, and access to hiring opportunities to accelerate careers.',
     isVerified: true,
     verifications: [
       {
