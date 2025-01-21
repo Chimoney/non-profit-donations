@@ -1190,6 +1190,326 @@ const nonProfits: readonly NonProfit[] = [
       },
     ],
   },
+  {
+    npCode: 'I4G',
+    name: 'Ingressive for Good',
+    email: 'hello@ingressive.org',
+    country: 'Nigeria',
+    website: 'https://ingressive.org',
+    logo: 'https://shorturl.at/N7IOp',
+    foundedYear: '2020',
+    description:
+      'I4G is an edtech nonprofit making it easier for African youths to access the resources, training, and opportunities they need to change their lives. We make it easy for individuals and companies to give to support African talents, as we provide them with the tools, training, and support they need to increase their earning power.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://ingressive.org/donations',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Tech4Dev',
+    name: 'Technology for Social Change and Development Initiative',
+    email: 'enquiries@tech4dev.com',
+    country: 'Nigeria',
+    website: 'https://tech4dev.com',
+    logo: 'https://tech4dev.com/assets/images/logo.svg',
+    foundedYear: '2016',
+    description:
+      'Tech4Dev is a non-profit social enterprise that creates access to decent work and opportunities for Africans through digital skills empowerment and advocacy.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://tech4dev.com/get-involved/become-a-partner.html',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'FAME',
+    name: 'Fashioned and Made for Excellence Foundation',
+    email: 'info@thefamefoundation.org.ng',
+    country: 'Nigeria',
+    website: 'https://thefamefoundation.org.ng',
+    logo: 'https://shorturl.at/ra7GO',
+    foundedYear: '2017',
+    description:
+      'FAME addresses the learning crisis by collaborating with young people, schools, and governments to create and implement education solutions. These solutions aim to empower Nigerian youth with the necessary skills and values to lead, overcome gender inequalities, excel in school, prepare for the workplace, drive positive change in their communities, and succeed in life.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://linktr.ee/thefamefoundation',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'HEI',
+    name: 'Health Emergency Initiative',
+    email: 'info@hei.org.ng',
+    country: 'Nigeria',
+    website: 'https://hei.org.ng',
+    logo: 'https://hei.org.ng/wp-content/uploads/2018/04/HEI-Logo.png',
+    foundedYear: '2015',
+    description:
+      'HEI is a community of passionate, empathetic individuals dedicated to providing basic healthcare to the poorest segments of society through grassroots initiatives. We believe that every life is precious and should be protected at all costs, which is why our mantra is: ” that None should die.”',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://hei.org.ng/get-involved/make-a-donation',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Onelife Initiative',
+    name: 'Onelife Initiative',
+    email: 'contact@onelifeinitiative.org',
+    country: 'Nigeria',
+    website: 'https://onelifeinitiative.org',
+    logo: 'https://onelifeinitiative.org/wp-content/uploads/2023/09/Logo_pngWebbb.png',
+    foundedYear: '2014',
+    description:
+      'Onelife Initiative is a registered youth serving non-governmental, non-profit organisation/charity in Nigeria with special consultative status with the United Nations Economic and Social Council (ECOSOC). We work in West Africa to improve the well being of young people by providing safe spaces, skills, linkages and vocational trainings including information and resources to enable them make informed decisions.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'http://onelifeinitiative.org/donate-to-support',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'SCFN',
+    name: 'Sickle Cell Foundation Nigeria',
+    email: 'info@sicklecellfoundation.com',
+    country: 'Nigeria',
+    website: 'https://www.sicklecellfoundation.com',
+    logo: 'https://www.sicklecellfoundation.com/frontend/images/logo5.png',
+    foundedYear: '1994',
+    description:
+      'SCFN is a non-profit organisation that believes every person living with sickle cell disorder deserves a chance to live a long, pain-free, productive, and fulfilling life! The Sickle Cell Foundation Nigeria (SCFN) is dedicated to the fight against sickle cell disorder.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.sicklecellfoundation.com/donation',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'LEAP Africa',
+    name: 'LEAP Africa',
+    email: 'info@leapafrica.org',
+    country: 'Nigeria',
+    website: 'https://leapafrica.org',
+    logo: 'https://leapafrica.org/wp-content/uploads/2023/12/LEAP-Africa-Official-Logo-1.png',
+    foundedYear: '2002',
+    description:
+      'LEAP Africa is a youth-focused leadership development organization committed to raising leaders who will transform Africa; through interventions for young people, that bridges the gap in five areas: Education, Entrepreneurship, Employability, Active Citizenship, and Health and Wellbeing.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://dashboard.flutterwave.com/donate/0dyzwilyoxog',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'Africa Agility',
+    name: 'Africa Agility',
+    email: 'info@africaagility.org',
+    country: 'Nigeria',
+    website: 'https://africaagility.org',
+    logo: 'https://shorturl.at/ru8fH',
+    foundedYear: '2020',
+    description:
+      "Africa Agility is a non-profit SOCIAL IMPACT Organization. We are SUPPORTING the expansion of Africa's digital economy, by creating a more diversified tech and Agile workplace and ADVOCATING for those that have been marginalized through stereotyping.",
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://givebutter.com/c/AfricaAgilityFoundation',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'WeTech',
+    name: 'WeTech',
+    email: 'we@wetechng.com',
+    country: 'Nigeria',
+    website: 'https://www.wetechng.com',
+    logo: 'https://shorturl.at/lXPJE',
+    foundedYear: '2018',
+    description:
+      'Wetech is a community that is committed to breaking down barriers and providing access to opportunities for women in the tech industry. Our conferences brings together inspiring female leaders and we offer mentorship, professional development resources, and access to hiring opportunities to accelerate careers.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://www.wetechng.com/donate',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
+  {
+    npCode: 'NexaScale',
+    name: 'NexaScale',
+    email: 'info@nexascale.org',
+    country: 'Nigeria',
+    website: 'https://nexascale.org',
+    logo: 'https://nexascale.org/img/logo-black.24eb56ae.png',
+    foundedYear: '2023',
+    description:
+      'Nexascale is a social enterprise committed to fostering the growth and development of the next generation of tech professionals. We believe that by providing resources and opportunities for learning and skill building, we can help individuals achieve their full potential and contribute to the growth of the tech industry. In addition to providing training and educational resources such as workshops, webinars, and online courses, we aim to create a supportive community where members can connect, collaborate, and grow together.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('2025-01-21'),
+        verifier: '@oreoluwa212',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'donation-link',
+        paymentID: 'https://nexascale.org/donate',
+      },
+      {
+        type: 'chimoney',
+        paymentID: {
+          test: '',
+          production: '', //if present
+        },
+        donationHandler: 'chimoneyDonation',
+      },
+    ],
+  },
 ];
 
 export default nonProfits;
