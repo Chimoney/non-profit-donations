@@ -1515,7 +1515,7 @@ const nonProfits: readonly NonProfit[] = [
     name: 'Lagos Food Bank Initiative',
     email: 'contact@lagosfoodbank.org',
     country: 'Nigeria',
-    website: 'https://lagosfoodbank.org/',
+    website: 'https://lagosfoodbank.org',
     logo: 'https://shorturl.at/e0Lf4',
     foundedYear: '2015',
     description:
