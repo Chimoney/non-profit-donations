@@ -1,6 +1,268 @@
 import { NonProfit } from '../types/non-profit';
 
 const nonProfits: readonly NonProfit[] = [
+  import { NonProfit } from '../types/non-profit';
+
+const nonProfits: readonly NonProfit[] = [
+  {
+    npCode: 'Rescue Sports Foundation',
+    name: 'Rescue Sports Foundation',
+    email: 'info@rescuesportsfoundation.com ',
+    country: 'Ghana',
+    website: 'https://rescuesportsfoundation.com/',
+    logo: 'https://rescuesportsfoundation.com/wp-content/uploads/2018/08/Sports-in-Action-1.jpg',
+    foundedYear: '',
+    description: ' Rescue Sports seek to reach out to the sections of the society that have been marginalized or ignored out of the great commission through the universal language of sports.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 7, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '+233(0) 244 654 359 MTN Mobile money'
+     // This PaymentID was gotten from https://rescuesportsfoundation.com/donation//#////
+      },
+    ],
+  },
+
+  {
+    npCode: 'WAYEOK',
+    name: 'West African Youth Empowerment Organisation Kokrobite',
+    email: 'info@wayeok-ghana.org',
+    country: 'Ghana',
+    website: 'https://wayeok-ghana.org/',
+    logo: 'https://wayeok-ghana.org/wp-0a52b-content/uploads/2020/04/cropped-wayeok-logo.png',
+    foundedYear: '2016',
+    description: 'a non-profit organization dedicated to advance education for children and teenagers. We are located in Kokrobite, a fishing community in the outskirts of Accra, the capital of Ghana.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 5, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '(+233) 559 051 281  MTN Mobile money'
+        // This PaymentID was gotten from https://wayeok-ghana.org/donate//////
+      },
+    ],
+  },
+
+  {
+    npCode: ' KNEF',
+    name: 'K. Nyame Educational Foundation',
+    email:info@eayfdn.orgempoweredafricanyouthsfoundation@gmail.com',
+    country: 'Ghana',
+    website: 'https://www.knefghana.com/',
+    logo: 'https://static.wixstatic.com/media/7d9246_fa66ad69cba94bae88cfa23b088a0b0a~mv2.png/v1/crop/x_36,y_0,w_465,h_465/fill/w_104,h_104,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/KNEF%20Ghana_logo.png',
+    foundedYear: '2007',
+    description: 'At KNEF, our goal is to create opportunities for leadership, skill development, and opportunities for youth to build up their communities.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 6, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+
+       type: 'Mobile Money',
+        paymentID: '+233 55 001 5026 MTN Mobile money'
+
+        // This PaymentID was gotten from https://www.knefghana.com/donate////
+      },
+    ],
+  },
+
+
+  {
+    npCode: 'GDCA',
+    name: 'Ghana Domestic Company Association',
+    email: 'info@gdcaghana.org',
+    country: 'Ghana',
+    website: 'https://www.gdcaghana.org/',
+    logo: 'https://static.wixstatic.com/media/621423_a465925d3754452fa915cdeb7ec8f63f~mv2.png/v1/crop/x_475,y_475,w_4450,h_4450/fill/w_129,h_129,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GDCA%20logo%20best2.png',
+    foundedYear: '',
+    description: 'An empowered and happy society',
+    isVerified: true, 
+    verifications: [
+      {
+        date: new Date('Nov 6, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+       type: 'Mobile Money',
+        paymentID: '0245262379 MTN Mobile money, 0506305358 Vodafone'
+
+        // This PaymentID was gotten from https://www.gdcaghana.org/support////
+      },
+    ],
+  },
+
+
+
+  {
+    npCode: 'SCEF',
+    name: 'Street Children Empowerment Foundation',
+    email: ' info@scef-international.org',
+    country: 'Ghana',
+    website: 'https://scef-international.org/',
+    logo: 'https://scef-international.org/wp-content/uploads/2023/03/scef_logo-1.png',
+    foundedYear: '2010',
+    description: ' have impacted the lives of children in street situations through major programs and projects.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 6, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+       type: 'Mobile Money',
+        paymentID: '0240168390 MTN Mobile money'
+        // This PaymentID was gotten from https://scef-international.org/become-godparent///
+      },
+    ],
+  },
+
+  {
+    npCode: 'WAAF',
+    name: 'West Africa AIDS Foundation',
+    email: 'info@waafweb.org',
+    country: 'Ghana',
+    website: 'https://waafweb.org//',
+    logo: 'https://waafweb.org/wp-content/uploads/2022/08/logo.png',
+    foundedYear: '1999',
+    description: 'The West Africa AIDS Foundation (WAAF) is committed to contributing to the Global Agenda of Ending AIDS by 2030 through the provision of preventative services through viral suppression in a client-centered approach',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 4, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '0558753217 MTN Mobile money'
+
+        // This PaymentID was gotten fromhttps://waafweb.org/donate////
+      },
+    ],
+  },
+  {
+    npCode: 'COMPASS-Ghana',
+    name: 'COMPASS-Ghana',
+    email: 'info@compass-ghana.org',
+    country: 'Ghana',
+    website: 'https://compass-gh.org//',
+    logo: 'https://compass-gh.org/wp-content/uploads/2022/08/Temporary-2-white-circle.png',
+    foundedYear: '2022',
+    description: ' Using a three pronged approach, we educate, embed and collaborate to instil leading standards of palliative care into Ghana for positive systematic change.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 6, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '+233 (0) 5305 39931 MTN Mobile money, +233 (0) 20 1578 282 Vodafone'
+
+        // This PaymentID was gotten from https://compass-gh.org/donate-2/////
+      },
+    ],
+  },
+
+
+  {
+    npCode: 'Adanu',
+    name: 'Adanu',
+    email: 'info@adanu.org',
+    country: 'Ghana',
+    website: 'https://adanu.org/',
+    logo: 'https://adanu.org/',
+    foundedYear: '2013',
+    description: ' Adanu’s mission is to ignite the passion of Ghanaian communities to bring about a future filled with opportunity and hope.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Nov 7, 2024'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '+233 (0) 5305 39931 MTN Mobile money,
+
+        // This PaymentID was gotten from https://adanu.org/give/giving-in-ghana/////
+      },
+    ],
+  },
+
+  {
+    npCode: ' KCC',
+    name: 'Kaya ChildCare',
+    email: 'hello@kayachildcare.org',
+    country: 'Ghana',
+    website: 'https://kayachildcare.org/',
+    logo: 'https://kayachildcare.org/support-us/',
+    foundedYear: '2017',
+    description: 'Kaya Childcare exists to stop the cycle of poverty by ensuring the child does not miss out on their development during the most critical early years of their life.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 8, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '055 862 7917 MTN Mobile money,
+// This PaymentID was gotten from https://kayachildcare.org/support-us//////
+      },
+    ],
+  },
+
+  {
+    npCode: 'OKF',
+    name: 'Osei-Kusi Foundation',
+    email: 'oseikusifoundation@gmail.com',
+    country: 'Ghana',
+    website: 'https://www.oseikusifoundation.org//',
+    logo: 'https://images.squarespace-cdn.com/content/v1/610be7019be34556ae610b11/0349ef93-09a7-4954-ab2a-ecb853832d4f/white-logo.png?format=1500w',
+    foundedYear: '2009',
+    description: 'committed to holistic youth development with special focus on educational scholarships for young people.',
+    isVerified: true,
+    verifications: [
+      {
+        date: new Date('Oct 8, 2023'),
+        verifier: '@mynameissaraah',
+      },
+    ],
+    paymentMethods: [
+      {
+        type: 'Mobile Money',
+        paymentID: '0557644715, 0242336841 MTN Mobile money,,
+        // This PaymentID was gotten from https://www.oseikusifoundation.org/donate/
+      },
+    ],
+  },
+
   {
     npCode: 'Gamble Alert',
     name: 'Gamble Alert',
